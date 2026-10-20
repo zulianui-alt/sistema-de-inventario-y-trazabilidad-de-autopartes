@@ -1,0 +1,12 @@
+Responsabilidades
+
+Giliam Guleidi Lopez Gomez
+1. Gestion de ususarios y roles 
+
+Bryant Alexander Bracho Parra
+5. Certificacion, reportes e historico
+4. Alertas de Inconsistencias y remplazos
+
+Erik Santiago Ochoa
+2. Registro e inventario de vehiculos y autopartes
+3. Auditoria y escaneo (QR/Barra)
