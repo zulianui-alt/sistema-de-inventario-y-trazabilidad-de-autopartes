@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#243145","secondary-fixed-dim":"#68dba9","on-surface":"#d6e3fe","inverse-surface":"#d6e3fe","tertiary-fixed":"#ffdad6","background":"#061426","primary-fixed-dim":"#b7c4ff","tertiary":"#ffb4ab","on-error":"#690005","on-tertiary-fixed":"#410002","on-background":"#d6e3fe","on-secondary-fixed-variant":"#005137","on-secondary-container":"#00311f","tertiary-container":"#bb0112","surface":"#061426","on-primary-fixed":"#001551","surface-dim":"#061426","inverse-primary":"#2151da","on-tertiary":"#690005","outline":"#8e90a0","on-surface-variant":"#c4c5d7","secondary-container":"#25a475","error-container":"#93000a","on-secondary-fixed":"#002114","on-primary-container":"#cad3ff","secondary-fixed":"#85f8c4","error":"#ffb4ab","surface-tint":"#b7c4ff","secondary":"#68dba9","surface-container-low":"#0e1c2f","on-secondary":"#003825","on-tertiary-fixed-variant":"#93000b","primary-fixed":"#dce1ff","primary":"#b7c4ff","on-primary":"#002682","surface-container-lowest":"#020e21","tertiary-fixed-dim":"#ffb4ab","surface-container-highest":"#28354a","on-tertiary-container":"#ffc7c1","primary-container":"#1d4ed8","on-error-container":"#ffdad6","surface-variant":"#28354a","surface-bright":"#2d3a4e","surface-container":"#132033","surface-container-high":"#1d2a3e","outline-variant":"#434655"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="px-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(104,219,169,0.4)]"></div><span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">CONSOLA EJECUTIVA</span></div><span class="font-label text-[11px] px-2 py-0.5 rounded-sm bg-surface-container text-secondary font-medium">v4.2-SEC</span></div><div class="px-6"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2"><span class="text-[11px] font-label uppercase tracking-wider text-outline">Taller Activo</span><div class="flex items-center justify-between"><span class="text-xs font-semibold text-on-surface truncate">CENC-01 Norte Metropolitana</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div></div></div><nav class="px-4 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><div class="px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Supervisión Operativa</div><a class="flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-operativo-ejecutivo" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Resumen Operativo</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warning</span><span>Centro de Discrepancias</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">published_with_changes</span><span>Registro de Reemplazo</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-02</span></a><div class="pt-4 px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Trazabilidad y Certificación</div><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">verified</span><span>Emisión de Certificados</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hoja-de-vida-del-vehiculo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">badge</span><span>Hoja de Vida Vehicular</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-02</span></a></nav></div><div class="px-5 flex flex-col gap-3"><div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="text-[11px] font-label uppercase text-outline">Canal Criptográfico</span><span class="text-xs font-semibold text-secondary flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>Ledger Activo (mTLS)</span></div><span class="material-symbols-outlined text-secondary text-[20px]">lock</span></div><div class="flex items-center justify-between px-2 pt-2"><span class="text-[11px] text-outline">SITAA Core v4.20</span><span class="text-[11px] font-label text-outline">Hash Sync OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Logotipo moderno y de alta tecnología para SITAA (Sistema de Integridad y Trazabilidad de Auditoría Automotriz). Isotipo heráldico y tecnológico estilizado combinando un escudo de ciberseguridad, nodos criptográficos y la letra 'S', acompañado de la tipografía angular y sólida 'SITAA' con un subtítulo 'INTEGRITY &amp; VEHICULAR AUDIT'. Tonos azul eléctrico (#3b82f6), cian (#06b6d4) y blanco sobre fondo oscuro.. Brand logo. - Primary color: #1d4ed8 - Font: inter - Mode: dark - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="h-5 w-[1px] bg-surface-container-high"></div><span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Sistema de Integridad y Trazabilidad</span></div><div class="flex items-center gap-5"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span class="text-xs font-medium text-on-surface-variant">Ambiente: <span class="text-on-surface font-semibold">Producción Segura</span></span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-3"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface">Auditor Ejecutivo</span><span class="text-[11px] font-label text-outline">ID: AUD-9842-EX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="px-8 py-8 flex flex-col gap-8 max-w-7xl mx-auto w-full">
+<!-- Top Action & Navigation Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary font-label text-xs tracking-wider uppercase font-semibold">RF-M05-02</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-medium">Historial de Servicio Premium &amp; Trazabilidad</span>
+</div>
+<h1 class="text-2xl lg:text-3xl font-bold text-on-surface tracking-tight">Hoja de Vida Vehicular Ejecutiva</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-2 transition-all shadow-sm" id="btn-share">
+<span class="material-symbols-outlined text-[18px] text-outline">share</span>
+<span>Compartir Ficha</span>
+</button>
+<button class="px-4 py-2.5 rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary-container text-xs font-semibold flex items-center gap-2 transition-all shadow-md group" id="btn-export-pdf">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-y-0.5">picture_as_pdf</span>
+<span>Descargar Hoja de Vida Completa (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Vehicle Hero & Snapshot Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Primary Vehicle Card -->
+<div class="lg:col-span-8 rounded-xl bg-surface-container-low p-6 lg:p-7 relative overflow-hidden flex flex-col justify-between shadow-lg">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6 relative z-10">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 flex-wrap">
+<span class="px-2.5 py-1 rounded-sm bg-surface-container-highest text-on-surface font-label text-xs tracking-widest font-semibold uppercase">
+                VIN: WAU-ZZZ-4J9-PA01892
+              </span>
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary text-xs font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Certificado Vigente (Oct 2025)
+              </span>
+</div>
+<div>
+<h2 class="text-2xl lg:text-3xl font-bold text-on-surface tracking-tight">Audi RS e-tron GT</h2>
+<p class="text-sm text-on-surface-variant font-medium mt-0.5">Edición Daytona Grey • Año Modelo 2023 • Tracción Total Quattro Eléctrica</p>
+</div>
+</div>
+<!-- Score Badge -->
+<div class="flex md:flex-col items-center md:items-end justify-between p-4 md:p-3 rounded-lg bg-surface-container md:bg-transparent shadow-sm md:shadow-none">
+<span class="text-xs font-semibold text-outline uppercase tracking-wider font-label">Índice Integridad</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="text-3xl lg:text-4xl font-extrabold text-secondary tracking-tight">98.4</span>
+<span class="text-sm font-semibold text-secondary">%</span>
+</div>
+<span class="text-[11px] font-medium text-secondary/90 bg-secondary/10 px-2 py-0.5 rounded-sm mt-1">Excelente</span>
+</div>
+</div>
+<!-- Vehicle Spec & Quick Telemetry Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 bg-surface-container/60 rounded-lg p-4 relative z-10">
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] uppercase tracking-wider font-label text-outline">Matrícula</span>
+<span class="text-sm font-semibold text-on-surface font-label">8492-MBR</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] uppercase tracking-wider font-label text-outline">Odómetro Auditado</span>
+<span class="text-sm font-semibold text-on-surface font-label">18,432 km</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] uppercase tracking-wider font-label text-outline">Estado Batería (SoH)</span>
+<span class="text-sm font-semibold text-secondary">99.1% Óptimo</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] uppercase tracking-wider font-label text-outline">Alertas Críticas</span>
+<span class="text-sm font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              0 Activas
+            </span>
+</div>
+</div>
+</div>
+<!-- Vehicle Visual Specimen Card -->
+<div class="lg:col-span-4 rounded-xl bg-surface-container-low p-6 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern dark gray Audi RS e-tron GT electric sports coupe parked in a pristine high-tech automotive inspection bay with subtle cool blue neon edge reflections and dark industrial slate surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCywySmU5i2H3KjMvTs6rO-o4D1TqBQJCxdaHyQKFrqm1CnLdCkrREpuj6iaGICkXfV9AWvX1xfmseNm3nrj1C5tgu4_NEneG5cNnis3G6K8-7DLWrlo9m9rmIzr_daAaGz7MnL7BzjMjaEWv6PX0pZQxaeq5aUR79CsJ1_hke-Sum8QO7yxBvUK-BLO2awaN8B2aMFFzESMXgTlUIvLWBD2ld5cWy5CPkPZgjWNNY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-3.5">
+<div class="flex items-center justify-between w-full">
+<span class="text-[11px] font-label font-semibold text-on-surface bg-surface-container-highest/80 backdrop-blur-md px-2 py-0.5 rounded-sm">Ficha Técnica ID #AT-994</span>
+<span class="text-[11px] text-on-surface-variant font-label">SITAA Shield Sync</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between pt-3">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Inspección Presencial y Telemática</span>
+<span class="text-[11px] text-outline font-label">Taller Oficial CENC-01 Norte</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Executive KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- KPI 1 -->
+<div class="rounded-xl bg-surface-container-low p-5 flex items-center justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-1">
+<span class="text-xs uppercase font-label tracking-wider text-outline">Hitos Certificados</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">24</span>
+<span class="text-xs font-semibold text-secondary">100% Inmutables</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Eventos de ciclo de vida auditados</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">event_available</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="rounded-xl bg-surface-container-low p-5 flex items-center justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-1">
+<span class="text-xs uppercase font-label tracking-wider text-outline">Sustituciones de Piezas</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-on-surface tracking-tight">2</span>
+<span class="text-xs font-semibold text-primary">Homologadas OEM</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Trazabilidad oficial de componentes</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">published_with_changes</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="rounded-xl bg-surface-container-low p-5 flex items-center justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-1">
+<span class="text-xs uppercase font-label tracking-wider text-outline">Integridad Odómetro</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold text-secondary tracking-tight">0</span>
+<span class="text-xs font-semibold text-secondary">Discrepancias</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Consistencia lineal en telemetría</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Timeline Section: Premium Service History -->
+<div class="rounded-xl bg-surface-container-low p-6 lg:p-8 flex flex-col gap-8 shadow-lg">
+<!-- Section Header with Quick Filter -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+<div class="flex flex-col gap-0.5">
+<h3 class="text-lg font-bold text-on-surface tracking-tight">Cronología Oficial de Servicio y Certificación</h3>
+<p class="text-xs text-on-surface-variant">Línea de custodia garantizada criptográficamente con respaldo de red oficial</p>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto bg-surface-container p-1 rounded-lg">
+<button class="px-3 py-1 rounded-md bg-surface-container-high text-on-surface text-xs font-semibold">Todos (5)</button>
+<button class="px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface text-xs font-medium transition-colors">Certificaciones</button>
+<button class="px-3 py-1 rounded-md text-on-surface-variant hover:text-on-surface text-xs font-medium transition-colors">Mantenimiento</button>
+</div>
+</div>
+<!-- Spacious Timeline Container -->
+<div class="relative flex flex-col gap-8 pl-4 sm:pl-8 before:absolute before:top-3 before:bottom-3 before:left-[27px] sm:before:left-[43px] before:w-0.5 before:bg-surface-container-high">
+<!-- Timeline Item 1: Gold Certificate (Oct 2024) -->
+<div class="relative flex items-start gap-4 sm:gap-6 group">
+<!-- Icon Indicator -->
+<div class="relative z-10 flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">workspace_premium</span>
+</div>
+<!-- Content Card -->
+<div class="flex-1 bg-surface-container p-5 sm:p-6 rounded-xl flex flex-col gap-4 shadow-sm hover:bg-surface-container-high/70 transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-sm bg-secondary/15 text-secondary text-xs font-semibold uppercase font-label">Nivel Oro</span>
+<h4 class="text-base font-bold text-on-surface">Certificado de Integridad Nivel Oro Emitido</h4>
+</div>
+<span class="text-xs font-label text-outline font-medium">18 Oct 2024 • 11:42 CET</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Superada satisfactoriamente la auditoría anual integral de software de propulsión, estado de paquetes de celdas de alto voltaje y coherencia de módulos de control. Sin observaciones pendientes.
+            </p>
+<div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Ver Acta Oficial
+                </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-outline">download</span>
+                  Descargar Comprobante
+                </button>
+</div>
+<!-- Technical Details Toggle -->
+<button class="text-xs text-outline hover:text-primary font-label flex items-center gap-1 transition-colors" onclick="toggleHash('hash-item-1')">
+<span>Ver detalle técnico / hash</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- Collapsible Technical Detail -->
+<div class="hidden mt-2 p-3.5 rounded-lg bg-surface-container-lowest text-[11px] font-label text-outline flex flex-col gap-1.5" id="hash-item-1">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold">Hash de Bloque Ledger (SHA-256):</span>
+<span class="text-secondary font-semibold">Validado ✓</span>
+</div>
+<p class="text-on-surface break-all select-all">0x4f9c8b7e21a44e59102c918f4a66bb3098e72da318f7762c9431e5bb09f1a2cc</p>
+<div class="flex items-center gap-4 text-[10px] text-outline pt-1">
+<span>Auditor: AUD-9842-EX</span>
+<span>Firma: ED25519-SITAA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2: Authorized Replacement (Sep 2024) -->
+<div class="relative flex items-start gap-4 sm:gap-6 group">
+<div class="relative z-10 flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-md ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">swap_driving_apps</span>
+</div>
+<div class="flex-1 bg-surface-container p-5 sm:p-6 rounded-xl flex flex-col gap-4 shadow-sm hover:bg-surface-container-high/70 transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-sm bg-primary/15 text-primary text-xs font-semibold uppercase font-label">Reemplazo Homologado</span>
+<h4 class="text-base font-bold text-on-surface">Sustitución de Sensor Frontal LiDAR &amp; Radar</h4>
+</div>
+<span class="text-xs font-label text-outline font-medium">29 Sep 2024 • 16:15 CET</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Recambio autorizado del sensor frontal por pequeña fractura de carcasa durante trayecto en autopista. Instalación de pieza original de fábrica con número de serie homologado e integrado en la red de seguridad del vehículo.
+            </p>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+<div class="flex items-center gap-2">
+<span class="text-outline font-label">Taller Responsable:</span>
+<span class="font-semibold text-on-surface">Audi Service Center Norte Metropolitano</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline font-label">Parte OEM:</span>
+<span class="font-label text-on-surface">#4K0-907-561-B</span>
+</div>
+</div>
+<div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+                  Ver Acta de Sustitución
+                </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-outline">download</span>
+                  Descargar Comprobante OEM
+                </button>
+</div>
+<button class="text-xs text-outline hover:text-primary font-label flex items-center gap-1 transition-colors" onclick="toggleHash('hash-item-2')">
+<span>Ver detalle técnico / hash</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="hidden mt-2 p-3.5 rounded-lg bg-surface-container-lowest text-[11px] font-label text-outline flex flex-col gap-1.5" id="hash-item-2">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold">Trazabilidad de Componente Sustituido:</span>
+<span class="text-secondary font-semibold">Pieza Homologada ✓</span>
+</div>
+<p class="text-on-surface break-all select-all">0x9182aa18bc0091ef7483921045bbffad31238947acbd7612e0915fcd918342aa</p>
+<div class="flex items-center gap-4 text-[10px] text-outline pt-1">
+<span>Serial Anterior: #LID-2023-8812</span>
+<span>Serial Actual: #LID-2024-9904</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3: Calibration Alert Resolved (Sep 2024) -->
+<div class="relative flex items-start gap-4 sm:gap-6 group">
+<div class="relative z-10 flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary shadow-md ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">tune</span>
+</div>
+<div class="flex-1 bg-surface-container p-5 sm:p-6 rounded-xl flex flex-col gap-4 shadow-sm hover:bg-surface-container-high/70 transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-sm bg-secondary/15 text-secondary text-xs font-semibold uppercase font-label">Resuelto con Éxito</span>
+<h4 class="text-base font-bold text-on-surface">Calibración Dinámica de Asistencias a la Conducción</h4>
+</div>
+<span class="text-xs font-label text-outline font-medium">14 Sep 2024 • 09:30 CET</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Notificación preventiva registrada por leve desajuste en el eje de guiado óptico tras cambio de neumáticos. Calibración dinámica en carretera completada al 100% de tolerancia milimétrica de fábrica.
+            </p>
+<div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+                  Ver Acta de Calibración
+                </button>
+</div>
+<button class="text-xs text-outline hover:text-primary font-label flex items-center gap-1 transition-colors" onclick="toggleHash('hash-item-3')">
+<span>Ver detalle técnico / hash</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="hidden mt-2 p-3.5 rounded-lg bg-surface-container-lowest text-[11px] font-label text-outline flex flex-col gap-1.5" id="hash-item-3">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold">Registro Telemático de Ajuste:</span>
+<span class="text-secondary font-semibold">Comprobado ✓</span>
+</div>
+<p class="text-on-surface break-all select-all">0x76cde8990145fa39b22a0149eef3228a011cd87413988290faedcbb89019aa12</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 4: Odometer Check (Mar 2024) -->
+<div class="relative flex items-start gap-4 sm:gap-6 group">
+<div class="relative z-10 flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shadow-md ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">av_timer</span>
+</div>
+<div class="flex-1 bg-surface-container p-5 sm:p-6 rounded-xl flex flex-col gap-4 shadow-sm hover:bg-surface-container-high/70 transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-sm bg-primary/15 text-primary text-xs font-semibold uppercase font-label">Telemetría Segura</span>
+<h4 class="text-base font-bold text-on-surface">Auditoría Periódica de Kilometraje y Odómetro</h4>
+</div>
+<span class="text-xs font-label text-outline font-medium">04 Mar 2024 • 14:10 CET</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Lectura y certificación de odómetro con correlación directa entre registros ECU, centralita de batería de tracción y nodos telemáticos del fabricante. Confirmados 14,820 km sin saltos ni alteraciones.
+            </p>
+<div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">assessment</span>
+                  Ver Certificado Odómetro
+                </button>
+</div>
+<button class="text-xs text-outline hover:text-primary font-label flex items-center gap-1 transition-colors" onclick="toggleHash('hash-item-4')">
+<span>Ver detalle técnico / hash</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="hidden mt-2 p-3.5 rounded-lg bg-surface-container-lowest text-[11px] font-label text-outline flex flex-col gap-1.5" id="hash-item-4">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold">Checksum Odómetro:</span>
+<span class="text-secondary font-semibold">0 Discrepancias ✓</span>
+</div>
+<p class="text-on-surface break-all select-all">0xaa9128fe73889028cb6177890aae8891040582bcdea11234988771120498acde</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 5: Birth / Delivery (Jan 2023) -->
+<div class="relative flex items-start gap-4 sm:gap-6 group">
+<div class="relative z-10 flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-outline shadow-md ring-4 ring-surface-container-low">
+<span class="material-symbols-outlined text-[20px] sm:text-[22px]">factory</span>
+</div>
+<div class="flex-1 bg-surface-container p-5 sm:p-6 rounded-xl flex flex-col gap-4 shadow-sm hover:bg-surface-container-high/70 transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-sm bg-surface-container-highest text-on-surface-variant text-xs font-semibold uppercase font-label">Origen Vehicular</span>
+<h4 class="text-base font-bold text-on-surface">Matriculación Inicial y Salida de Factoría Böllinger Höfe</h4>
+</div>
+<span class="text-xs font-label text-outline font-medium">12 Ene 2023 • 10:00 CET</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Génesis del gemelo digital y bloque de inicio (Genesis Block). Registro de origen por la planta de fabricación de Neckarsulm. Emisión del pasaporte criptográfico de trazabilidad europea.
+            </p>
+<div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2.5">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+                  Ver Certificado de Nacimiento
+                </button>
+</div>
+<button class="text-xs text-outline hover:text-primary font-label flex items-center gap-1 transition-colors" onclick="toggleHash('hash-item-5')">
+<span>Ver detalle técnico / hash</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="hidden mt-2 p-3.5 rounded-lg bg-surface-container-lowest text-[11px] font-label text-outline flex flex-col gap-1.5" id="hash-item-5">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant font-semibold">Bloque Génesis SITAA Core:</span>
+<span class="text-secondary font-semibold">Inmutable ✓</span>
+</div>
+<p class="text-on-surface break-all select-all">0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Assurance & Legal Seal Footer Deck -->
+<div class="p-6 rounded-xl bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Validez Notarial y Pericial Acreditada</span>
+<span class="text-[11px] text-outline">Documento conforme al Marco de Identidad y Auditoría Vehicular UE eIDAS y Ledger SITAA v4.2</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-xs text-outline">Última sincronización: Hoy, 08:30 CET</span>
+<button class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">
+<span>Verificación en línea</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleHash(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  }
+
+  // Toast notification for PDF export simulation
+  document.getElementById('btn-export-pdf')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Generando Documento Seguro...</span>';
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>¡Descarga Iniciada!</span>';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 2500);
+    }, 1200);
+  });
+
+  document.getElementById('btn-share')?.addEventListener('click', function() {
+    const originalText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">check</span><span>Enlace Copiado</span>';
+    setTimeout(() => {
+      this.innerHTML = originalText;
+    }, 2000);
+  });
+</script></main></div></body></html>

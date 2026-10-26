@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#243145","secondary-fixed-dim":"#68dba9","on-surface":"#d6e3fe","inverse-surface":"#d6e3fe","tertiary-fixed":"#ffdad6","background":"#061426","primary-fixed-dim":"#b7c4ff","tertiary":"#ffb4ab","on-error":"#690005","on-tertiary-fixed":"#410002","on-background":"#d6e3fe","on-secondary-fixed-variant":"#005137","on-secondary-container":"#00311f","tertiary-container":"#bb0112","surface":"#061426","on-primary-fixed":"#001551","surface-dim":"#061426","inverse-primary":"#2151da","on-tertiary":"#690005","outline":"#8e90a0","on-surface-variant":"#c4c5d7","secondary-container":"#25a475","error-container":"#93000a","on-secondary-fixed":"#002114","on-primary-container":"#cad3ff","secondary-fixed":"#85f8c4","error":"#ffb4ab","surface-tint":"#b7c4ff","secondary":"#68dba9","surface-container-low":"#0e1c2f","on-secondary":"#003825","on-tertiary-fixed-variant":"#93000b","primary-fixed":"#dce1ff","primary":"#b7c4ff","on-primary":"#002682","surface-container-lowest":"#020e21","tertiary-fixed-dim":"#ffb4ab","surface-container-highest":"#28354a","on-tertiary-container":"#ffc7c1","primary-container":"#1d4ed8","on-error-container":"#ffdad6","surface-variant":"#28354a","surface-bright":"#2d3a4e","surface-container":"#132033","surface-container-high":"#1d2a3e","outline-variant":"#434655"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="px-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(104,219,169,0.4)]"></div><span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">CONSOLA EJECUTIVA</span></div><span class="font-label text-[11px] px-2 py-0.5 rounded-sm bg-surface-container text-secondary font-medium">v4.2-SEC</span></div><div class="px-6"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2"><span class="text-[11px] font-label uppercase tracking-wider text-outline">Taller Activo</span><div class="flex items-center justify-between"><span class="text-xs font-semibold text-on-surface truncate">CENC-01 Norte Metropolitana</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div></div></div><nav class="px-4 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><div class="px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Supervisión Operativa</div><a class="flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-operativo-ejecutivo" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Resumen Operativo</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warning</span><span>Centro de Discrepancias</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">published_with_changes</span><span>Registro de Reemplazo</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-02</span></a><div class="pt-4 px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Trazabilidad y Certificación</div><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">verified</span><span>Emisión de Certificados</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hoja-de-vida-del-vehiculo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">badge</span><span>Hoja de Vida Vehicular</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-02</span></a></nav></div><div class="px-5 flex flex-col gap-3"><div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="text-[11px] font-label uppercase text-outline">Canal Criptográfico</span><span class="text-xs font-semibold text-secondary flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>Ledger Activo (mTLS)</span></div><span class="material-symbols-outlined text-secondary text-[20px]">lock</span></div><div class="flex items-center justify-between px-2 pt-2"><span class="text-[11px] text-outline">SITAA Core v4.20</span><span class="text-[11px] font-label text-outline">Hash Sync OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Logotipo moderno y de alta tecnología para SITAA (Sistema de Integridad y Trazabilidad de Auditoría Automotriz). Isotipo heráldico y tecnológico estilizado combinando un escudo de ciberseguridad, nodos criptográficos y la letra 'S', acompañado de la tipografía angular y sólida 'SITAA' con un subtítulo 'INTEGRITY &amp; VEHICULAR AUDIT'. Tonos azul eléctrico (#3b82f6), cian (#06b6d4) y blanco sobre fondo oscuro.. Brand logo. - Primary color: #1d4ed8 - Font: inter - Mode: dark - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="h-5 w-[1px] bg-surface-container-high"></div><span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Sistema de Integridad y Trazabilidad</span></div><div class="flex items-center gap-5"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span class="text-xs font-medium text-on-surface-variant">Ambiente: <span class="text-on-surface font-semibold">Producción Segura</span></span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-3"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface">Auditor Ejecutivo</span><span class="text-[11px] font-label text-outline">ID: AUD-9842-EX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="px-8 py-8 flex flex-col gap-8 max-w-7xl mx-auto w-full">
+<!-- Executive Title & Contextual Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-sm bg-primary-container/30 text-primary font-label text-xs uppercase tracking-wider font-semibold">RF-M05-01 // AUDITORÍA EXPEDIDA</span>
+<span class="flex items-center gap-1.5 text-xs text-secondary font-label">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+            LEDGER CONCILIADO
+          </span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight">
+          Certificado Oficial de Integridad Vehicular
+        </h1>
+<p class="text-sm text-on-surface-variant font-body">
+          Audi RS e-tron GT (2023) • Bastidor <span class="font-label text-primary font-semibold">WAUZZZF80P7018492</span> • Matrícula <span class="font-label text-on-surface font-semibold px-2 py-0.5 rounded-sm bg-surface-container-high">9482-LPM</span>
+</p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="px-4 py-2.5 rounded-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-semibold flex items-center gap-2 transition-all shadow-sm" id="copy-btn" onclick="copyVerificationLink()">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span id="copy-btn-text">Copiar Enlace Verificable</span>
+</button>
+<button class="px-4 py-2.5 rounded-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-semibold flex items-center gap-2 transition-all shadow-sm" onclick="triggerShareModal()">
+<span class="material-symbols-outlined text-sm">send_and_archive</span>
+<span>Enviar a Aseguradora / Tráfico</span>
+</button>
+<button class="px-5 py-2.5 rounded-sm bg-primary-container hover:bg-inverse-primary text-on-primary-container hover:text-white text-xs font-bold flex items-center gap-2 transition-all shadow-md" onclick="downloadCertificate()">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Descargar PDF Oficial Firmado</span>
+</button>
+</div>
+</div>
+<!-- Scorecard & Executive Highlight Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Main Integrity Score Card -->
+<div class="lg:col-span-8 bg-surface-container-low p-6 rounded-xl relative overflow-hidden flex flex-col justify-between shadow-xl">
+<div class="absolute -right-12 -top-12 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary shadow-[0_0_24px_rgba(104,219,169,0.2)]">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-bold">DICTAMEN PERICIAL INALTERABLE</span>
+<span class="text-2xl font-headline font-bold text-on-surface">100% ÍNTEGRO / NIVEL ORO</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-sm bg-secondary/10">
+<span class="material-symbols-outlined text-secondary text-base">military_tech</span>
+<span class="font-label text-xs uppercase tracking-wider text-secondary font-bold">SELLO DE CALIDAD SITA-CORE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase text-on-surface-variant">Conformidad Criptográfica</span>
+<span class="text-lg font-headline font-bold text-secondary flex items-center gap-1.5">
+              100% Sin Varianza
+            </span>
+<span class="text-[11px] text-outline">18/18 micro-hashes válidos</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase text-on-surface-variant">Índice de Depreciación Técnica</span>
+<span class="text-lg font-headline font-bold text-on-surface">0.00% Fraude</span>
+<span class="text-[11px] text-secondary">Aptitud de Reventa: Grado A1</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-[11px] font-label uppercase text-on-surface-variant">Timestamp de Custodia</span>
+<span class="text-sm font-label font-semibold text-on-surface truncate">2025-02-18 10:14:02 UTC</span>
+<span class="text-[11px] text-outline">Bloque SHA-256 verificado</span>
+</div>
+</div>
+</div>
+<!-- Vehicle Photo Context Card -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl overflow-hidden flex flex-col shadow-xl relative">
+<div class="relative w-full h-44 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-resolution studio photograph of a dark sleek Audi RS e-tron GT electric sports car in an automotive testing laboratory, bathed in subtle cyan and slate accent lighting, sharp clean lines, automotive inspection ambiance, hyper-realistic, 8k resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzT1qefWyWOJ9mdxc6symLvaF6U8QkBvZKK6D-_GxwYD-QIkfEIcfAyQX46RryHVRF5oFGImGMDtuwu2xgKk_dHTj4cMMz7lBhGpwpS_--hsxjDJMvciPOunVwHZysIuvvMmIsfJgACujqqcu0Bhgwz13HtR-ab5YaTAJM3AWbh0DehYrMc_LfdsU9dUJlfpUFtS9YiFyI-UV1bp2LbbpEtFDLLf59OCmlWEYt7DA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<span class="absolute top-3 left-3 px-2 py-1 rounded-sm bg-surface-container-lowest/80 backdrop-blur-md text-[10px] font-label uppercase text-secondary font-semibold">Unidad Auditada</span>
+</div>
+<div class="p-4 flex flex-col justify-between flex-1 gap-2">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Inspección de Certificación:</span>
+<span class="font-label text-on-surface font-semibold">Madrid CENC-01</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Inspector Jefe:</span>
+<span class="text-on-surface font-medium">Ing. Rafael Méndez (Perito #449)</span>
+</div>
+<div class="flex justify-between items-center text-xs pt-1">
+<span class="text-on-surface-variant">Vigencia del Dictamen:</span>
+<span class="text-secondary font-label font-bold">12 Meses Oficial</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4 Subsystems Quick Status Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Subsystem 1: Motor y Electrónica -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-4 shadow-md transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">electric_bolt</span>
+</div>
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary font-label text-[10px] font-bold uppercase">CORRECTO</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Tren Motriz</span>
+<h3 class="text-base font-headline font-bold text-on-surface">Motor y Electrónica</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Configuración original de fábrica (Dual e-Motor 440kW). Inversores sin firmware adulterado.</p>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label text-outline">
+<span>Firmware Checksum</span>
+<span class="text-secondary font-semibold">ECU: MATCH OK</span>
+</div>
+</div>
+<!-- Subsystem 2: Batería HV -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-4 shadow-md transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">battery_charging_full</span>
+</div>
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary font-label text-[10px] font-bold uppercase">ÓPTIMO</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Acumulador 800V</span>
+<h3 class="text-base font-headline font-bold text-on-surface">Batería de Alto Voltaje</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Salud de celdas al 97.4% (SoH). Sin manipulaciones en BMS ni bypass de módulos.</p>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label text-outline">
+<span>Estado de Salud (SoH)</span>
+<span class="text-secondary font-semibold">97.4% (33 Celdas OK)</span>
+</div>
+</div>
+<!-- Subsystem 3: Odómetro y Kilometraje -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-4 shadow-md transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">speed</span>
+</div>
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary font-label text-[10px] font-bold uppercase">VERIFICADO</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Telemetría de Uso</span>
+<h3 class="text-base font-headline font-bold text-on-surface">Odómetro y Kilometraje</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">42,150 km verificados sin saltos temporales ni rollback. Correlación con ECU e Infotainment.</p>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label text-outline">
+<span>Historial Telemático</span>
+<span class="text-secondary font-semibold">42.150 km REALES</span>
+</div>
+</div>
+<!-- Subsystem 4: Seguridad y ADAS -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col justify-between gap-4 shadow-md transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">sensors</span>
+</div>
+<span class="px-2 py-0.5 rounded-sm bg-secondary/15 text-secondary font-label text-[10px] font-bold uppercase">CALIBRADO</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Sistemas Activos</span>
+<h3 class="text-base font-headline font-bold text-on-surface">Seguridad y Sensores ADAS</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Cámaras estereoscópicas, radares frontales y LiDAR alineados bajo tolerancia estricta.</p>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px] font-label text-outline">
+<span>Tolerancia de Calibración</span>
+<span class="text-secondary font-semibold">Δ 0.02° (Dentro de norma)</span>
+</div>
+</div>
+</div>
+<!-- Digital Certificate A4 Preview & Cryptographic Verification Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left: Interactive Realistic A4 Certificate Viewer -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+<h2 class="text-base font-headline font-semibold text-on-surface">Previsualización del Certificado Digital (A4 Oficial)</h2>
+</div>
+<span class="font-label text-xs text-on-surface-variant">Formato DIN A4 / PDF-A/3</span>
+</div>
+<!-- Styled A4 Sheet Mockup -->
+<div class="w-full bg-surface-container-low p-6 sm:p-8 rounded-xl shadow-2xl relative overflow-hidden flex flex-col gap-6 text-on-surface">
+<!-- Official Certificate Top Seal Band -->
+<div class="flex items-start justify-between pb-6 bg-surface-container p-6 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-label font-bold text-lg">
+                S
+              </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm tracking-wide text-on-surface">SITAA • SISTEMA DE INTEGRIDAD VEHICULAR</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-wider">CERTIFICACIÓN CRIPTOGRÁFICA OFICIAL - LEY 11/2007</span>
+</div>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-label text-xs font-bold text-secondary">FOLIO #CERT-2025-09842</span>
+<span class="font-label text-[10px] text-outline">EXPEDIDO: 18/FEB/2025</span>
+</div>
+</div>
+<!-- Certificate Core Content Details -->
+<div class="grid grid-cols-2 gap-4 text-xs">
+<div class="bg-surface-container p-3 rounded-lg flex flex-col gap-1">
+<span class="text-outline uppercase font-label text-[10px]">Vehículo</span>
+<span class="font-semibold text-on-surface text-sm">Audi RS e-tron GT (2023)</span>
+<span class="text-on-surface-variant text-[11px]">Sedán Eléctrico Deportivo • 598 CV</span>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex flex-col gap-1">
+<span class="text-outline uppercase font-label text-[10px]">Identificación Oficial</span>
+<span class="font-semibold text-on-surface text-sm">Matrícula: 9482-LPM</span>
+<span class="font-label text-primary text-[11px] truncate">VIN: WAUZZZF80P7018492</span>
+</div>
+</div>
+<!-- Official Evaluation Breakdown inside A4 -->
+<div class="bg-surface-container p-4 rounded-lg flex flex-col gap-3">
+<span class="font-label text-[11px] uppercase tracking-wider text-outline">Sumario de Calificación Técnica</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+<div class="p-2 rounded bg-surface-container-high flex flex-col">
+<span class="text-[10px] text-outline font-label">Batería</span>
+<span class="font-headline font-bold text-secondary text-sm">97.4%</span>
+<span class="text-[9px] text-on-surface-variant">Grado A</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col">
+<span class="text-[10px] text-outline font-label">Kms Auditados</span>
+<span class="font-headline font-bold text-secondary text-sm">42,150</span>
+<span class="text-[9px] text-on-surface-variant">Certificados</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col">
+<span class="text-[10px] text-outline font-label">Chasis</span>
+<span class="font-headline font-bold text-secondary text-sm">Sin Vicios</span>
+<span class="text-[9px] text-on-surface-variant">Original</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col">
+<span class="text-[10px] text-outline font-label">Software</span>
+<span class="font-headline font-bold text-secondary text-sm">OEM v4.9</span>
+<span class="text-[9px] text-on-surface-variant">Inalterado</span>
+</div>
+</div>
+</div>
+<!-- QR Verification & Digital Signatures Footnote -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-lg bg-surface-container">
+<!-- Stylized QR Code Component -->
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 bg-on-surface p-1.5 rounded-md flex items-center justify-center shadow-inner">
+<!-- SVG Vector QR Code Replica -->
+<svg class="w-full h-full text-surface-container-lowest" fill="currentColor" viewbox="0 0 100 100">
+<!-- Outer corners -->
+<path d="M0,0 h30 v30 h-30 z M6,6 v18 h18 v-18 z M10,10 h10 v10 h-10 z"></path>
+<path d="M70,0 h30 v30 h-30 z M76,6 v18 h18 v-18 z M80,10 h10 v10 h-10 z"></path>
+<path d="M0,70 h30 v30 h-30 z M6,76 v18 h18 v-18 z M10,80 h10 v10 h-10 z"></path>
+<!-- Data matrix blocks -->
+<rect height="6" width="6" x="36" y="8"></rect>
+<rect height="6" width="8" x="46" y="8"></rect>
+<rect height="8" width="6" x="58" y="16"></rect>
+<rect height="6" width="8" x="36" y="24"></rect>
+<rect height="6" width="6" x="48" y="28"></rect>
+<rect height="8" width="6" x="8" y="38"></rect>
+<rect height="6" width="8" x="18" y="44"></rect>
+<rect height="6" width="6" x="28" y="36"></rect>
+<rect height="20" width="20" x="40" y="40"></rect>
+<rect height="8" width="6" x="64" y="38"></rect>
+<rect height="8" width="8" x="74" y="44"></rect>
+<rect height="6" width="6" x="86" y="36"></rect>
+<rect height="8" width="8" x="36" y="68"></rect>
+<rect height="12" width="6" x="50" y="64"></rect>
+<rect height="6" width="10" x="62" y="74"></rect>
+<rect height="6" width="14" x="78" y="68"></rect>
+<rect height="12" width="8" x="74" y="80"></rect>
+<rect height="6" width="6" x="88" y="86"></rect>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-headline font-bold text-on-surface">Escaneo de Verificación Pública</span>
+<span class="text-[11px] text-on-surface-variant">Válido para DGT, Consorcio de Seguros y Comprador final.</span>
+<span class="font-label text-[10px] text-secondary font-medium mt-1">https://verify.sitaa.org/audit/9482LPM</span>
+</div>
+</div>
+<!-- Digital Seal Stamp -->
+<div class="text-center sm:text-right flex flex-col items-center sm:items-end">
+<div class="px-3 py-1 rounded bg-secondary/15 text-secondary font-label text-xs font-bold uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">lock</span>
+                FIRMADO ELECTRÓNICAMENTE
+              </div>
+<span class="text-[10px] font-label text-outline mt-1">Certificado X.509 RSA-4096</span>
+<span class="text-[10px] font-label text-outline">AC Camerfirma • TSA Timestamped</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Verification Actions, Audit Trail & Collapsible Cryptographic Proofs -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Direct Executive Actions Card -->
+<div class="p-6 rounded-xl bg-surface-container-low flex flex-col gap-4 shadow-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">task_alt</span>
+<h3 class="text-sm font-headline font-bold text-on-surface uppercase tracking-wider">Acciones Ejecutivas Inmediatas</h3>
+</div>
+<p class="text-xs text-on-surface-variant">
+            El certificado digital cuenta con valor probatorio pericial bajo la normativa de trazabilidad europea. Seleccione el canal de distribución requerido:
+          </p>
+<div class="flex flex-col gap-2.5 pt-1">
+<button class="w-full py-3 px-4 rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container hover:text-white font-headline text-sm font-semibold flex items-center justify-between transition-all shadow-md" onclick="downloadCertificate()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                Descargar Certificado PDF Oficial
+              </span>
+<span class="font-label text-xs">2.4 MB</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline text-xs font-semibold flex items-center justify-between transition-all" onclick="triggerShareModal()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">account_balance</span>
+                Emitir a Tráfico (DGT) y Aseguradora
+              </span>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline text-xs font-semibold flex items-center justify-between transition-all" onclick="copyVerificationLink()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">link</span>
+                Copiar Enlace de Verificación Pública
+              </span>
+<span class="material-symbols-outlined text-sm text-outline">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Technical Cryptographic Hash Section -->
+<div class="rounded-xl bg-surface-container-low shadow-xl overflow-hidden transition-all">
+<button class="w-full p-4 flex items-center justify-between bg-surface-container-low hover:bg-surface-container transition-colors text-left" onclick="toggleCryptoDropdown()">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg">terminal</span>
+<div class="flex flex-col">
+<span class="text-xs font-headline font-semibold text-on-surface">Detalle Técnico de Bloque y Firma Criptográfica</span>
+<span class="text-[11px] font-label text-outline">SHA-256 State • Árbol de Merkle • Ledger mTLS</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="dropdown-chevron">expand_more</span>
+</button>
+<!-- Collapsible Content -->
+<div class="hidden p-5 bg-surface-container-lowest flex flex-col gap-4" id="crypto-panel">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label uppercase text-outline">Hash de Bloque (Root Merkle Hash)</span>
+<div class="p-2.5 rounded bg-surface-container font-label text-[11px] text-secondary break-all flex items-center justify-between">
+<span>0x8fa3e29fbc4102c918349bbcd9103e84712ef01a938cde1109a01847c2fa89b2</span>
+<span class="material-symbols-outlined text-xs text-outline cursor-pointer hover:text-white" onclick="navigator.clipboard.writeText('0x8fa3e29fbc4102c918349bbcd9103e84712ef01a938cde1109a01847c2fa89b2')">content_copy</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label uppercase text-outline">Firma Digital del Perito (ED25519)</span>
+<div class="p-2.5 rounded bg-surface-container font-label text-[11px] text-primary break-all">
+                sig:3b9f42..ce781190a4df78bc0981aa4582f001
+              </div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-xs pt-1">
+<div class="flex flex-col gap-0.5">
+<span class="text-[10px] font-label uppercase text-outline">Nodo Ledger</span>
+<span class="font-label text-on-surface text-[11px]">MAD-SITAA-NODE-04</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[10px] font-label uppercase text-outline">Consenso</span>
+<span class="font-label text-secondary text-[11px]">PBFT (Finalizado)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[10px] font-label uppercase text-outline">Protocolo</span>
+<span class="font-label text-on-surface text-[11px]">mTLS v1.3 Zero-Trust</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[10px] font-label uppercase text-outline">Sello Temporal</span>
+<span class="font-label text-on-surface text-[11px]">1739873642.089 Unix</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Banner / Micro-Audit status -->
+<div class="p-4 rounded-xl bg-surface-container-high/40 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl">format_image_left</span>
+<div class="flex flex-col text-xs">
+<span class="font-semibold text-on-surface">Cadena de Custodia Imputable</span>
+<span class="text-on-surface-variant">Cualquier intento de alteración física o de software invalidará la firma del QR automáticamente.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Simulated Toast Feedback Notification for Interaction -->
+<div class="fixed bottom-6 right-6 px-4 py-3 rounded-lg bg-surface-container-highest text-on-surface shadow-2xl flex items-center gap-3 transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="toast-notify">
+<span class="material-symbols-outlined text-secondary text-lg" id="toast-icon">check_circle</span>
+<span class="text-xs font-semibold" id="toast-msg">Acción ejecutada correctamente.</span>
+</div>
+</div>
+<script>
+  function toggleCryptoDropdown() {
+    const panel = document.getElementById('crypto-panel');
+    const chevron = document.getElementById('dropdown-chevron');
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      panel.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('toast-notify');
+    const msg = document.getElementById('toast-msg');
+    const ico = document.getElementById('toast-icon');
+    
+    msg.textContent = message;
+    ico.textContent = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2800);
+  }
+
+  function copyVerificationLink() {
+    const url = "https://verify.sitaa.org/audit/9482LPM-WAUZZZF80P7018492";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Enlace de verificación copiado al portapapeles", "link");
+      });
+    } else {
+      showToast("Enlace copiado: " + url, "link");
+    }
+  }
+
+  function downloadCertificate() {
+    showToast("Generando y descargando PDF firmado digitalmente...", "download");
+  }
+
+  function triggerShareModal() {
+    showToast("Expediente transmitido a DGT y Consorcio de Aseguradoras vía mTLS", "send");
+  }
+</script></main></div></body></html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#243145","secondary-fixed-dim":"#68dba9","on-surface":"#d6e3fe","inverse-surface":"#d6e3fe","tertiary-fixed":"#ffdad6","background":"#061426","primary-fixed-dim":"#b7c4ff","tertiary":"#ffb4ab","on-error":"#690005","on-tertiary-fixed":"#410002","on-background":"#d6e3fe","on-secondary-fixed-variant":"#005137","on-secondary-container":"#00311f","tertiary-container":"#bb0112","surface":"#061426","on-primary-fixed":"#001551","surface-dim":"#061426","inverse-primary":"#2151da","on-tertiary":"#690005","outline":"#8e90a0","on-surface-variant":"#c4c5d7","secondary-container":"#25a475","error-container":"#93000a","on-secondary-fixed":"#002114","on-primary-container":"#cad3ff","secondary-fixed":"#85f8c4","error":"#ffb4ab","surface-tint":"#b7c4ff","secondary":"#68dba9","surface-container-low":"#0e1c2f","on-secondary":"#003825","on-tertiary-fixed-variant":"#93000b","primary-fixed":"#dce1ff","primary":"#b7c4ff","on-primary":"#002682","surface-container-lowest":"#020e21","tertiary-fixed-dim":"#ffb4ab","surface-container-highest":"#28354a","on-tertiary-container":"#ffc7c1","primary-container":"#1d4ed8","on-error-container":"#ffdad6","surface-variant":"#28354a","surface-bright":"#2d3a4e","surface-container":"#132033","surface-container-high":"#1d2a3e","outline-variant":"#434655"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="px-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(104,219,169,0.4)]"></div><span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">CONSOLA EJECUTIVA</span></div><span class="font-label text-[11px] px-2 py-0.5 rounded-sm bg-surface-container text-secondary font-medium">v4.2-SEC</span></div><div class="px-6"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2"><span class="text-[11px] font-label uppercase tracking-wider text-outline">Taller Activo</span><div class="flex items-center justify-between"><span class="text-xs font-semibold text-on-surface truncate">CENC-01 Norte Metropolitana</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div></div></div><nav class="px-4 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><div class="px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Supervisión Operativa</div><a class="flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-operativo-ejecutivo" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Resumen Operativo</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warning</span><span>Centro de Discrepancias</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-01</span></a><a aria-current="page" class="flex items-center justify-between px-3.5 py-3 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="registro-de-reemplazo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">published_with_changes</span><span>Registro de Reemplazo</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-02</span></a><div class="pt-4 px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Trazabilidad y Certificación</div><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">verified</span><span>Emisión de Certificados</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hoja-de-vida-del-vehiculo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">badge</span><span>Hoja de Vida Vehicular</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-02</span></a></nav></div><div class="px-5 flex flex-col gap-3"><div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="text-[11px] font-label uppercase text-outline">Canal Criptográfico</span><span class="text-xs font-semibold text-secondary flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>Ledger Activo (mTLS)</span></div><span class="material-symbols-outlined text-secondary text-[20px]">lock</span></div><div class="flex items-center justify-between px-2 pt-2"><span class="text-[11px] text-outline">SITAA Core v4.20</span><span class="text-[11px] font-label text-outline">Hash Sync OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Logotipo moderno y de alta tecnología para SITAA (Sistema de Integridad y Trazabilidad de Auditoría Automotriz). Isotipo heráldico y tecnológico estilizado combinando un escudo de ciberseguridad, nodos criptográficos y la letra 'S', acompañado de la tipografía angular y sólida 'SITAA' con un subtítulo 'INTEGRITY &amp; VEHICULAR AUDIT'. Tonos azul eléctrico (#3b82f6), cian (#06b6d4) y blanco sobre fondo oscuro.. Brand logo. - Primary color: #1d4ed8 - Font: inter - Mode: dark - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="h-5 w-[1px] bg-surface-container-high"></div><span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Sistema de Integridad y Trazabilidad</span></div><div class="flex items-center gap-5"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span class="text-xs font-medium text-on-surface-variant">Ambiente: <span class="text-on-surface font-semibold">Producción Segura</span></span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-3"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface">Auditor Ejecutivo</span><span class="text-[11px] font-label text-outline">ID: AUD-9842-EX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full px-6 lg:px-10 py-8 flex flex-col gap-8 max-w-7xl mx-auto">
+<!-- Header Panel: Vehículo y Orden de Trabajo -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-6 shadow-md">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="p-3.5 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-3xl">electric_bolt</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="text-xs font-label uppercase tracking-widest text-secondary font-semibold bg-surface-container-high px-2.5 py-0.5 rounded-sm">RF-M04-02</span>
+<span class="text-xs text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span> Taller Autorizado Oficial
+              </span>
+</div>
+<h1 class="text-2xl lg:text-3xl font-bold tracking-tight text-on-surface">Porsche Taycan 4S <span class="text-on-surface-variant font-normal text-xl">(2023)</span></h1>
+<div class="flex items-center gap-3 text-xs text-on-surface-variant mt-0.5">
+<span>Placa: <strong class="text-on-surface">LXP-492-Z</strong></span>
+<span>•</span>
+<span>Kilometraje: <strong class="text-on-surface font-label">28,410 km</strong></span>
+</div>
+</div>
+</div>
+<!-- Badges de contexto operativo -->
+<div class="flex items-center gap-4 flex-wrap bg-surface-container-low p-3.5 rounded-xl">
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] font-label text-outline uppercase tracking-wider">Número VIN</span>
+<span class="font-label text-xs font-semibold text-primary tracking-wider">WP0AA2Y15PSA93821</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col gap-0.5">
+<span class="text-[11px] font-label text-outline uppercase tracking-wider">Orden de Trabajo</span>
+<span class="font-label text-xs font-semibold text-on-surface">OT-2024-0941</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-highest">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-medium text-secondary">Modo Asistente</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stepper de Progreso Intuitivo -->
+<div class="bg-surface-container-low p-4 lg:p-6 rounded-xl shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative">
+<!-- Paso 1: Completado -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-surface-container transition-all">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[10px] font-label text-secondary uppercase font-semibold">Paso 1 • Completado</span>
+<span class="text-sm font-semibold text-on-surface truncate">Diagnóstico de Baja</span>
+</div>
+</div>
+<!-- Paso 2: Activo Actual -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-primary-container/20 text-on-surface transition-all shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm shrink-0">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-[10px] font-label text-primary uppercase font-semibold">Paso 2 • En Proceso</span>
+<span class="text-sm font-bold text-on-surface truncate">Pieza Homologada</span>
+</div>
+</div>
+<!-- Paso 3: Pendiente -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-surface-container/60 opacity-70 transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-outline flex items-center justify-center font-medium text-sm shrink-0">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="text-[10px] font-label text-outline uppercase font-semibold">Paso 3 • Próximo</span>
+<span class="text-sm font-medium text-on-surface-variant truncate">Validación y Firma</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparativa Visual: Retiro (Baja) vs Nuevo Recambio (Alta) -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">published_with_changes</span>
+          Sustitución de Componente Crítico
+        </h2>
+<span class="text-xs text-outline font-label">Submódulo: Inversión de Tracción Delantera</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Tarjeta Izquierda: Componente Dado de Baja -->
+<div class="rounded-xl bg-surface-container p-6 flex flex-col justify-between relative shadow-md">
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-md bg-tertiary-container/30 text-tertiary text-xs font-semibold uppercase font-label flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">remove_circle</span> Pieza a Retirar (Baja)
+              </span>
+<span class="text-xs font-label text-outline">Ref: INV-FR-992-A</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-3xl">power_off</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-base font-bold text-on-surface">Inversor de Potencia Frontal</h3>
+<p class="text-xs text-on-surface-variant">Serie Fabricante: <span class="font-label text-on-surface">SN-PORS-883109-F</span></p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-error-container/20 text-error text-xs font-medium w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Falla aislada detectada (Código E-702)
+                </div>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low text-xs text-on-surface-variant flex flex-col gap-1.5">
+<div class="flex justify-between">
+<span>Razón de baja:</span>
+<span class="font-medium text-on-surface">Degradación térmica controlada</span>
+</div>
+<div class="flex justify-between">
+<span>Certificado previo:</span>
+<span class="font-label text-primary">CERT-94021-V</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-base">check_circle</span>
+              Desmontaje físico completado
+            </div>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-xs font-semibold text-on-surface flex items-center gap-2 transition-all" id="btn-desvincular" onclick="desvincularPieza()">
+<span class="material-symbols-outlined text-sm text-secondary">link_off</span>
+<span id="text-desvincular">Pieza Desvinculada OK</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta Derecha: Componente Autorizado Nuevo -->
+<div class="rounded-xl bg-surface-container p-6 flex flex-col justify-between relative shadow-md">
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-md bg-secondary-container/30 text-secondary text-xs font-semibold uppercase font-label flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">add_circle</span> Pieza Entrante (Alta)
+              </span>
+<span class="text-xs font-label text-secondary font-semibold">Precinto de Fábrica Válido</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-base font-bold text-on-surface">Nuevo Inversor OEM Bosch</h3>
+<p class="text-xs text-on-surface-variant">Serie Nueva: <span class="font-label text-on-surface">SN-BSH-449102-X</span></p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-medium w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Homologado 100% verificado
+                </div>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low text-xs text-on-surface-variant flex flex-col gap-1.5">
+<div class="flex justify-between">
+<span>Homologación:</span>
+<span class="font-medium text-on-surface">OEM Certificada TÜV SÜD</span>
+</div>
+<div class="flex justify-between">
+<span>Hash de Trazabilidad:</span>
+<span class="font-label text-secondary truncate max-w-[180px]">0x82f4c9...71ab</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2 text-xs text-outline">
+<span class="material-symbols-outlined text-base text-primary">qr_code_scanner</span>
+              Listo para emparejamiento
+            </div>
+<button class="px-4 py-2.5 rounded-lg bg-primary-container hover:bg-on-primary-fixed-variant text-xs font-semibold text-on-primary-container flex items-center gap-2 transition-all shadow-sm" onclick="escanearCodigo()">
+<span class="material-symbols-outlined text-sm">qr_code_2</span>
+<span>Escanear QR / Código de Barras</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sección de Evidencias Fotográficas -->
+<div class="bg-surface-container rounded-xl p-6 shadow-md flex flex-col gap-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h2 class="text-base font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">photo_camera</span>
+            Evidencias Fotográficas Obligatorias
+          </h2>
+<p class="text-xs text-on-surface-variant">Adjunte fotos nítidas del precinto de seguridad y conector de alto voltaje conectado.</p>
+</div>
+<span class="text-xs font-label text-secondary bg-surface-container-low px-2.5 py-1 rounded">2 de 2 Requeridas</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Evidencia 1: Precinto de Seguridad -->
+<div class="group relative rounded-xl bg-surface-container-low p-4 flex flex-col gap-3 transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Foto 1: Precinto de Seguridad
+            </span>
+<span class="text-[11px] font-label text-secondary font-medium">Cargado OK</span>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close up forensic photographic evidence of a tamper evident holographic blue and silver seal on a high voltage automotive inverter casing. Sharp macro focus showing the pristine serial code and clean matte dark metallic texture under cool workshop inspection lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChxCTyIsRZDARL4OVniE9-J-7PtvhHe-_UMn_L4KO3bevEA5m_ezWQDdUyQzJdhXeKhDMbCUNa-GexSHCVQMhJQslcKiiDEHyaVn0s1SMpquIiVzotTTYI6GcKWt_sVwsCZ4abg8V5Rp4Pg28c-n3VEKI0OcTiMeQVIXc_i8dYDGA5zb0uPnj8l-cKOy7ZsskFAmotg7QCODtxze_5sAc3QczHpRJUmloSQH26zE8"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-[11px] font-label text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+              PRECINTO-OK-98.jpg
+            </div>
+<button class="absolute top-2 right-2 p-1.5 rounded-md bg-surface-container-lowest/70 hover:bg-surface-container-lowest text-on-surface text-xs transition-colors">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline">
+<span>Hora: 14:32:09 CET</span>
+<span>Checksum: SHA256-Válido</span>
+</div>
+</div>
+<!-- Evidencia 2: Conector de Alto Voltaje -->
+<div class="group relative rounded-xl bg-surface-container-low p-4 flex flex-col gap-3 transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Foto 2: Conector HV Acoplado
+            </span>
+<span class="text-[11px] font-label text-secondary font-medium">Cargado OK</span>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Detailed technical close up photo of an orange high voltage insulated connector securely locked into the electric vehicle power module. Crisp studio-grade inspection lighting highlights the dual locking tab and intact harness seal with zero play or damage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYgeIxl_tfVbYVR6KN-Z3mm1fQ1tGEggi-HW7M9R0Q2sSOBqrmE63S25k8MmYbI8z7L_zEAo9MrNUgDGyagggQGh58mrbenHr0huSkF7vtx7QD9j7XDhSj1JELc3VFORwK--EE-7ZgnPxft4n1POaTIsL7LxYJhITXues5NPLjDtCmSxguf5R4iLvL0oJsTH2WvAwX6NqOio7R1TVcSfpQnIomTbwN-rx3m_E6dg8"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-[11px] font-label text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+              CONECTOR-HV-LOK.jpg
+            </div>
+<button class="absolute top-2 right-2 p-1.5 rounded-md bg-surface-container-lowest/70 hover:bg-surface-container-lowest text-on-surface text-xs transition-colors">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline">
+<span>Hora: 14:35:44 CET</span>
+<span>Torque Verificado: 14.5 Nm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Confirmación Ejecutiva y Acción Principal -->
+<div class="bg-surface-container p-6 lg:p-8 rounded-xl shadow-lg flex flex-col gap-6">
+<!-- Checkbox de Certificación -->
+<label class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 w-5 h-5 rounded text-primary focus:ring-0 focus:outline-none accent-primary-container shrink-0 cursor-pointer" id="check-confirm" type="checkbox"/>
+<div class="flex flex-col gap-1">
+<span class="text-sm font-semibold text-on-surface leading-tight">
+            Certifico la correcta instalación del recambio oficial bajo protocolo de seguridad.
+          </span>
+<p class="text-xs text-on-surface-variant">
+            Esta acción generará un bloque inmutable en el registro vehicular de SITAA, invalidará el número de serie anterior y vinculará la garantía del fabricante al chasis actual.
+          </p>
+</div>
+</label>
+<!-- Botonera de Acción Destacada -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-3 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg">enhanced_encryption</span>
+<span>Firma digital con token de auditor: <strong class="text-on-surface font-label">AUD-9842-EX</strong></span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="w-1/2 sm:w-auto px-5 py-3 rounded-xl bg-surface-container-high hover:bg-surface-bright text-xs font-semibold text-on-surface-variant hover:text-on-surface transition-all">
+            Guardar Borrador
+          </button>
+<button class="w-1/2 sm:w-auto px-8 py-3.5 rounded-xl bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary-container font-bold text-sm tracking-wide shadow-xl flex items-center justify-center gap-2.5 transition-all transform active:scale-95" id="btn-autorizar" onclick="ejecutarAutorizacion()">
+<span class="material-symbols-outlined text-lg">draw</span>
+<span>Firmar y Autorizar Reemplazo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function desvincularPieza() {
+    const textEl = document.getElementById('text-desvincular');
+    const btn = document.getElementById('btn-desvincular');
+    textEl.textContent = 'Desvinculación Confirmada';
+    btn.classList.remove('bg-surface-container-highest');
+    btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+  }
+
+  function escanearCodigo() {
+    alert('Iniciando lector óptico SITAA... Cámara lista para código DataMatrix Bosch.');
+  }
+
+  function ejecutarAutorizacion() {
+    const check = document.getElementById('check-confirm');
+    const btn = document.getElementById('btn-autorizar');
+    if (!check.checked) {
+      alert('Por favor acepte la certificación de instalación para proceder.');
+      return;
+    }
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">sync</span><span>Sellando Registro Criptográfico...</span>';
+    setTimeout(() => {
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      btn.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span><span>Reemplazo Autorizado y Sellado</span>';
+    }, 1200);
+  }
+</script></main></div></body></html>

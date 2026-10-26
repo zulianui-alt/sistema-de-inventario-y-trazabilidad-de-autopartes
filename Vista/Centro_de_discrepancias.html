@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#0039b5","inverse-on-surface":"#243145","secondary-fixed-dim":"#68dba9","on-surface":"#d6e3fe","inverse-surface":"#d6e3fe","tertiary-fixed":"#ffdad6","background":"#061426","primary-fixed-dim":"#b7c4ff","tertiary":"#ffb4ab","on-error":"#690005","on-tertiary-fixed":"#410002","on-background":"#d6e3fe","on-secondary-fixed-variant":"#005137","on-secondary-container":"#00311f","tertiary-container":"#bb0112","surface":"#061426","on-primary-fixed":"#001551","surface-dim":"#061426","inverse-primary":"#2151da","on-tertiary":"#690005","outline":"#8e90a0","on-surface-variant":"#c4c5d7","secondary-container":"#25a475","error-container":"#93000a","on-secondary-fixed":"#002114","on-primary-container":"#cad3ff","secondary-fixed":"#85f8c4","error":"#ffb4ab","surface-tint":"#b7c4ff","secondary":"#68dba9","surface-container-low":"#0e1c2f","on-secondary":"#003825","on-tertiary-fixed-variant":"#93000b","primary-fixed":"#dce1ff","primary":"#b7c4ff","on-primary":"#002682","surface-container-lowest":"#020e21","tertiary-fixed-dim":"#ffb4ab","surface-container-highest":"#28354a","on-tertiary-container":"#ffc7c1","primary-container":"#1d4ed8","on-error-container":"#ffdad6","surface-variant":"#28354a","surface-bright":"#2d3a4e","surface-container":"#132033","surface-container-high":"#1d2a3e","outline-variant":"#434655"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="px-6 flex items-center justify-between"><div class="flex items-center gap-3"><div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(104,219,169,0.4)]"></div><span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">CONSOLA EJECUTIVA</span></div><span class="font-label text-[11px] px-2 py-0.5 rounded-sm bg-surface-container text-secondary font-medium">v4.2-SEC</span></div><div class="px-6"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2"><span class="text-[11px] font-label uppercase tracking-wider text-outline">Taller Activo</span><div class="flex items-center justify-between"><span class="text-xs font-semibold text-on-surface truncate">CENC-01 Norte Metropolitana</span><span class="material-symbols-outlined text-outline text-[16px]">unfold_more</span></div></div></div><nav class="px-4 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><div class="px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Supervisión Operativa</div><a class="flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-operativo-ejecutivo" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Resumen Operativo</span></a><a aria-current="page" class="flex items-center justify-between px-3.5 py-3 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="centro-de-discrepancias" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warning</span><span>Centro de Discrepancias</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">published_with_changes</span><span>Registro de Reemplazo</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M04-02</span></a><div class="pt-4 px-3 py-1.5 text-[11px] font-label uppercase tracking-wider text-outline">Trazabilidad y Certificación</div><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">verified</span><span>Emisión de Certificados</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-01</span></a><a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hoja-de-vida-del-vehiculo" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">badge</span><span>Hoja de Vida Vehicular</span></div><span class="font-label text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-high text-on-surface-variant">RF-M05-02</span></a></nav></div><div class="px-5 flex flex-col gap-3"><div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="text-[11px] font-label uppercase text-outline">Canal Criptográfico</span><span class="text-xs font-semibold text-secondary flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse"></span>Ledger Activo (mTLS)</span></div><span class="material-symbols-outlined text-secondary text-[20px]">lock</span></div><div class="flex items-center justify-between px-2 pt-2"><span class="text-[11px] text-outline">SITAA Core v4.20</span><span class="text-[11px] font-label text-outline">Hash Sync OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Logotipo moderno y de alta tecnología para SITAA (Sistema de Integridad y Trazabilidad de Auditoría Automotriz). Isotipo heráldico y tecnológico estilizado combinando un escudo de ciberseguridad, nodos criptográficos y la letra 'S', acompañado de la tipografía angular y sólida 'SITAA' con un subtítulo 'INTEGRITY &amp; VEHICULAR AUDIT'. Tonos azul eléctrico (#3b82f6), cian (#06b6d4) y blanco sobre fondo oscuro.. Brand logo. - Primary color: #1d4ed8 - Font: inter - Mode: dark - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="h-5 w-[1px] bg-surface-container-high"></div><span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Sistema de Integridad y Trazabilidad</span></div><div class="flex items-center gap-5"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span class="text-xs font-medium text-on-surface-variant">Ambiente: <span class="text-on-surface font-semibold">Producción Segura</span></span></div><div class="h-4 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-3"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface">Auditor Ejecutivo</span><span class="text-[11px] font-label text-outline">ID: AUD-9842-EX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-6 md:p-10 flex flex-col gap-8 max-w-7xl mx-auto w-full">
+<!-- Top Executive Header & KPI Strip -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-tertiary-container/30 text-error text-xs font-label uppercase tracking-widest font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+            Supervisión RF-M04-01
+          </span>
+<span class="text-outline text-xs font-label">· Centro de Discrepancias</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-bold text-on-surface tracking-tight">
+          Panel de Decisión Ejecutiva
+        </h1>
+<p class="text-on-surface-variant text-sm max-w-2xl">
+          Evaluación directa de integridad física y lógica vehicular. Resumen priorizado para toma inmediata de decisiones de retención y despacho.
+        </p>
+</div>
+<!-- KPI Executive Metrics Cards -->
+<div class="grid grid-cols-3 gap-3 w-full lg:w-auto">
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col justify-between min-w-[120px] sm:min-w-[140px] relative overflow-hidden">
+<div class="absolute -right-3 -bottom-3 text-error/10">
+<span class="material-symbols-outlined text-[64px]">emergency</span>
+</div>
+<span class="text-[11px] font-label uppercase text-error font-medium">Crítica Inmediata</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-headline font-bold text-error">01</span>
+<span class="text-xs text-error/80 font-medium">Bloqueado</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col justify-between min-w-[120px] sm:min-w-[140px] relative overflow-hidden">
+<div class="absolute -right-3 -bottom-3 text-on-surface-variant/10">
+<span class="material-symbols-outlined text-[64px]">pending_actions</span>
+</div>
+<span class="text-[11px] font-label uppercase text-on-surface-variant font-medium">En Revisión</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-headline font-bold text-on-surface">02</span>
+<span class="text-xs text-on-surface-variant font-medium">En Espera</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col justify-between min-w-[120px] sm:min-w-[140px] relative overflow-hidden">
+<div class="absolute -right-3 -bottom-3 text-secondary/10">
+<span class="material-symbols-outlined text-[64px]">verified</span>
+</div>
+<span class="text-[11px] font-label uppercase text-secondary font-medium">Conformes OK</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-3xl font-headline font-bold text-secondary">24</span>
+<span class="text-xs text-secondary/80 font-medium">Auditados</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Banner de Alerta Crítica Prioritaria -->
+<div class="bg-surface-container-low rounded-xl shadow-xl overflow-hidden relative">
+<div class="bg-tertiary-container/20 p-5 sm:p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center text-on-tertiary-container shadow-md shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xs font-label uppercase font-bold text-error tracking-wider">Acción Urgente Requerida</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="text-xs text-on-surface-variant font-label">Taller CENC-01 Norte</span>
+</div>
+<h2 class="text-xl sm:text-2xl font-headline font-bold text-on-surface mt-0.5">
+              Incidente Crítico Detectado en Tesla Model S Plaid (2023)
+            </h2>
+<div class="flex items-center gap-3 mt-1 text-sm font-label text-on-surface-variant">
+<span>Matrícula: <strong class="text-on-surface font-semibold">4892-LKM</strong></span>
+<span>·</span>
+<span>VIN: <strong class="text-on-surface font-semibold">5YJSA1E28PF409218</strong></span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high/80">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<span class="text-xs font-label uppercase text-on-surface font-medium">Estado: En Bahía de Entrada</span>
+</div>
+</div>
+<!-- Tarjeta Central de Diagnóstico Comprensible -->
+<div class="p-6 sm:p-8 flex flex-col gap-8">
+<!-- Vista Visual y Módulo -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Imagen del Vehículo Auditado -->
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden shadow-lg h-56 lg:h-64 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-end studio automotive photography of a midnight blue 2023 Tesla Model S Plaid in an ultra-clean corporate diagnostic garage, illuminated by cool cyan and cobalt light reflections, clean lines, pristine and dramatic luxury tech atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt8hH0aFyPKAlCSY0G7zVoNu32xk3kiGPmCk6UYFWOamKwqOqkyQGOxAFND_I03Bk4xs5CgIp67x5piRFqdSdJvUsOGBcXmC7juYDp7z7ZXWMqZqLgR6sEs1KMQLSG_-6j13IxskueyQ0wNvpQOFwsFdEZ8GHGnB06IGp6CZzxjsJHEjDeU_86fiHE7JrcXDn38DXCYaEdQU97U-DfoVJke9sTttK4Y0k8WqX03tE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent flex flex-col justify-end p-4">
+<span class="text-xs font-label text-secondary font-medium">Inspección de Hardware SITAA</span>
+<span class="text-sm font-bold text-on-surface">Unidad #4892-LKM (Bahía 02)</span>
+</div>
+</div>
+<!-- Desglose Amigable e Inmediato -->
+<div class="lg:col-span-8 flex flex-col justify-between h-full gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Módulo en Conflicto</span>
+<div class="flex items-center gap-3">
+<span class="text-xl sm:text-2xl font-headline font-bold text-on-surface">Gateway Telemático Central (ECU-01)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-error font-label text-xs font-semibold">NO VÁLIDO</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
+                El vehículo reporta componentes no registrados en su registro de fábrica. El módulo telemático instalado no cuenta con firma criptográfica válida y el número de serie no coincide con la cadena de custodia original.
+              </p>
+</div>
+<!-- Semáforo de Estado Simple -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3.5 h-3.5 rounded-full bg-error shadow-[0_0_10px_rgba(255,180,171,0.5)]"></div>
+<div>
+<span class="text-xs font-label text-on-surface-variant block uppercase">Firmware de Control</span>
+<span class="text-sm font-bold text-error">Modificado / No Autorizado</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3.5 h-3.5 rounded-full bg-error shadow-[0_0_10px_rgba(255,180,171,0.5)]"></div>
+<div>
+<span class="text-xs font-label text-on-surface-variant block uppercase">Número de Serie Pieza</span>
+<span class="text-sm font-bold text-error">Pieza No Reconocida</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparativa Simple: Fábrica vs Vehículo -->
+<div class="flex flex-col gap-3">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Comparativa Ejecutiva Directa</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Columna Fábrica (Esperado) -->
+<div class="p-5 rounded-xl bg-surface-container flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label uppercase text-secondary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">factory</span>
+                  Esperado por Fábrica (Registro SITAA)
+                </span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label uppercase bg-secondary-container/20 text-secondary">Oficial</span>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Serial de Pieza:</span>
+<span class="font-label font-semibold text-on-surface">GTW-TSL-984022-US</span>
+</div>
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Versión Firmware:</span>
+<span class="font-label font-semibold text-on-surface">v2023.44.30.8 (Oficial Certificado)</span>
+</div>
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Firma Digital:</span>
+<span class="font-label font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> Válida de Fabricante
+                  </span>
+</div>
+</div>
+</div>
+<!-- Columna Vehículo (Detectado) -->
+<div class="p-5 rounded-xl bg-tertiary-container/10 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label uppercase text-error font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">sensor_occupied</span>
+                  Detectado en Bahía de Taller
+                </span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label uppercase bg-tertiary-container/30 text-error">Discrepancia</span>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Serial de Pieza:</span>
+<span class="font-label font-bold text-error bg-tertiary-container/20 px-1.5 py-0.5 rounded">GTW-MOD-UNKNOWN-88</span>
+</div>
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Versión Firmware:</span>
+<span class="font-label font-bold text-error bg-tertiary-container/20 px-1.5 py-0.5 rounded">vCUSTOM-EXT-9.2 (No homologado)</span>
+</div>
+<div class="flex justify-between items-center text-sm py-1">
+<span class="text-on-surface-variant">Firma Digital:</span>
+<span class="font-label font-semibold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">gpp_bad</span> Nula o Forzada
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Acciones Ejecutivas Destacadas -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2">
+<div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+<!-- Botón Cuarentena Inmediata -->
+<button class="px-6 py-3.5 rounded-lg bg-tertiary-container hover:bg-error-container text-on-tertiary-container font-headline font-semibold text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-tertiary-container/20 transition-all hover:scale-[1.02] active:scale-[0.98]" id="btnQuarantine" onclick="triggerAction('quarantine')">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">front_hand</span>
+              Poner en Cuarentena Inmediata
+            </button>
+<!-- Botón Autorizar Sustitución -->
+<button class="px-6 py-3.5 rounded-lg bg-primary-container hover:bg-primary-container/80 text-on-primary-container font-headline font-semibold text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-primary-container/25 transition-all hover:scale-[1.02] active:scale-[0.98]" id="btnAuthorize" onclick="triggerAction('authorize')">
+<span class="material-symbols-outlined text-[20px]">published_with_changes</span>
+              Autorizar Sustitución / Derivar a M04-02
+            </button>
+</div>
+<!-- Botón Detalle Técnico (Acordeón) -->
+<button class="px-4 py-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant text-xs font-label uppercase tracking-wider flex items-center justify-center gap-2 transition-colors" onclick="toggleDetails()">
+<span class="material-symbols-outlined text-base">code</span>
+<span id="accordionText">Ver detalles técnicos (Opcional)</span>
+<span class="material-symbols-outlined text-base transition-transform duration-200" id="accordionIcon">expand_more</span>
+</button>
+</div>
+<!-- Acordeón de Datos Técnicos Avanzados (Oculto por defecto) -->
+<div class="hidden flex-col gap-4 p-5 rounded-xl bg-surface-container-lowest text-xs font-label" id="techDetailsDrawer">
+<div class="flex items-center justify-between pb-2 text-outline">
+<span class="uppercase tracking-widest text-[11px]">Telemetría Hash y Traza Forense SITAA Core</span>
+<span>Nodo: N-METRO-01</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-3 bg-surface-container-low rounded flex flex-col gap-1.5">
+<span class="text-outline">Hash de Integridad FOT (Expected):</span>
+<span class="text-secondary select-all break-all">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded flex flex-col gap-1.5">
+<span class="text-outline">Hash Extraído ECU-01 (Actual):</span>
+<span class="text-error select-all break-all">ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-outline pt-1 text-[11px]">
+<span class="material-symbols-outlined text-xs">info</span>
+<span>Protocolo de diagnóstico completado mediante cable físico ODB-II mTLS certificado. Tiempo de muestreo: 0.14 seg.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lista Resumida de Flota con Incidentes Pendientes -->
+<div class="bg-surface-container-low rounded-xl shadow-md p-6 flex flex-col gap-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex flex-col">
+<h3 class="text-lg font-headline font-bold text-on-surface">Vehículos con Incidentes Pendientes de Decisión</h3>
+<p class="text-xs text-on-surface-variant font-body">Cola priorizada de auditoría en los centros de servicio asignados.</p>
+</div>
+<span class="text-xs font-label text-outline uppercase">3 Incidentes Activos Totales</span>
+</div>
+<!-- Tabla Limpia Minimalista -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant text-xs font-label uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l">Vehículo</th>
+<th class="py-3 px-4">Matrícula</th>
+<th class="py-3 px-4">Componente en Fallo</th>
+<th class="py-3 px-4">Severidad</th>
+<th class="py-3 px-4">Ubicación</th>
+<th class="py-3 px-4 rounded-r text-right">Acción Rápida</th>
+</tr>
+</thead>
+<tbody class="text-sm font-body divide-y-0">
+<!-- Fila 1 (La actual crítica) -->
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors">
+<td class="py-3.5 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Tesla Model S Plaid (2023)
+              </td>
+<td class="py-3.5 px-4 font-label text-xs font-semibold text-on-surface">4892-LKM</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Gateway Central (ECU-01)</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-[11px] font-label font-semibold uppercase bg-tertiary-container/30 text-error">Crítica</span>
+</td>
+<td class="py-3.5 px-4 text-xs font-label text-on-surface-variant">CENC-01 Norte</td>
+<td class="py-3.5 px-4 text-right">
+<span class="text-xs font-label text-primary font-semibold">Seleccionado Arriba</span>
+</td>
+</tr>
+<!-- Fila 2 (En revisión) -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-4 text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                BMW i4 M50 Gran Coupé (2024)
+              </td>
+<td class="py-3.5 px-4 font-label text-xs text-on-surface-variant">1093-NBL</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Sensor LiDAR Frontal</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-[11px] font-label uppercase bg-surface-container-highest text-on-surface-variant">En Revisión</span>
+</td>
+<td class="py-3.5 px-4 text-xs font-label text-on-surface-variant">CENC-02 Sur</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-xs font-label text-on-surface transition-colors">
+                  Cargar Panel
+                </button>
+</td>
+</tr>
+<!-- Fila 3 (En revisión) -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3.5 px-4 text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                Porsche Taycan 4S (2022)
+              </td>
+<td class="py-3.5 px-4 font-label text-xs text-on-surface-variant">7731-MRR</td>
+<td class="py-3.5 px-4 text-on-surface-variant">Inversor Trasero HV</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded text-[11px] font-label uppercase bg-surface-container-highest text-on-surface-variant">En Revisión</span>
+</td>
+<td class="py-3.5 px-4 text-xs font-label text-on-surface-variant">CENC-01 Norte</td>
+<td class="py-3.5 px-4 text-right">
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-xs font-label text-on-surface transition-colors">
+                  Cargar Panel
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Confirmación Visual Toast (Hidden by default) -->
+<div class="fixed bottom-6 right-6 hidden z-50 bg-surface-container-highest text-on-surface p-4 rounded-xl shadow-2xl flex items-center gap-3 transition-opacity" id="actionToast">
+<span class="material-symbols-outlined text-secondary text-2xl" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="text-sm font-headline font-bold" id="toastTitle">Instrucción Procesada</span>
+<span class="text-xs text-on-surface-variant" id="toastMessage">El registro vehicular se ha actualizado en SITAA Core.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleDetails() {
+    const drawer = document.getElementById('techDetailsDrawer');
+    const icon = document.getElementById('accordionIcon');
+    const text = document.getElementById('accordionText');
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+      icon.classList.add('rotate-180');
+      text.innerText = 'Ocultar detalles técnicos';
+    } else {
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+      icon.classList.remove('rotate-180');
+      text.innerText = 'Ver detalles técnicos (Opcional)';
+    }
+  }
+
+  function triggerAction(actionType) {
+    const toast = document.getElementById('actionToast');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMessage = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+
+    if (actionType === 'quarantine') {
+      toastTitle.innerText = "Cuarentena Aplicada con Éxito";
+      toastMessage.innerText = "El Tesla Model S (4892-LKM) fue inmovilizado en Bahía 02 bajo bloqueo de seguridad.";
+      toastIcon.innerText = "lock";
+      toastIcon.className = "material-symbols-outlined text-error text-2xl";
+    } else {
+      toastTitle.innerText = "Derivación a RF-M04-02 Registrada";
+      toastMessage.innerText = "Orden de reemplazo autorizada. Taller CENC-01 notificado para recambio de Gateway.";
+      toastIcon.innerText = "swap_horiz";
+      toastIcon.className = "material-symbols-outlined text-primary text-2xl";
+    }
+
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  }
+</script></main></div></body></html>
