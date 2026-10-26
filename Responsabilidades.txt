@@ -1,12 +1,19 @@
 Responsabilidades
 
 Giliam Guleidi Lopez Gomez
-1. Gestion de ususarios y roles 
+RF-M01-01	Registro y Autenticación de Usuarios	M01: Usuarios	Alta	Control de acceso seguro.
+RF-M01-02	Control de Acceso Basado en Roles (RBAC)	M01: Usuarios	Alta	Gestión de permisos por perfil.
+
 
 Bryant Alexander Bracho Parra
-5. Certificacion, reportes e historico
-4. Alertas de Inconsistencias y remplazos
+RF-M04-01	Generación de Alerta por Discrepancia	M04: Alertas	Alta	Detección de cambios no autorizados.
+RF-M04-02	Registro de Reemplazo Autorizado	M04: Alertas	Media	Gestión transparente de bajas/altas.
+RF-M05-01	Generación de Certificado Digital (PDF)	M05: Certificación	Alta	Emisión de constancias de integridad.
+RF-M05-02	Histórico de Trazabilidad por Vehículo	M05: Certificación	Media	Hoja de vida digital del vehículo.
+
 
 Erik Santiago Ochoa
-2. Registro e inventario de vehiculos y autopartes
-3. Auditoria y escaneo (QR/Barra)
+RF-M02-01	Alta de Vehículos	M02: Inventario	Alta	Identificación del parque automotor.
+RF-M02-02	Inventariado Estricto de Autopartes	M02: Inventario	Alta	Catalogación de piezas y seriales.
+RF-M03-01	Escaneo de Códigos vía Cámara Web/Móvil	M03: Auditoría	Alta	Inspección digital en taller.
+RF-M03-02	Verificación de Seriales Backend (AJAX)	M03: Auditoría	Alta	Validación inmediata de originalidad.
