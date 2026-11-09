@@ -1,563 +1,845 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#434655","surface-container-high":"#1d2a3e","surface-container-lowest":"#020e21","tertiary-fixed":"#ffdad6","on-error-container":"#ffdad6","inverse-surface":"#d6e3fe","surface-tint":"#b7c4ff","surface-container-low":"#0e1c2f","on-tertiary":"#690005","tertiary-fixed-dim":"#ffb4ab","primary-container":"#1d4ed8","tertiary-container":"#bb0112","on-tertiary-container":"#ffc7c1","secondary":"#68dba9","on-secondary-fixed":"#002114","error-container":"#93000a","surface":"#061426","surface-bright":"#2d3a4e","secondary-fixed-dim":"#68dba9","secondary-fixed":"#85f8c4","secondary-container":"#25a475","surface-dim":"#061426","tertiary":"#ffb4ab","surface-container-highest":"#28354a","on-surface-variant":"#c4c5d7","surface-container":"#132033","surface-variant":"#28354a","error":"#ffb4ab","on-background":"#d6e3fe","on-primary":"#002682","on-error":"#690005","on-primary-container":"#cad3ff","on-primary-fixed-variant":"#0039b5","outline":"#8e90a0","on-secondary-container":"#00311f","primary-fixed-dim":"#b7c4ff","on-tertiary-fixed":"#410002","inverse-on-surface":"#243145","on-secondary":"#003825","primary":"#b7c4ff","inverse-primary":"#2151da","on-tertiary-fixed-variant":"#93000b","on-primary-fixed":"#001551","primary-fixed":"#dce1ff","on-surface":"#d6e3fe","on-secondary-fixed-variant":"#005137","background":"#061426"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="flex flex-col"><span class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span></div></div><div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between"><div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span></div><nav class="px-3 space-y-4 pb-6" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01: Usuarios y Acceso</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02: Inventario Vehicular</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a aria-current="page" class="block px-3 py-1.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03: Auditoría y Escaneo</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04: Supervisión Forense</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05: Trazabilidad Registral</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div></div></nav></div><div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2"><div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span class="text-secondary font-label text-[11px]">ACTIVO</span></div><div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-secondary w-full"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-4"><div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">domain</span><div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller / Entorno</span><select class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2"><option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01</option><option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option><option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)</option></select></div></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">lock</span><span class="font-label text-xs text-on-surface-variant">Ledger Status: <span class="text-secondary font-semibold">Inmutable</span></span></div></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label"><span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span></div><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<div class="px-6 py-6 flex flex-col gap-6">
-<!-- Header Section with High Assurance Forensic Identification -->
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container-low px-6 py-5 rounded-xl shadow-md">
-<div class="flex flex-col gap-1.5">
-<div class="flex items-center gap-2.5">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-label font-bold uppercase tracking-wider bg-primary-container/20 text-primary">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-            RF-M02-02 // CATALOGACIÓN ESTRICTA DE COMPONENTES
-          </span>
-<span class="hidden sm:inline-flex px-2 py-0.5 rounded text-[10px] font-label tracking-widest bg-surface-container-high text-on-surface-variant">
-            CRYPTOGRAPHIC LEDGER TX-READY
-          </span>
-</div>
-<h1 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface tracking-tight">
-          Inventariado de Autopartes y Módulos Críticos
-        </h1>
-<p class="text-xs sm:text-sm text-on-surface-variant max-w-3xl">
-          Registro criptográfico trazable de piezas de alto voltaje, cinemática y control telemático vinculadas al chasis bajo normativa forense ISO/SAE 21434.
-        </p>
-</div>
-<div class="flex items-center gap-2 self-start lg:self-auto flex-wrap">
-<button class="px-3.5 py-2 rounded text-xs font-label font-medium bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center gap-2 transition-colors shadow-sm" id="btnExportMatrix">
-<span class="material-symbols-outlined text-[16px] text-primary">sim_card_download</span>
-          Exportar Matriz (JSON/CSV)
-        </button>
-<button class="px-4 py-2 rounded text-xs font-label font-semibold bg-primary hover:bg-inverse-surface text-on-primary transition-colors flex items-center gap-2 shadow-sm" id="btnScanBatch">
-<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
-          Escanear Nuevo Lote
-        </button>
-</div>
-</div>
-<!-- Active Vehicle Selection Strip -->
-<div class="bg-surface-container p-4 rounded-xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 shadow-sm">
-<div class="flex items-center gap-3.5">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
-<span class="material-symbols-outlined text-[24px]">directions_car</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="text-[10px] font-label text-outline uppercase tracking-wider">Vehículo Intervenido Activo</span>
-<div class="flex items-center gap-2">
-<span class="text-sm font-headline font-semibold text-on-surface truncate">Audi RS e-tron GT (2023)</span>
-<span class="px-2 py-0.5 rounded text-[11px] font-label bg-surface-container-highest text-secondary font-medium">9482-LPM</span>
-</div>
-<div class="flex items-center gap-2 text-[11px] font-label text-on-surface-variant">
-<span>VIN: <span class="text-on-surface tracking-wider font-semibold">WAUZZZF28NA019284</span></span>
-<span class="text-outline">•</span>
-<span class="text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>ECDSA Firmado</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex-shrink-0 self-auto">
-<div class="flex flex-col">
-<div class="flex items-center justify-between text-[11px] font-label gap-4">
-<span class="text-on-surface-variant uppercase">Árbol de Componentes</span>
-<span class="text-secondary font-bold" id="treeStatusCount">18 / 18 Registrados</span>
-</div>
-<div class="w-48 sm:w-56 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1.5">
-<div class="h-full bg-secondary transition-all duration-500" style="width: 100%;"></div>
-</div>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-[11px] font-label text-on-surface transition-colors">
-          Cambiar Unidad
-        </button>
-</div>
-</div>
-<!-- Forensic Inventory KPIs -->
-<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-<div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-[11px] font-label uppercase tracking-wider text-outline">Componentes Serializados</span>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="text-2xl font-label font-bold text-on-surface">1,842</span>
-<span class="text-[11px] font-label text-secondary">+12 hoy</span>
-</div>
-<span class="text-[10px] text-on-surface-variant mt-0.5">Integridad 100% en Ledger</span>
-</div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[20px]">memory</span>
-</div>
-</div>
-<div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-[11px] font-label uppercase tracking-wider text-outline">Piezas OEM Verificadas</span>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="text-2xl font-label font-bold text-secondary">98.4%</span>
-<span class="text-[11px] font-label text-on-surface-variant">TÜV / CE</span>
-</div>
-<span class="text-[10px] text-on-surface-variant mt-0.5">Certificación criptográfica</span>
-</div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-[20px]">verified</span>
-</div>
-</div>
-<div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-[11px] font-label uppercase tracking-wider text-outline">Módulos en Bahía de Espera</span>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="text-2xl font-label font-bold text-primary">7</span>
-<span class="text-[11px] font-label text-on-surface-variant">Pre-auditoría</span>
-</div>
-<span class="text-[10px] text-on-surface-variant mt-0.5">Pendiente vinculación física</span>
-</div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[20px]">inventory_2</span>
-</div>
-</div>
-<div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-[11px] font-label uppercase tracking-wider text-outline">Alertas Serial Duplicado</span>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="text-2xl font-label font-bold text-on-surface">0</span>
-<span class="text-[11px] font-label text-secondary font-semibold">CERO CLONACIÓN</span>
-</div>
-<span class="text-[10px] text-on-surface-variant mt-0.5">Control de hash anti-tamper</span>
-</div>
-<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-[20px]">security</span>
-</div>
-</div>
-</div>
-<!-- Main Workspace: Split Breakdown vs New Registration Form -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-<!-- Left / Center Panel (8 cols): Subsystem Parts Tree -->
-<div class="lg:col-span-8 flex flex-col gap-5">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-container px-4 py-3 rounded-xl">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
-<span class="text-sm font-headline font-semibold text-on-surface">Desglose del Árbol de Piezas del Vehículo</span>
-<span class="text-[11px] font-label bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">3 Subsistemas Críticos</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="relative">
-<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[16px]">search</span>
-<input class="bg-surface-container-low text-xs text-on-surface pl-8 pr-3 py-1.5 rounded-lg focus:outline-none placeholder:text-outline/70 w-48 sm:w-60 font-label" id="componentFilter" placeholder="Filtrar por serial o ECU..." type="text"/>
-</div>
-<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Filtrar por anomalías">
-<span class="material-symbols-outlined text-[18px]">filter_list</span>
-</button>
-</div>
-</div>
-<!-- Subsistema 1: Tren Motriz e Inversor -->
-<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
-<div class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none" onclick="document.getElementById('subsystem-powertrain').classList.toggle('hidden')">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary text-[20px]">electric_bolt</span>
-<div>
-<span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema 01: Tren Motriz e Inversor de Tracción</span>
-<span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Bus Dual 800V SiC</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">3/3 Verificados</span>
-<span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
-</div>
-</div>
-<div class="p-4 flex flex-col gap-3" id="subsystem-powertrain">
-<!-- Card 1 -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">electrical_services</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Inversor MCU Frontal Silicon Carbide</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado OEM</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">MCU-800V-90241A</span></span>
-<span>PART: <span class="text-on-surface">4J0-907-124-C</span></span>
-<span>PROV: <span class="text-on-surface">BorgWarner BorgSys</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x9f4a...83d2</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">rotate_right</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Motor Sincrónico Trasero PSM 350kW</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Serial Coincidente</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">PSM-RR-2023-8831</span></span>
-<span>PART: <span class="text-on-surface">9J1-901-020-B</span></span>
-<span>PROV: <span class="text-on-surface">Audi Hungaria Zrt.</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x3bc1...e99a</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-outline flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">settings</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Caja Reductora Eje Trasero 2 Velocidades</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado OEM</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">GBX-2SPD-40910</span></span>
-<span>PART: <span class="text-on-surface">0G5-300-045-A</span></span>
-<span>PROV: <span class="text-on-surface">ZF Friedrichshafen</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0xaa72...104f</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Subsistema 2: Almacenamiento Energético (HV Battery & BMS) -->
-<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
-<div class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none" onclick="document.getElementById('subsystem-battery').classList.toggle('hidden')">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
-<div>
-<span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema 02: Almacenamiento Energético y Módulos de Celda</span>
-<span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Pack 93.4 kWh Brutos (396 Celdas)</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">13/13 Verificados</span>
-<span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
-</div>
-</div>
-<div class="p-4 flex flex-col gap-3" id="subsystem-battery">
-<!-- Card Battery Pack General -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Carcasa Estructural Pack Batería 800V</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Serial Coincidente</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">BAT-HV800-AUDI-0912</span></span>
-<span>PART: <span class="text-on-surface">9J1-915-105-T</span></span>
-<span>PROV: <span class="text-on-surface">LG Energy Solution</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x66f1...028d</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-<!-- Card BMS -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">developer_board</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Controlador Maestro BMS (Battery Management System)</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado OEM</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">BMS-MST-89241940</span></span>
-<span>PART: <span class="text-on-surface">4KE-907-553-A</span></span>
-<span>PROV: <span class="text-on-surface">Bosch Mobility Solutions</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x11ce...bb90</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-<!-- Modules Summary row / collapsible cells -->
-<div class="bg-surface-container px-3.5 py-2.5 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-secondary">grid_view</span>
-<span class="font-headline text-on-surface font-medium">Módulos de Celda de Ión-Litio (Módulos 01 a 12 en Serie)</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="text-[11px] font-label text-on-surface-variant">12 Bloques Serializados</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary">Todos Verificados</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Subsistema 3: Módulos Telemáticos y ADAS -->
-<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
-<div class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none" onclick="document.getElementById('subsystem-adas').classList.toggle('hidden')">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-outline text-[20px]">sensors</span>
-<div>
-<span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema 03: Módulos Telemáticos y Sensores ADAS Nivel 2+</span>
-<span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Criptoprocesadores de Navegación</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">2/2 Verificados</span>
-<span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
-</div>
-</div>
-<div class="p-4 flex flex-col gap-3" id="subsystem-adas">
-<!-- Card Gateway -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">router</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Gateway Central ECU-01 de Seguridad Vehicular</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado OEM</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">GW-CAN-FD-00918</span></span>
-<span>PART: <span class="text-on-surface">4K0-907-468-Q</span></span>
-<span>PROV: <span class="text-on-surface">Continental Automotive</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x78ab...55e1</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-<!-- Card LiDAR Bosch -->
-<div class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
-<div class="flex items-start gap-3">
-<div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[18px]">radar</span>
-</div>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="text-xs font-headline font-semibold text-on-surface">Sensor Óptico Frontal LiDAR &amp; Radar de Onda Milimétrica</span>
-<span class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado OEM</span>
-</div>
-<div class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-<span>SERIAL: <span class="text-on-surface font-semibold">LIDAR-BOSCH-77G-44</span></span>
-<span>PART: <span class="text-on-surface">9J1-907-561-D</span></span>
-<span>PROV: <span class="text-on-surface">Robert Bosch GmbH</span></span>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
-<div class="flex flex-col md:items-end text-left md:text-right">
-<span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
-<span class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x43d9...901e</span>
-</div>
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">history</span>
-                  Telemetría
-                </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Panel (4 cols): Quick Registration / Binding Form -->
-<div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
-<div class="bg-surface-container p-5 rounded-xl shadow-md flex flex-col gap-4">
-<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
-<span class="text-sm font-headline font-bold text-on-surface">Registro Rápido de Autoparte</span>
-</div>
-<span class="text-[10px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">Formulario Forense</span>
-</div>
-<form class="flex flex-col gap-3.5 text-xs" id="partRegistrationForm">
-<!-- Part Category -->
-<div class="flex flex-col gap-1">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Categoría de Autoparte *</label>
-<select class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-body" id="regCategory" required="">
-<option value="TREN_MOTRIZ">Tren Motriz e Inversor de Tracción</option>
-<option value="ALMACENAMIENTO_HV">Almacenamiento Energético (HV Battery)</option>
-<option value="TELEMATICA_ADAS">Módulos Telemáticos y ADAS</option>
-<option value="CHASIS_FRENADO">Chasis, Frenado y Dirección</option>
-<option value="SEGURIDAD_PASIVA">Seguridad Pasiva y Airbags</option>
-</select>
-</div>
-<!-- Manufacturer OEM -->
-<div class="flex flex-col gap-1">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Fabricante / Proveedor OEM *</label>
-<input class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-body placeholder:text-outline/60" id="regManufacturer" placeholder="Ej. Bosch, LG Energy, BorgWarner..." required="" type="text"/>
-</div>
-<!-- Serial Number -->
-<div class="flex flex-col gap-1">
-<div class="flex items-center justify-between">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Nº de Serie Grabado OEM *</label>
-<span class="text-[10px] font-label text-primary cursor-pointer hover:underline" onclick="scanMockSerial()">Escanear OCR</span>
-</div>
-<input class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label tracking-wide uppercase placeholder:text-outline/60" id="regSerial" placeholder="Ej. SN-90248-X8" required="" type="text"/>
-</div>
-<!-- Part Number -->
-<div class="flex flex-col gap-1">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Número de Parte (Part Number) *</label>
-<input class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label tracking-wide uppercase placeholder:text-outline/60" id="regPartNumber" placeholder="Ej. 4J0-907-124-C" required="" type="text"/>
-</div>
-<!-- Lot & Certification in grid -->
-<div class="grid grid-cols-2 gap-3">
-<div class="flex flex-col gap-1">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Lote Producción</label>
-<input class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label uppercase placeholder:text-outline/60" id="regBatch" placeholder="LOT-2023/W42" type="text"/>
-</div>
-<div class="flex flex-col gap-1">
-<label class="font-label text-[11px] text-on-surface-variant uppercase">Certificado TÜV / CE</label>
-<input class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label uppercase placeholder:text-outline/60" id="regCert" placeholder="TÜV-DE-9941" type="text"/>
-</div>
-</div>
-<!-- Auto-hash notice -->
-<div class="p-3 bg-surface-container-low rounded flex items-start gap-2.5 text-[11px] font-label text-on-surface-variant">
-<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">lock</span>
-<span>Al vincular, se computará automáticamente un digest SHA-256 inmutable asociado al VIN <strong class="text-on-surface">WAUZZZF28NA019284</strong>.</span>
-</div>
-<!-- Submit Button -->
-<button class="w-full mt-1 py-2.5 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-2 shadow-md" type="submit">
-<span class="material-symbols-outlined text-[16px]">link</span>
-              Vincular Pieza a Chasis
-            </button>
-</form>
-</div>
-<!-- Workshop Stock Verification Snippet -->
-<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-3 shadow-sm">
-<div class="flex items-center justify-between">
-<span class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
-<span class="material-symbols-outlined text-outline text-[16px]">warehouse</span>
-              Stock Homologado en Taller
-            </span>
-<span class="text-[10px] font-label text-primary">Bahía #01</span>
-</div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center justify-between text-[11px] font-label p-2 bg-surface-container-low rounded">
-<div class="flex flex-col">
-<span class="text-on-surface font-medium">BMS Slave Board Rev. 4</span>
-<span class="text-outline">ID: STK-8812-HV</span>
-</div>
-<span class="px-2 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">3 Disp.</span>
-</div>
-<div class="flex items-center justify-between text-[11px] font-label p-2 bg-surface-container-low rounded">
-<div class="flex flex-col">
-<span class="text-on-surface font-medium">Sensor Radar ADAS Bosch 77G</span>
-<span class="text-outline">ID: STK-4019-RAD</span>
-</div>
-<span class="px-2 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">1 Disp.</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Notification Toast (Hidden by default) -->
-<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-highest px-4 py-3 rounded-lg shadow-xl flex items-center gap-3" id="toastNotification">
-<span class="material-symbols-outlined text-secondary text-[20px]" id="toastIcon">check_circle</span>
-<div class="flex flex-col">
-<span class="text-xs font-headline font-bold text-on-surface" id="toastTitle">Registro Confirmado</span>
-<span class="text-[11px] font-label text-on-surface-variant" id="toastMsg">Pieza vinculada con hash criptográfico.</span>
-</div>
-</div>
-</div>
-<script>
-    // Filtering Components in the Tree
-    const filterInput = document.getElementById('componentFilter');
-    if (filterInput) {
-      filterInput.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
-        const cards = document.querySelectorAll('.component-card');
-        cards.forEach(card => {
-          const text = card.innerText.toLowerCase();
-          if (text.includes(query)) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-      });
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
     }
 
-    // Quick Simulation of OCR Scan
-    window.scanMockSerial = function() {
-      const serialField = document.getElementById('regSerial');
-      const mockSerials = ['MCU-SIC-88192-EU', 'BMS-MOD-77281-QC', 'LID-GEN3-00912-DE', 'INV-HV8-44910-AU'];
-      const randomSerial = mockSerials[Math.floor(Math.random() * mockSerials.length)];
-      serialField.value = randomSerial;
-      showToast('OCR Escáner Exitoso', 'Serial capturado: ' + randomSerial);
-    };
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"outline-variant": "#434655", "surface-container-high": "#1d2a3e", "surface-container-lowest": "#020e21", "tertiary-fixed": "#ffdad6", "on-error-container": "#ffdad6", "inverse-surface": "#d6e3fe", "surface-tint": "#b7c4ff", "surface-container-low": "#0e1c2f", "on-tertiary": "#690005", "tertiary-fixed-dim": "#ffb4ab", "primary-container": "#1d4ed8", "tertiary-container": "#bb0112", "on-tertiary-container": "#ffc7c1", "secondary": "#68dba9", "on-secondary-fixed": "#002114", "error-container": "#93000a", "surface": "#061426", "surface-bright": "#2d3a4e", "secondary-fixed-dim": "#68dba9", "secondary-fixed": "#85f8c4", "secondary-container": "#25a475", "surface-dim": "#061426", "tertiary": "#ffb4ab", "surface-container-highest": "#28354a", "on-surface-variant": "#c4c5d7", "surface-container": "#132033", "surface-variant": "#28354a", "error": "#ffb4ab", "on-background": "#d6e3fe", "on-primary": "#002682", "on-error": "#690005", "on-primary-container": "#cad3ff", "on-primary-fixed-variant": "#0039b5", "outline": "#8e90a0", "on-secondary-container": "#00311f", "primary-fixed-dim": "#b7c4ff", "on-tertiary-fixed": "#410002", "inverse-on-surface": "#243145", "on-secondary": "#003825", "primary": "#b7c4ff", "inverse-primary": "#2151da", "on-tertiary-fixed-variant": "#93000b", "on-primary-fixed": "#001551", "primary-fixed": "#dce1ff", "on-surface": "#d6e3fe", "on-secondary-fixed-variant": "#005137", "background": "#061426"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {}, fontFamily: {headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {}}}}</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+</head>
 
-    // Part Binding Simulation
-    const regForm = document.getElementById('partRegistrationForm');
-    if (regForm) {
-      regForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const serial = document.getElementById('regSerial').value;
-        const partNo = document.getElementById('regPartNumber').value;
-        const category = document.getElementById('regCategory').value;
-        const mfg = document.getElementById('regManufacturer').value;
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto">
+    <div class="flex flex-col">
+      <div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img
+          alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK" />
+        <div class="flex flex-col"><span
+            class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span
+            class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span>
+        </div>
+      </div>
+      <div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between">
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span
+            class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span
+          class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span>
+      </div>
+      <nav class="px-3 space-y-4 pb-6"
+        data-active-classes="bg-primary-container text-on-primary-container font-semibold">
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01:
+            Usuarios y Acceso</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02:
+            Inventario Vehicular</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a aria-current="page"
+              class="block px-3 py-1.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold"
+              data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03:
+            Auditoría y Escaneo</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04:
+            Supervisión Forense</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05:
+            Trazabilidad Registral</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2">
+      <div class="flex items-center justify-between text-xs"><span
+          class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span
+          class="text-secondary font-label text-[11px]">ACTIVO</span></div>
+      <div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+        <div class="h-full bg-secondary w-full"></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span
+            class="material-symbols-outlined text-outline text-[18px]">domain</span>
+          <div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller /
+              Entorno</span><select
+              class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2">
+              <option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01
+              </option>
+              <option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option>
+              <option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)
+              </option>
+            </select></div>
+        </div>
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span
+            class="material-symbols-outlined text-secondary text-[16px]">lock</span><span
+            class="font-label text-xs text-on-surface-variant">Ledger Status: <span
+              class="text-secondary font-semibold">Inmutable</span></span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label">
+          <span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span>
+        </div><button aria-label="Notificaciones"
+          class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+          type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span
+            class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button>
+        <div class="flex items-center gap-3 pl-2">
+          <div class="flex flex-col text-right"><span
+              class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span
+              class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+              class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <div class="px-6 py-6 flex flex-col gap-6">
+          <!-- Header Section with High Assurance Forensic Identification -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container-low px-6 py-5 rounded-xl shadow-md">
+            <div class="flex flex-col gap-1.5">
+              <div class="flex items-center gap-2.5">
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-label font-bold uppercase tracking-wider bg-primary-container/20 text-primary">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                  RF-M02-02 // CATALOGACIÓN ESTRICTA DE COMPONENTES
+                </span>
+                <span
+                  class="hidden sm:inline-flex px-2 py-0.5 rounded text-[10px] font-label tracking-widest bg-surface-container-high text-on-surface-variant">
+                  CRYPTOGRAPHIC LEDGER TX-READY
+                </span>
+              </div>
+              <h1 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface tracking-tight">
+                Inventariado de Autopartes y Módulos Críticos
+              </h1>
+              <p class="text-xs sm:text-sm text-on-surface-variant max-w-3xl">
+                Registro criptográfico trazable de piezas de alto voltaje, cinemática y control telemático vinculadas al
+                chasis bajo normativa forense ISO/SAE 21434.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 self-start lg:self-auto flex-wrap">
+              <button
+                class="px-3.5 py-2 rounded text-xs font-label font-medium bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center gap-2 transition-colors shadow-sm"
+                id="btnExportMatrix">
+                <span class="material-symbols-outlined text-[16px] text-primary">sim_card_download</span>
+                Exportar Matriz (JSON/CSV)
+              </button>
+              <button
+                class="px-4 py-2 rounded text-xs font-label font-semibold bg-primary hover:bg-inverse-surface text-on-primary transition-colors flex items-center gap-2 shadow-sm"
+                id="btnScanBatch">
+                <span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+                Escanear Nuevo Lote
+              </button>
+            </div>
+          </div>
+          <!-- Active Vehicle Selection Strip -->
+          <div
+            class="bg-surface-container p-4 rounded-xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 shadow-sm">
+            <div class="flex items-center gap-3.5">
+              <div
+                class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+                <span class="material-symbols-outlined text-[24px]">directions_car</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-[10px] font-label text-outline uppercase tracking-wider">Vehículo Intervenido
+                  Activo</span>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-headline font-semibold text-on-surface truncate">Audi RS e-tron GT
+                    (2023)</span>
+                  <span
+                    class="px-2 py-0.5 rounded text-[11px] font-label bg-surface-container-highest text-secondary font-medium">9482-LPM</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] font-label text-on-surface-variant">
+                  <span>VIN: <span class="text-on-surface tracking-wider font-semibold">WAUZZZF28NA019284</span></span>
+                  <span class="text-outline">•</span>
+                  <span class="text-secondary flex items-center gap-1"><span
+                      class="w-1.5 h-1.5 rounded-full bg-secondary"></span>ECDSA Firmado</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex-shrink-0 self-auto">
+              <div class="flex flex-col">
+                <div class="flex items-center justify-between text-[11px] font-label gap-4">
+                  <span class="text-on-surface-variant uppercase">Árbol de Componentes</span>
+                  <span class="text-secondary font-bold" id="treeStatusCount">18 / 18 Registrados</span>
+                </div>
+                <div class="w-48 sm:w-56 h-1.5 bg-surface-container-highest rounded-full overflow-hidden mt-1.5">
+                  <div class="h-full bg-secondary transition-all duration-500" style="width: 100%;"></div>
+                </div>
+              </div>
+              <button
+                class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-[11px] font-label text-on-surface transition-colors">
+                Cambiar Unidad
+              </button>
+            </div>
+          </div>
+          <!-- Forensic Inventory KPIs -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            <div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="text-[11px] font-label uppercase tracking-wider text-outline">Componentes
+                  Serializados</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="text-2xl font-label font-bold text-on-surface">1,842</span>
+                  <span class="text-[11px] font-label text-secondary">+12 hoy</span>
+                </div>
+                <span class="text-[10px] text-on-surface-variant mt-0.5">Integridad 100% en Ledger</span>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[20px]">memory</span>
+              </div>
+            </div>
+            <div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="text-[11px] font-label uppercase tracking-wider text-outline">Piezas OEM Verificadas</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="text-2xl font-label font-bold text-secondary">98.4%</span>
+                  <span class="text-[11px] font-label text-on-surface-variant">TÜV / CE</span>
+                </div>
+                <span class="text-[10px] text-on-surface-variant mt-0.5">Certificación criptográfica</span>
+              </div>
+              <div
+                class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </div>
+            </div>
+            <div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="text-[11px] font-label uppercase tracking-wider text-outline">Módulos en Bahía de
+                  Espera</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="text-2xl font-label font-bold text-primary">7</span>
+                  <span class="text-[11px] font-label text-on-surface-variant">Pre-auditoría</span>
+                </div>
+                <span class="text-[10px] text-on-surface-variant mt-0.5">Pendiente vinculación física</span>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+              </div>
+            </div>
+            <div class="bg-surface-container p-4 rounded-xl shadow-sm flex items-center justify-between">
+              <div class="flex flex-col">
+                <span class="text-[11px] font-label uppercase tracking-wider text-outline">Alertas Serial
+                  Duplicado</span>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="text-2xl font-label font-bold text-on-surface">0</span>
+                  <span class="text-[11px] font-label text-secondary font-semibold">CERO CLONACIÓN</span>
+                </div>
+                <span class="text-[10px] text-on-surface-variant mt-0.5">Control de hash anti-tamper</span>
+              </div>
+              <div
+                class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[20px]">security</span>
+              </div>
+            </div>
+          </div>
+          <!-- Main Workspace: Split Breakdown vs New Registration Form -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Left / Center Panel (8 cols): Subsystem Parts Tree -->
+            <div class="lg:col-span-8 flex flex-col gap-5">
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-container px-4 py-3 rounded-xl">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+                  <span class="text-sm font-headline font-semibold text-on-surface">Desglose del Árbol de Piezas del
+                    Vehículo</span>
+                  <span
+                    class="text-[11px] font-label bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">3
+                    Subsistemas Críticos</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="relative">
+                    <span
+                      class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[16px]">search</span>
+                    <input
+                      class="bg-surface-container-low text-xs text-on-surface pl-8 pr-3 py-1.5 rounded-lg focus:outline-none placeholder:text-outline/70 w-48 sm:w-60 font-label"
+                      id="componentFilter" placeholder="Filtrar por serial o ECU..." type="text" />
+                  </div>
+                  <button
+                    class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"
+                    title="Filtrar por anomalías">
+                    <span class="material-symbols-outlined text-[18px]">filter_list</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Subsistema 1: Tren Motriz e Inversor -->
+              <div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+                <div
+                  class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none"
+                  onclick="document.getElementById('subsystem-powertrain').classList.toggle('hidden')">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary text-[20px]">electric_bolt</span>
+                    <div>
+                      <span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema
+                        01: Tren Motriz e Inversor de Tracción</span>
+                      <span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Bus Dual 800V
+                        SiC</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">3/3
+                      Verificados</span>
+                    <span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-3" id="subsystem-powertrain">
+                  <!-- Card 1 -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">electrical_services</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Inversor MCU Frontal Silicon
+                            Carbide</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado
+                            OEM</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">MCU-800V-90241A</span></span>
+                          <span>PART: <span class="text-on-surface">4J0-907-124-C</span></span>
+                          <span>PROV: <span class="text-on-surface">BorgWarner BorgSys</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x9f4a...83d2</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">rotate_right</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Motor Sincrónico Trasero PSM
+                            350kW</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Serial
+                            Coincidente</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">PSM-RR-2023-8831</span></span>
+                          <span>PART: <span class="text-on-surface">9J1-901-020-B</span></span>
+                          <span>PROV: <span class="text-on-surface">Audi Hungaria Zrt.</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x3bc1...e99a</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-outline flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">settings</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Caja Reductora Eje Trasero 2
+                            Velocidades</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado
+                            OEM</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">GBX-2SPD-40910</span></span>
+                          <span>PART: <span class="text-on-surface">0G5-300-045-A</span></span>
+                          <span>PROV: <span class="text-on-surface">ZF Friedrichshafen</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0xaa72...104f</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Subsistema 2: Almacenamiento Energético (HV Battery & BMS) -->
+              <div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+                <div
+                  class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none"
+                  onclick="document.getElementById('subsystem-battery').classList.toggle('hidden')">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+                    <div>
+                      <span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema
+                        02: Almacenamiento Energético y Módulos de Celda</span>
+                      <span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Pack 93.4 kWh
+                        Brutos (396 Celdas)</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">13/13
+                      Verificados</span>
+                    <span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-3" id="subsystem-battery">
+                  <!-- Card Battery Pack General -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Carcasa Estructural Pack
+                            Batería 800V</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Serial
+                            Coincidente</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">BAT-HV800-AUDI-0912</span></span>
+                          <span>PART: <span class="text-on-surface">9J1-915-105-T</span></span>
+                          <span>PROV: <span class="text-on-surface">LG Energy Solution</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x66f1...028d</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Card BMS -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">developer_board</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Controlador Maestro BMS
+                            (Battery Management System)</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado
+                            OEM</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">BMS-MST-89241940</span></span>
+                          <span>PART: <span class="text-on-surface">4KE-907-553-A</span></span>
+                          <span>PROV: <span class="text-on-surface">Bosch Mobility Solutions</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x11ce...bb90</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Modules Summary row / collapsible cells -->
+                  <div
+                    class="bg-surface-container px-3.5 py-2.5 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                    <div class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-[16px] text-secondary">grid_view</span>
+                      <span class="font-headline text-on-surface font-medium">Módulos de Celda de Ión-Litio (Módulos 01
+                        a 12 en Serie)</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <span class="text-[11px] font-label text-on-surface-variant">12 Bloques Serializados</span>
+                      <span
+                        class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary">Todos
+                        Verificados</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Subsistema 3: Módulos Telemáticos y ADAS -->
+              <div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+                <div
+                  class="bg-surface-container-high px-4 py-3 flex items-center justify-between cursor-pointer select-none"
+                  onclick="document.getElementById('subsystem-adas').classList.toggle('hidden')">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-outline text-[20px]">sensors</span>
+                    <div>
+                      <span class="text-xs font-headline font-bold uppercase tracking-wider text-on-surface">Subsistema
+                        03: Módulos Telemáticos y Sensores ADAS Nivel 2+</span>
+                      <span class="hidden sm:inline-block ml-2 text-[11px] font-label text-outline">• Criptoprocesadores
+                        de Navegación</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="text-[11px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">2/2
+                      Verificados</span>
+                    <span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
+                  </div>
+                </div>
+                <div class="p-4 flex flex-col gap-3" id="subsystem-adas">
+                  <!-- Card Gateway -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">router</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Gateway Central ECU-01 de
+                            Seguridad Vehicular</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado
+                            OEM</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">GW-CAN-FD-00918</span></span>
+                          <span>PART: <span class="text-on-surface">4K0-907-468-Q</span></span>
+                          <span>PROV: <span class="text-on-surface">Continental Automotive</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x78ab...55e1</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Card LiDAR Bosch -->
+                  <div
+                    class="component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">radar</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs font-headline font-semibold text-on-surface">Sensor Óptico Frontal LiDAR
+                            &amp; Radar de Onda Milimétrica</span>
+                          <span
+                            class="px-2 py-0.5 rounded text-[10px] font-label bg-secondary-container/20 text-secondary font-medium">Homologado
+                            OEM</span>
+                        </div>
+                        <div
+                          class="text-[11px] font-label text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+                          <span>SERIAL: <span class="text-on-surface font-semibold">LIDAR-BOSCH-77G-44</span></span>
+                          <span>PART: <span class="text-on-surface">9J1-907-561-D</span></span>
+                          <span>PROV: <span class="text-on-surface">Robert Bosch GmbH</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                      <div class="flex flex-col md:items-end text-left md:text-right">
+                        <span class="text-[10px] font-label text-outline">PRECINTO / HASH</span>
+                        <span
+                          class="text-[11px] font-label text-primary font-mono truncate max-w-[130px]">0x43d9...901e</span>
+                      </div>
+                      <button
+                        class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-[11px] font-label text-on-surface transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px]">history</span>
+                        Telemetría
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Panel (4 cols): Quick Registration / Binding Form -->
+            <div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
+              <div class="bg-surface-container p-5 rounded-xl shadow-md flex flex-col gap-4">
+                <div class="flex items-center justify-between pb-3 border-b border-surface-container-highest">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+                    <span class="text-sm font-headline font-bold text-on-surface">Registro Rápido de Autoparte</span>
+                  </div>
+                  <span
+                    class="text-[10px] font-label text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">Formulario
+                    Forense</span>
+                </div>
+                <form class="flex flex-col gap-3.5 text-xs" id="partRegistrationForm">
+                  <!-- Part Category -->
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label text-[11px] text-on-surface-variant uppercase">Categoría de Autoparte
+                      *</label>
+                    <select
+                      class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-body"
+                      id="regCategory" required="">
+                      <option value="TREN_MOTRIZ">Tren Motriz e Inversor de Tracción</option>
+                      <option value="ALMACENAMIENTO_HV">Almacenamiento Energético (HV Battery)</option>
+                      <option value="TELEMATICA_ADAS">Módulos Telemáticos y ADAS</option>
+                      <option value="CHASIS_FRENADO">Chasis, Frenado y Dirección</option>
+                      <option value="SEGURIDAD_PASIVA">Seguridad Pasiva y Airbags</option>
+                    </select>
+                  </div>
+                  <!-- Manufacturer OEM -->
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label text-[11px] text-on-surface-variant uppercase">Fabricante / Proveedor OEM
+                      *</label>
+                    <input
+                      class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-body placeholder:text-outline/60"
+                      id="regManufacturer" placeholder="Ej. Bosch, LG Energy, BorgWarner..." required="" type="text" />
+                  </div>
+                  <!-- Serial Number -->
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center justify-between">
+                      <label class="font-label text-[11px] text-on-surface-variant uppercase">Nº de Serie Grabado OEM
+                        *</label>
+                      <span class="text-[10px] font-label text-primary cursor-pointer hover:underline"
+                        onclick="scanMockSerial()">Escanear OCR</span>
+                    </div>
+                    <input
+                      class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label tracking-wide uppercase placeholder:text-outline/60"
+                      id="regSerial" placeholder="Ej. SN-90248-X8" required="" type="text" />
+                  </div>
+                  <!-- Part Number -->
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label text-[11px] text-on-surface-variant uppercase">Número de Parte (Part
+                      Number) *</label>
+                    <input
+                      class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label tracking-wide uppercase placeholder:text-outline/60"
+                      id="regPartNumber" placeholder="Ej. 4J0-907-124-C" required="" type="text" />
+                  </div>
+                  <!-- Lot & Certification in grid -->
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label text-[11px] text-on-surface-variant uppercase">Lote Producción</label>
+                      <input
+                        class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label uppercase placeholder:text-outline/60"
+                        id="regBatch" placeholder="LOT-2023/W42" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label class="font-label text-[11px] text-on-surface-variant uppercase">Certificado TÜV /
+                        CE</label>
+                      <input
+                        class="bg-surface-container-low text-on-surface px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-primary font-label uppercase placeholder:text-outline/60"
+                        id="regCert" placeholder="TÜV-DE-9941" type="text" />
+                    </div>
+                  </div>
+                  <!-- Auto-hash notice -->
+                  <div
+                    class="p-3 bg-surface-container-low rounded flex items-start gap-2.5 text-[11px] font-label text-on-surface-variant">
+                    <span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">lock</span>
+                    <span>Al vincular, se computará automáticamente un digest SHA-256 inmutable asociado al VIN <strong
+                        class="text-on-surface">WAUZZZF28NA019284</strong>.</span>
+                  </div>
+                  <!-- Submit Button -->
+                  <button
+                    class="w-full mt-1 py-2.5 rounded bg-primary hover:bg-inverse-surface text-on-primary font-label font-bold text-xs tracking-wider transition-all flex items-center justify-center gap-2 shadow-md"
+                    type="submit">
+                    <span class="material-symbols-outlined text-[16px]">link</span>
+                    Vincular Pieza a Chasis
+                  </button>
+                </form>
+              </div>
+              <!-- Workshop Stock Verification Snippet -->
+              <div class="bg-surface-container p-4 rounded-xl flex flex-col gap-3 shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-headline font-semibold text-on-surface flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-outline text-[16px]">warehouse</span>
+                    Stock Homologado en Taller
+                  </span>
+                  <span class="text-[10px] font-label text-primary">Bahía #01</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-[11px] font-label p-2 bg-surface-container-low rounded">
+                    <div class="flex flex-col">
+                      <span class="text-on-surface font-medium">BMS Slave Board Rev. 4</span>
+                      <span class="text-outline">ID: STK-8812-HV</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">3
+                      Disp.</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-[11px] font-label p-2 bg-surface-container-low rounded">
+                    <div class="flex flex-col">
+                      <span class="text-on-surface font-medium">Sensor Radar ADAS Bosch 77G</span>
+                      <span class="text-outline">ID: STK-4019-RAD</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">1
+                      Disp.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Notification Toast (Hidden by default) -->
+          <div
+            class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-highest px-4 py-3 rounded-lg shadow-xl flex items-center gap-3"
+            id="toastNotification">
+            <span class="material-symbols-outlined text-secondary text-[20px]" id="toastIcon">check_circle</span>
+            <div class="flex flex-col">
+              <span class="text-xs font-headline font-bold text-on-surface" id="toastTitle">Registro Confirmado</span>
+              <span class="text-[11px] font-label text-on-surface-variant" id="toastMsg">Pieza vinculada con hash
+                criptográfico.</span>
+            </div>
+          </div>
+        </div>
+        <script>
+          // Filtering Components in the Tree
+          const filterInput = document.getElementById('componentFilter');
+          if (filterInput) {
+            filterInput.addEventListener('input', (e) => {
+              const query = e.target.value.toLowerCase().trim();
+              const cards = document.querySelectorAll('.component-card');
+              cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                  card.classList.remove('hidden');
+                } else {
+                  card.classList.add('hidden');
+                }
+              });
+            });
+          }
 
-        // Visual Toast feedback
-        showToast('Pieza Vinculada al Chasis', 'Hash SHA-256 computado para ' + serial);
+          // Quick Simulation of OCR Scan
+          window.scanMockSerial = function () {
+            const serialField = document.getElementById('regSerial');
+            const mockSerials = ['MCU-SIC-88192-EU', 'BMS-MOD-77281-QC', 'LID-GEN3-00912-DE', 'INV-HV8-44910-AU'];
+            const randomSerial = mockSerials[Math.floor(Math.random() * mockSerials.length)];
+            serialField.value = randomSerial;
+            showToast('OCR Escáner Exitoso', 'Serial capturado: ' + randomSerial);
+          };
 
-        // Append to Powertrain container dynamically
-        const container = document.getElementById('subsystem-powertrain');
-        if (container) {
-          const newCard = document.createElement('div');
-          newCard.className = 'component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors animate-fade-in';
-          newCard.innerHTML = `
+          // Part Binding Simulation
+          const regForm = document.getElementById('partRegistrationForm');
+          if (regForm) {
+            regForm.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const serial = document.getElementById('regSerial').value;
+              const partNo = document.getElementById('regPartNumber').value;
+              const category = document.getElementById('regCategory').value;
+              const mfg = document.getElementById('regManufacturer').value;
+
+              // Visual Toast feedback
+              showToast('Pieza Vinculada al Chasis', 'Hash SHA-256 computado para ' + serial);
+
+              // Append to Powertrain container dynamically
+              const container = document.getElementById('subsystem-powertrain');
+              if (container) {
+                const newCard = document.createElement('div');
+                newCard.className = 'component-card bg-surface-container-low p-3.5 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container-high/60 transition-colors animate-fade-in';
+                newCard.innerHTML = `
             <div class="flex items-start gap-3">
               <div class="p-2 rounded bg-surface-container text-secondary flex-shrink-0 mt-0.5">
                 <span class="material-symbols-outlined text-[18px]">verified</span>
@@ -582,51 +864,56 @@
               <button class="px-2.5 py-1.5 rounded bg-surface-container-high text-[11px] font-label text-on-surface">Telemetría</button>
             </div>
           `;
-          container.prepend(newCard);
-        }
+                container.prepend(newCard);
+              }
 
-        // Update Tree counter
-        const counterEl = document.getElementById('treeStatusCount');
-        if (counterEl) {
-          counterEl.innerText = '19 / 19 Registrados';
-        }
+              // Update Tree counter
+              const counterEl = document.getElementById('treeStatusCount');
+              if (counterEl) {
+                counterEl.innerText = '19 / 19 Registrados';
+              }
 
-        regForm.reset();
-      });
-    }
+              regForm.reset();
+            });
+          }
 
-    // Export Matrix Simulation
-    const btnExport = document.getElementById('btnExportMatrix');
-    if (btnExport) {
-      btnExport.addEventListener('click', () => {
-        showToast('Exportación Forense Generada', 'Archivo descargado: MATRIZ_AUTOPARTES_WAUZZZF28NA019284.json');
-      });
-    }
+          // Export Matrix Simulation
+          const btnExport = document.getElementById('btnExportMatrix');
+          if (btnExport) {
+            btnExport.addEventListener('click', () => {
+              showToast('Exportación Forense Generada', 'Archivo descargado: MATRIZ_AUTOPARTES_WAUZZZF28NA019284.json');
+            });
+          }
 
-    // Scan Batch Simulation
-    const btnScan = document.getElementById('btnScanBatch');
-    if (btnScan) {
-      btnScan.addEventListener('click', () => {
-        showToast('Modo Escaneo Lote Activado', 'Esperando conexión con escáner óptico Bluetooth...');
-      });
-    }
+          // Scan Batch Simulation
+          const btnScan = document.getElementById('btnScanBatch');
+          if (btnScan) {
+            btnScan.addEventListener('click', () => {
+              showToast('Modo Escaneo Lote Activado', 'Esperando conexión con escáner óptico Bluetooth...');
+            });
+          }
 
-    function showToast(title, msg) {
-      const toast = document.getElementById('toastNotification');
-      const toastTitle = document.getElementById('toastTitle');
-      const toastMsg = document.getElementById('toastMsg');
-      if (!toast) return;
+          function showToast(title, msg) {
+            const toast = document.getElementById('toastNotification');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastMsg = document.getElementById('toastMsg');
+            if (!toast) return;
 
-      toastTitle.innerText = title;
-      toastMsg.innerText = msg;
+            toastTitle.innerText = title;
+            toastMsg.innerText = msg;
 
-      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
 
-      setTimeout(() => {
-        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-        toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 3500);
-    }
-  </script>
-</div></main></div></body></html>
+            setTimeout(() => {
+              toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+              toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3500);
+          }
+        </script>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
