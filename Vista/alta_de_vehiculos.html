@@ -1,544 +1,797 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#434655","surface-container-high":"#1d2a3e","surface-container-lowest":"#020e21","tertiary-fixed":"#ffdad6","on-error-container":"#ffdad6","inverse-surface":"#d6e3fe","surface-tint":"#b7c4ff","surface-container-low":"#0e1c2f","on-tertiary":"#690005","tertiary-fixed-dim":"#ffb4ab","primary-container":"#1d4ed8","tertiary-container":"#bb0112","on-tertiary-container":"#ffc7c1","secondary":"#68dba9","on-secondary-fixed":"#002114","error-container":"#93000a","surface":"#061426","surface-bright":"#2d3a4e","secondary-fixed-dim":"#68dba9","secondary-fixed":"#85f8c4","secondary-container":"#25a475","surface-dim":"#061426","tertiary":"#ffb4ab","surface-container-highest":"#28354a","on-surface-variant":"#c4c5d7","surface-container":"#132033","surface-variant":"#28354a","error":"#ffb4ab","on-background":"#d6e3fe","on-primary":"#002682","on-error":"#690005","on-primary-container":"#cad3ff","on-primary-fixed-variant":"#0039b5","outline":"#8e90a0","on-secondary-container":"#00311f","primary-fixed-dim":"#b7c4ff","on-tertiary-fixed":"#410002","inverse-on-surface":"#243145","on-secondary":"#003825","primary":"#b7c4ff","inverse-primary":"#2151da","on-tertiary-fixed-variant":"#93000b","on-primary-fixed":"#001551","primary-fixed":"#dce1ff","on-surface":"#d6e3fe","on-secondary-fixed-variant":"#005137","background":"#061426"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="flex flex-col"><span class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span></div></div><div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between"><div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span></div><nav class="px-3 space-y-4 pb-6" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01: Usuarios y Acceso</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02: Inventario Vehicular</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03: Auditoría y Escaneo</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04: Supervisión Forense</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05: Trazabilidad Registral</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div></div></nav></div><div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2"><div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span class="text-secondary font-label text-[11px]">ACTIVO</span></div><div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-secondary w-full"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-4"><div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">domain</span><div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller / Entorno</span><select class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2"><option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01</option><option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option><option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)</option></select></div></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">lock</span><span class="font-label text-xs text-on-surface-variant">Ledger Status: <span class="text-secondary font-semibold">Inmutable</span></span></div></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label"><span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span></div><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full px-8 py-8 gap-8">
-<!-- Header Section -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
-<div class="flex flex-col gap-2.5">
-<div class="flex items-center gap-3">
-<span class="px-2.5 py-1 rounded text-[11px] font-label font-medium tracking-wider bg-surface-container-high text-primary">
-          RF-M02-01 // IDENTIFICACIÓN DEL PARQUE AUTOMOTOR
-        </span>
-<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary/10 text-secondary text-[11px] font-label">
-<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span>SISTEMA REGISTRAL EN LÍNEA</span>
-</div>
-</div>
-<h1 class="text-3xl font-headline font-bold text-on-surface tracking-tight">
-        Alta y Registro de Vehículo
-      </h1>
-<p class="text-sm font-body text-on-surface-variant max-w-2xl leading-relaxed">
-        Enrolamiento institucional en la red pericial y anclaje del gemelo digital unívoco. Los datos asentados configuran la huella estructural auditada bajo norma ISO 3779.
-      </p>
-</div>
-<!-- Quick Action / OCR Trigger -->
-<div class="flex items-center gap-3 self-start md:self-end">
-<button class="flex items-center gap-2 px-4 py-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-headline font-medium transition-colors shadow-sm" id="btn-scan-doc">
-<span class="material-symbols-outlined text-primary text-[18px]">document_scanner</span>
-<span>Escanear Ficha Técnica (OCR)</span>
-</button>
-<button class="flex items-center gap-2 px-3.5 py-2.5 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface text-xs font-headline transition-colors">
-<span class="material-symbols-outlined text-[18px]">history</span>
-<span>Historial de Sesión</span>
-</button>
-</div>
-</div>
-<!-- Operational KPIs -->
-<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-<!-- KPI 1 -->
-<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
-<div class="flex items-start justify-between">
-<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Vehículos Registrados</span>
-<span class="p-2 rounded bg-surface-container-high text-primary material-symbols-outlined text-[18px]">garage</span>
-</div>
-<div class="mt-4 flex items-baseline justify-between">
-<span class="text-2xl font-label font-bold text-on-surface">1,420</span>
-<span class="text-xs font-label text-secondary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">trending_up</span> +38 este mes
-        </span>
-</div>
-</div>
-<!-- KPI 2 -->
-<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
-<div class="flex items-start justify-between">
-<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Validaciones VIN Pendientes</span>
-<span class="p-2 rounded bg-surface-container-high text-tertiary material-symbols-outlined text-[18px]">pending_actions</span>
-</div>
-<div class="mt-4 flex items-baseline justify-between">
-<span class="text-2xl font-label font-bold text-tertiary">04</span>
-<span class="text-xs font-label text-on-surface-variant">En cola pericial</span>
-</div>
-</div>
-<!-- KPI 3 -->
-<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
-<div class="flex items-start justify-between">
-<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Concordancia DGT / Registro</span>
-<span class="p-2 rounded bg-surface-container-high text-secondary material-symbols-outlined text-[18px]">verified</span>
-</div>
-<div class="mt-4 flex items-baseline justify-between">
-<span class="text-2xl font-label font-bold text-secondary">99.8%</span>
-<span class="text-xs font-label text-on-surface-variant">Checksum óptimo</span>
-</div>
-</div>
-<!-- KPI 4 -->
-<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
-<div class="flex items-start justify-between">
-<span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Capacidad de Bahías</span>
-<span class="p-2 rounded bg-surface-container-high text-primary-fixed-dim material-symbols-outlined text-[18px]">tune</span>
-</div>
-<div class="mt-4 flex items-baseline justify-between">
-<div class="flex items-baseline gap-1">
-<span class="text-2xl font-label font-bold text-on-surface">12</span>
-<span class="text-sm font-label text-on-surface-variant">/ 16 activas</span>
-</div>
-<div class="w-16 h-2 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-primary-container" style="width: 75%;"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Form Layout Container -->
-<form class="flex flex-col gap-6" id="vehicle-registration-form" onsubmit="event.preventDefault();">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-<!-- Bloque A: Identificación Primaria -->
-<div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
-<div class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
-<div class="flex items-center gap-2.5">
-<span class="w-7 h-7 rounded bg-primary/10 text-primary flex items-center justify-center font-label text-xs font-bold">A</span>
-<div>
-<h2 class="text-sm font-headline font-semibold text-on-surface">Identificación Primaria</h2>
-<span class="text-[11px] font-label text-on-surface-variant">Homologación y seriales oficiales</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-outline text-[20px]">badge</span>
-</div>
-<!-- VIN Input with Dynamic Validation -->
-<div class="flex flex-col gap-1.5">
-<div class="flex items-center justify-between">
-<label class="text-xs font-headline font-medium text-on-surface" for="vin-input">Número de Bastidor (VIN / 17 Dígitos)</label>
-<span class="font-label text-[10px] text-secondary font-medium tracking-wide" id="vin-checksum-badge">ISO 3779 OK</span>
-</div>
-<div class="relative">
-<input class="w-full h-10 px-3.5 rounded bg-surface-container-lowest text-on-surface font-label text-sm uppercase tracking-widest focus:outline-none focus:bg-surface-container-high transition-colors" id="vin-input" maxlength="17" type="text" value="WP0AB2Y16MSA90142"/>
-<span class="absolute right-3 top-2.5 material-symbols-outlined text-secondary text-[18px]">verified</span>
-</div>
-<p class="text-[11px] font-label text-on-surface-variant flex items-center gap-1.5">
-<span class="text-outline">WMI:</span> WP0 (Alemania) <span class="text-outline">· VDS:</span> AB2Y1 <span class="text-outline">· Check:</span> 6 (Válido)
-          </p>
-</div>
-<!-- Placa / Matrícula -->
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="plate-input">Matrícula / Placa Registral</label>
-<input class="w-full h-10 px-3.5 rounded bg-surface-container-lowest text-on-surface font-label text-sm uppercase tracking-wider focus:outline-none focus:bg-surface-container-high transition-colors" id="plate-input" type="text" value="8921-MBX"/>
-</div>
-<!-- Marca y Modelo -->
-<div class="grid grid-cols-2 gap-3">
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="brand-select">Marca</label>
-<select class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none focus:bg-surface-container-high cursor-pointer" id="brand-select">
-<option selected="" value="Porsche">Porsche</option>
-<option value="Audi">Audi</option>
-<option value="Tesla">Tesla</option>
-<option value="BMW">BMW</option>
-<option value="Mercedes-Benz">Mercedes-Benz</option>
-</select>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="model-input">Modelo</label>
-<input class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none focus:bg-surface-container-high" id="model-input" type="text" value="Taycan 4S Cross Turismo"/>
-</div>
-</div>
-<!-- Año y Tipo Motorización -->
-<div class="grid grid-cols-2 gap-3">
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="year-select">Año Fabricación</label>
-<select class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs font-label focus:outline-none cursor-pointer" id="year-select">
-<option selected="" value="2024">2024</option>
-<option value="2023">2023</option>
-<option value="2022">2022</option>
-<option value="2021">2021</option>
-</select>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="powertrain-select">Motorización</label>
-<select class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none cursor-pointer" id="powertrain-select">
-<option selected="" value="bev">BEV (100% Eléctrico)</option>
-<option value="phev">PHEV (Híbrido Enchufable)</option>
-<option value="hev">HEV (Híbrido Convencional)</option>
-<option value="ice">Térmico (Gasolina/Diésel)</option>
-</select>
-</div>
-</div>
-</div>
-<!-- Bloque B: Datos de Custodia y Procedencia -->
-<div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
-<div class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
-<div class="flex items-center gap-2.5">
-<span class="w-7 h-7 rounded bg-secondary/10 text-secondary flex items-center justify-center font-label text-xs font-bold">B</span>
-<div>
-<h2 class="text-sm font-headline font-semibold text-on-surface">Custodia y Procedencia</h2>
-<span class="text-[11px] font-label text-on-surface-variant">Trazabilidad de tenencia física</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-outline text-[20px]">shield_person</span>
-</div>
-<!-- Propietario / Flota titular -->
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="owner-input">Propietario / Flota Titular</label>
-<div class="relative">
-<input class="w-full h-10 px-3.5 pr-9 rounded bg-surface-container-lowest text-on-surface text-xs font-medium focus:outline-none focus:bg-surface-container-high transition-colors" id="owner-input" type="text" value="KRONOS MOBILITY FLEET SPAIN S.L."/>
-<span class="absolute right-3 top-2.5 material-symbols-outlined text-outline text-[18px]">corporate_fare</span>
-</div>
-</div>
-<!-- Taller emisor asignado -->
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="workshop-select">Taller Pericial Asignado</label>
-<select class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none cursor-pointer" id="workshop-select">
-<option selected="" value="central">Taller Central Forense #01 (Bahía de Alta 04)</option>
-<option value="norte">División Pericial Norte (Madrid Lab)</option>
-<option value="sur">Polo Tecnológico Sur (Sevilla Hub)</option>
-</select>
-</div>
-<!-- Kilometraje y Estado Batería (SoH) -->
-<div class="grid grid-cols-2 gap-3">
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="odometer-input">Odómetro Inicial</label>
-<div class="relative">
-<input class="w-full h-10 px-3 pr-8 rounded bg-surface-container-lowest text-on-surface font-label text-xs focus:outline-none focus:bg-surface-container-high" id="odometer-input" type="text" value="14,820"/>
-<span class="absolute right-2.5 top-2.5 font-label text-[10px] text-outline">KM</span>
-</div>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface" for="soh-input">Salud Batería (SoH)</label>
-<div class="relative">
-<input class="w-full h-10 px-3 pr-8 rounded bg-surface-container-lowest text-secondary font-label text-xs focus:outline-none focus:bg-surface-container-high" id="soh-input" max="100" min="0" type="number" value="98"/>
-<span class="absolute right-2.5 top-2.5 font-label text-[10px] text-secondary">%</span>
-</div>
-</div>
-</div>
-<!-- Llaves Físicas / Digitales -->
-<div class="flex flex-col gap-1.5">
-<label class="text-xs font-headline font-medium text-on-surface">Dispositivos de Acceso Recepcionados</label>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-lowest">
-<span class="text-xs text-on-surface-variant flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-outline">key</span> Llaves Físicas
-              </span>
-<span class="font-label text-xs font-bold text-on-surface bg-surface-container px-2 py-0.5 rounded">2 / 2</span>
-</div>
-<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-lowest">
-<span class="text-xs text-on-surface-variant flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[16px] text-outline">nfc</span> Token / App
-              </span>
-<span class="font-label text-xs font-bold text-secondary bg-surface-container px-2 py-0.5 rounded">VINCULADO</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Bloque C: Validación de Gemelo Digital -->
-<div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
-<div class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
-<div class="flex items-center gap-2.5">
-<span class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center font-label text-xs font-bold">C</span>
-<div>
-<h2 class="text-sm font-headline font-semibold text-on-surface">Gemelo Digital SITAA</h2>
-<span class="text-[11px] font-label text-on-surface-variant">Parametrización y emisión de nodo</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-primary text-[20px]">token</span>
-</div>
-<!-- Switch Generar Pasaporte Digital -->
-<div class="flex items-start justify-between p-3.5 rounded bg-surface-container-lowest">
-<div class="flex flex-col gap-1 pr-3">
-<span class="text-xs font-headline font-semibold text-on-surface">Pasaporte Digital Inmutable</span>
-<span class="text-[11px] text-on-surface-variant leading-tight">
-              Ancla el hash SHA-256 inicial y apertura el libro de autopartes auditables.
-            </span>
-</div>
-<label class="relative inline-flex items-center cursor-pointer mt-0.5">
-<input checked="" class="sr-only peer" id="toggle-passport" type="checkbox"/>
-<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
-</label>
-</div>
-<!-- Nivel de Inspección Inicial -->
-<div class="flex flex-col gap-2">
-<label class="text-xs font-headline font-medium text-on-surface">Nivel de Protocolo Pericial</label>
-<div class="space-y-2">
-<label class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
-<input class="accent-primary-container" name="protocol-level" type="radio" value="standard"/>
-<div class="flex flex-col">
-<span class="text-xs font-headline font-medium text-on-surface">Estándar Bahía (Nivel 1)</span>
-<span class="text-[10px] text-on-surface-variant">Check visual, VIN e inventario base de 8 autopartes</span>
-</div>
-</label>
-<label class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
-<input checked="" class="accent-primary-container" name="protocol-level" type="radio" value="preventa"/>
-<div class="flex flex-col">
-<span class="text-xs font-headline font-medium text-on-surface">Peritaje Preventa / Leasing (Nivel 2)</span>
-<span class="text-[10px] text-on-surface-variant">Escaneo OBD-II, SoH comprobado, registro fotográfico forense</span>
-</div>
-</label>
-<label class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
-<input class="accent-primary-container" name="protocol-level" type="radio" value="homologacion"/>
-<div class="flex flex-col">
-<span class="text-xs font-headline font-medium text-on-surface">Homologación Oficial / DGT (Nivel 3)</span>
-<span class="text-[10px] text-on-surface-variant">Firma pericial colegiada con certificación criptográfica plena</span>
-</div>
-</label>
-</div>
-</div>
-<!-- Telemetría preliminar / Pre-visualización -->
-<div class="mt-auto p-3 rounded bg-surface-container-low flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
-<div class="flex flex-col">
-<span class="text-[10px] font-label text-outline uppercase">Bloque Propuesto</span>
-<span class="text-xs font-label text-on-surface">TX-M02-98442</span>
-</div>
-</div>
-<span class="text-[11px] font-label text-secondary bg-secondary/10 px-2 py-0.5 rounded">Listo para sellado</span>
-</div>
-</div>
-</div>
-<!-- Actions Bar -->
-<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-surface-container shadow-sm">
-<div class="flex items-center gap-2 text-xs font-label text-on-surface-variant">
-<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
-<span>Validación criptográfica local lista. No se registraron conflictos de duplicidad registral.</span>
-</div>
-<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
-<button class="px-5 py-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-headline font-medium transition-colors" type="button">
-          Guardar Borrador
-        </button>
-<button class="flex items-center gap-2 px-6 py-2.5 rounded bg-primary-container hover:bg-blue-600 text-on-primary-container text-xs font-headline font-semibold transition-colors shadow-md" id="btn-submit-registration" type="button">
-<span class="material-symbols-outlined text-[18px]">add_circle</span>
-<span>Registrar Vehículo y Crear Gemelo Digital</span>
-</button>
-</div>
-</div>
-</form>
-<!-- Lista Inferior: Últimos Vehículos Enrolados -->
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-3">
-<h3 class="text-base font-headline font-bold text-on-surface">Últimos Vehículos Enrolados en la Red</h3>
-<span class="px-2 py-0.5 rounded bg-surface-container-high font-label text-[11px] text-on-surface-variant">Sesión actual: 5</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="relative">
-<input class="h-8 pl-8 pr-3 rounded bg-surface-container text-xs text-on-surface placeholder:text-outline font-label focus:outline-none focus:bg-surface-container-high" placeholder="Filtrar por VIN o Matrícula..." type="text"/>
-<span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[16px]">search</span>
-</div>
-</div>
-</div>
-<!-- Table Container -->
-<div class="overflow-x-auto rounded-xl bg-surface-container shadow-sm">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container-lowest text-[11px] font-label text-outline uppercase tracking-wider">
-<th class="py-3 px-4">Vehículo / Unidad</th>
-<th class="py-3 px-4">VIN / Bastidor</th>
-<th class="py-3 px-4">Matrícula</th>
-<th class="py-3 px-4">Auditor / Perito</th>
-<th class="py-3 px-4">Fecha y Hora</th>
-<th class="py-3 px-4">Estado Registral</th>
-<th class="py-3 px-4 text-right">Acción</th>
-</tr>
-</thead>
-<tbody class="text-xs divide-y divide-surface-container-low font-body">
-<!-- Row 1 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[18px]">electric_car</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline font-semibold text-on-surface">Porsche Taycan 4S</span>
-<span class="text-[10px] text-on-surface-variant font-label">BEV · 2024</span>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-primary">WP0AB2Y16MSA90142</td>
-<td class="py-3.5 px-4 font-label text-on-surface">8921-MBX</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span class="text-on-surface">AUD-90241-TX</span>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 10:24:18</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary/15 text-secondary font-label text-[10px] font-medium tracking-wide">
-<span class="material-symbols-outlined text-[12px]">check_circle</span> ENROLADO OK
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
-                Ver Ficha
-              </button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[18px]">electric_car</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline font-semibold text-on-surface">Tesla Model S Plaid</span>
-<span class="text-[10px] text-on-surface-variant font-label">BEV · 2023</span>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-primary">5YJSA1E28PF492810</td>
-<td class="py-3.5 px-4 font-label text-on-surface">1402-LZK</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span class="text-on-surface">AUD-90241-TX</span>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 09:41:02</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary/15 text-secondary font-label text-[10px] font-medium tracking-wide">
-<span class="material-symbols-outlined text-[12px]">check_circle</span> ENROLADO OK
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
-                Ver Ficha
-              </button>
-</td>
-</tr>
-<!-- Row 3 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-tertiary">
-<span class="material-symbols-outlined text-[18px]">directions_car</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline font-semibold text-on-surface">Audi e-tron GT RS</span>
-<span class="text-[10px] text-on-surface-variant font-label">BEV · 2023</span>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-primary">WAUZZZF27NA019284</td>
-<td class="py-3.5 px-4 font-label text-on-surface">4920-KJP</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-<span class="text-on-surface">AUD-81044-MD</span>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 08:15:50</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-tertiary/15 text-tertiary font-label text-[10px] font-medium tracking-wide">
-<span class="material-symbols-outlined text-[12px]">sync</span> EN CURSO (SoH)
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
-                Ver Ficha
-              </button>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-error">
-<span class="material-symbols-outlined text-[18px]">warning</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline font-semibold text-on-surface">BMW i4 M50 Gran Coupé</span>
-<span class="text-[10px] text-on-surface-variant font-label">BEV · 2022</span>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-error">WBA33AW08NFP51094</td>
-<td class="py-3.5 px-4 font-label text-on-surface">7194-LTV</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span class="text-on-surface">AUD-90241-TX</span>
-</div>
-</td>
-<td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-11 17:50:33</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error/15 text-error font-label text-[10px] font-medium tracking-wide">
-<span class="material-symbols-outlined text-[12px]">gpp_maybe</span> ALERTA VIN
-              </span>
-</td>
-<td class="py-3.5 px-4 text-right">
-<button class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
-                Ver Ficha
-              </button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- Toast Notification Simulator for Registration Feedback -->
-<div class="fixed bottom-6 right-6 hidden bg-surface-container-highest text-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 z-50" id="registration-toast">
-<span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
-<div class="flex flex-col">
-<span class="text-xs font-headline font-semibold">Gemelo Digital Emitido con Éxito</span>
-<span class="text-[11px] font-label text-on-surface-variant" id="toast-vin-label">VIN: WP0AB2Y16MSA90142 | Bloque generado</span>
-</div>
-</div>
-</div>
-<script>
-  // Script para micro-interacciones del formulario de alta vehicular
-  (function() {
-    const vinInput = document.getElementById('vin-input');
-    const checksumBadge = document.getElementById('vin-checksum-badge');
-    const btnSubmit = document.getElementById('btn-submit-registration');
-    const toast = document.getElementById('registration-toast');
-    const toastLabel = document.getElementById('toast-vin-label');
-    const btnScanDoc = document.getElementById('btn-scan-doc');
+<html lang="es">
 
-    // Validación interactiva de VIN (17 caracteres)
-    if (vinInput && checksumBadge) {
-      vinInput.addEventListener('input', function(e) {
-        const val = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-        e.target.value = val;
-        if (val.length === 17) {
-          checksumBadge.textContent = 'ISO 3779 OK';
-          checksumBadge.className = 'font-label text-[10px] text-secondary font-medium tracking-wide';
-        } else {
-          checksumBadge.textContent = `${val.length}/17 DÍGITOS`;
-          checksumBadge.className = 'font-label text-[10px] text-tertiary font-medium tracking-wide';
-        }
-      });
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
     }
 
-    // Feedback de registro al hacer click en el botón principal
-    if (btnSubmit && toast) {
-      btnSubmit.addEventListener('click', function() {
-        const currentVin = vinInput ? vinInput.value : 'WP0AB2Y16MSA90142';
-        if (toastLabel) {
-          toastLabel.textContent = `VIN: ${currentVin} | Gemelo digital TX-M02-98442 anclado`;
-        }
-        toast.classList.remove('hidden');
-        toast.classList.add('flex');
-        setTimeout(() => {
-          toast.classList.add('hidden');
-          toast.classList.remove('flex');
-        }, 4000);
-      });
+    ::-webkit-scrollbar {
+      display: none;
     }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"outline-variant": "#434655", "surface-container-high": "#1d2a3e", "surface-container-lowest": "#020e21", "tertiary-fixed": "#ffdad6", "on-error-container": "#ffdad6", "inverse-surface": "#d6e3fe", "surface-tint": "#b7c4ff", "surface-container-low": "#0e1c2f", "on-tertiary": "#690005", "tertiary-fixed-dim": "#ffb4ab", "primary-container": "#1d4ed8", "tertiary-container": "#bb0112", "on-tertiary-container": "#ffc7c1", "secondary": "#68dba9", "on-secondary-fixed": "#002114", "error-container": "#93000a", "surface": "#061426", "surface-bright": "#2d3a4e", "secondary-fixed-dim": "#68dba9", "secondary-fixed": "#85f8c4", "secondary-container": "#25a475", "surface-dim": "#061426", "tertiary": "#ffb4ab", "surface-container-highest": "#28354a", "on-surface-variant": "#c4c5d7", "surface-container": "#132033", "surface-variant": "#28354a", "error": "#ffb4ab", "on-background": "#d6e3fe", "on-primary": "#002682", "on-error": "#690005", "on-primary-container": "#cad3ff", "on-primary-fixed-variant": "#0039b5", "outline": "#8e90a0", "on-secondary-container": "#00311f", "primary-fixed-dim": "#b7c4ff", "on-tertiary-fixed": "#410002", "inverse-on-surface": "#243145", "on-secondary": "#003825", "primary": "#b7c4ff", "inverse-primary": "#2151da", "on-tertiary-fixed-variant": "#93000b", "on-primary-fixed": "#001551", "primary-fixed": "#dce1ff", "on-surface": "#d6e3fe", "on-secondary-fixed-variant": "#005137", "background": "#061426"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {}, fontFamily: {headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {}}}}</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+</head>
 
-    // Simulación de escaneo rápido de ficha técnica
-    if (btnScanDoc && vinInput) {
-      btnScanDoc.addEventListener('click', function() {
-        btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-primary text-[18px] animate-spin">refresh</span><span>Extrayendo Datos OCR...</span>';
-        setTimeout(() => {
-          btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-secondary text-[18px]">done</span><span>Ficha Extraída</span>';
-          vinInput.value = 'WP0AB2Y16MSA90142';
-          if (checksumBadge) {
-            checksumBadge.textContent = 'ISO 3779 OK';
-            checksumBadge.className = 'font-label text-[10px] text-secondary font-medium tracking-wide';
-          }
-          setTimeout(() => {
-            btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-primary text-[18px]">document_scanner</span><span>Escanear Ficha Técnica (OCR)</span>';
-          }, 2000);
-        }, 1200);
-      });
-    }
-  })();
-</script></main></div></body></html>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto">
+    <div class="flex flex-col">
+      <div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img
+          alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK" />
+        <div class="flex flex-col"><span
+            class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span
+            class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span>
+        </div>
+      </div>
+      <div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between">
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span
+            class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span
+          class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span>
+      </div>
+      <nav class="px-3 space-y-4 pb-6"
+        data-active-classes="bg-primary-container text-on-primary-container font-semibold">
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01:
+            Usuarios y Acceso</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02:
+            Inventario Vehicular</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03:
+            Auditoría y Escaneo</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04:
+            Supervisión Forense</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05:
+            Trazabilidad Registral</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2">
+      <div class="flex items-center justify-between text-xs"><span
+          class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span
+          class="text-secondary font-label text-[11px]">ACTIVO</span></div>
+      <div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+        <div class="h-full bg-secondary w-full"></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span
+            class="material-symbols-outlined text-outline text-[18px]">domain</span>
+          <div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller /
+              Entorno</span><select
+              class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2">
+              <option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01
+              </option>
+              <option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option>
+              <option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)
+              </option>
+            </select></div>
+        </div>
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span
+            class="material-symbols-outlined text-secondary text-[16px]">lock</span><span
+            class="font-label text-xs text-on-surface-variant">Ledger Status: <span
+              class="text-secondary font-semibold">Inmutable</span></span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label">
+          <span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span>
+        </div><button aria-label="Notificaciones"
+          class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+          type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span
+            class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button>
+        <div class="flex items-center gap-3 pl-2">
+          <div class="flex flex-col text-right"><span
+              class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span
+              class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+              class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen">
+      <div class="flex flex-col w-full px-8 py-8 gap-8">
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+          <div class="flex flex-col gap-2.5">
+            <div class="flex items-center gap-3">
+              <span
+                class="px-2.5 py-1 rounded text-[11px] font-label font-medium tracking-wider bg-surface-container-high text-primary">
+                RF-M02-01 // IDENTIFICACIÓN DEL PARQUE AUTOMOTOR
+              </span>
+              <div
+                class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary/10 text-secondary text-[11px] font-label">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>SISTEMA REGISTRAL EN LÍNEA</span>
+              </div>
+            </div>
+            <h1 class="text-3xl font-headline font-bold text-on-surface tracking-tight">
+              Alta y Registro de Vehículo
+            </h1>
+            <p class="text-sm font-body text-on-surface-variant max-w-2xl leading-relaxed">
+              Enrolamiento institucional en la red pericial y anclaje del gemelo digital unívoco. Los datos asentados
+              configuran la huella estructural auditada bajo norma ISO 3779.
+            </p>
+          </div>
+          <!-- Quick Action / OCR Trigger -->
+          <div class="flex items-center gap-3 self-start md:self-end">
+            <button
+              class="flex items-center gap-2 px-4 py-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-headline font-medium transition-colors shadow-sm"
+              id="btn-scan-doc">
+              <span class="material-symbols-outlined text-primary text-[18px]">document_scanner</span>
+              <span>Escanear Ficha Técnica (OCR)</span>
+            </button>
+            <button
+              class="flex items-center gap-2 px-3.5 py-2.5 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface text-xs font-headline transition-colors">
+              <span class="material-symbols-outlined text-[18px]">history</span>
+              <span>Historial de Sesión</span>
+            </button>
+          </div>
+        </div>
+        <!-- Operational KPIs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <!-- KPI 1 -->
+          <div
+            class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Vehículos
+                Registrados</span>
+              <span
+                class="p-2 rounded bg-surface-container-high text-primary material-symbols-outlined text-[18px]">garage</span>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between">
+              <span class="text-2xl font-label font-bold text-on-surface">1,420</span>
+              <span class="text-xs font-label text-secondary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">trending_up</span> +38 este mes
+              </span>
+            </div>
+          </div>
+          <!-- KPI 2 -->
+          <div
+            class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Validaciones VIN
+                Pendientes</span>
+              <span
+                class="p-2 rounded bg-surface-container-high text-tertiary material-symbols-outlined text-[18px]">pending_actions</span>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between">
+              <span class="text-2xl font-label font-bold text-tertiary">04</span>
+              <span class="text-xs font-label text-on-surface-variant">En cola pericial</span>
+            </div>
+          </div>
+          <!-- KPI 3 -->
+          <div
+            class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Concordancia DGT /
+                Registro</span>
+              <span
+                class="p-2 rounded bg-surface-container-high text-secondary material-symbols-outlined text-[18px]">verified</span>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between">
+              <span class="text-2xl font-label font-bold text-secondary">99.8%</span>
+              <span class="text-xs font-label text-on-surface-variant">Checksum óptimo</span>
+            </div>
+          </div>
+          <!-- KPI 4 -->
+          <div
+            class="p-5 rounded-xl bg-surface-container flex flex-col justify-between shadow-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <span class="text-xs font-label uppercase text-on-surface-variant tracking-wider">Capacidad de
+                Bahías</span>
+              <span
+                class="p-2 rounded bg-surface-container-high text-primary-fixed-dim material-symbols-outlined text-[18px]">tune</span>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between">
+              <div class="flex items-baseline gap-1">
+                <span class="text-2xl font-label font-bold text-on-surface">12</span>
+                <span class="text-sm font-label text-on-surface-variant">/ 16 activas</span>
+              </div>
+              <div class="w-16 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                <div class="h-full bg-primary-container" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Form Layout Container -->
+        <form class="flex flex-col gap-6" id="vehicle-registration-form" onsubmit="event.preventDefault();">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Bloque A: Identificación Primaria -->
+            <div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
+              <div
+                class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="w-7 h-7 rounded bg-primary/10 text-primary flex items-center justify-center font-label text-xs font-bold">A</span>
+                  <div>
+                    <h2 class="text-sm font-headline font-semibold text-on-surface">Identificación Primaria</h2>
+                    <span class="text-[11px] font-label text-on-surface-variant">Homologación y seriales
+                      oficiales</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-outline text-[20px]">badge</span>
+              </div>
+              <!-- VIN Input with Dynamic Validation -->
+              <div class="flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="vin-input">Número de Bastidor
+                    (VIN / 17 Dígitos)</label>
+                  <span class="font-label text-[10px] text-secondary font-medium tracking-wide"
+                    id="vin-checksum-badge">ISO 3779 OK</span>
+                </div>
+                <div class="relative">
+                  <input
+                    class="w-full h-10 px-3.5 rounded bg-surface-container-lowest text-on-surface font-label text-sm uppercase tracking-widest focus:outline-none focus:bg-surface-container-high transition-colors"
+                    id="vin-input" maxlength="17" type="text" value="WP0AB2Y16MSA90142" />
+                  <span
+                    class="absolute right-3 top-2.5 material-symbols-outlined text-secondary text-[18px]">verified</span>
+                </div>
+                <p class="text-[11px] font-label text-on-surface-variant flex items-center gap-1.5">
+                  <span class="text-outline">WMI:</span> WP0 (Alemania) <span class="text-outline">· VDS:</span> AB2Y1
+                  <span class="text-outline">· Check:</span> 6 (Válido)
+                </p>
+              </div>
+              <!-- Placa / Matrícula -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-headline font-medium text-on-surface" for="plate-input">Matrícula / Placa
+                  Registral</label>
+                <input
+                  class="w-full h-10 px-3.5 rounded bg-surface-container-lowest text-on-surface font-label text-sm uppercase tracking-wider focus:outline-none focus:bg-surface-container-high transition-colors"
+                  id="plate-input" type="text" value="8921-MBX" />
+              </div>
+              <!-- Marca y Modelo -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="brand-select">Marca</label>
+                  <select
+                    class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none focus:bg-surface-container-high cursor-pointer"
+                    id="brand-select">
+                    <option selected="" value="Porsche">Porsche</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                  </select>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="model-input">Modelo</label>
+                  <input
+                    class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none focus:bg-surface-container-high"
+                    id="model-input" type="text" value="Taycan 4S Cross Turismo" />
+                </div>
+              </div>
+              <!-- Año y Tipo Motorización -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="year-select">Año
+                    Fabricación</label>
+                  <select
+                    class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs font-label focus:outline-none cursor-pointer"
+                    id="year-select">
+                    <option selected="" value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                  </select>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface"
+                    for="powertrain-select">Motorización</label>
+                  <select
+                    class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none cursor-pointer"
+                    id="powertrain-select">
+                    <option selected="" value="bev">BEV (100% Eléctrico)</option>
+                    <option value="phev">PHEV (Híbrido Enchufable)</option>
+                    <option value="hev">HEV (Híbrido Convencional)</option>
+                    <option value="ice">Térmico (Gasolina/Diésel)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Bloque B: Datos de Custodia y Procedencia -->
+            <div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
+              <div
+                class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="w-7 h-7 rounded bg-secondary/10 text-secondary flex items-center justify-center font-label text-xs font-bold">B</span>
+                  <div>
+                    <h2 class="text-sm font-headline font-semibold text-on-surface">Custodia y Procedencia</h2>
+                    <span class="text-[11px] font-label text-on-surface-variant">Trazabilidad de tenencia física</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-outline text-[20px]">shield_person</span>
+              </div>
+              <!-- Propietario / Flota titular -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-headline font-medium text-on-surface" for="owner-input">Propietario / Flota
+                  Titular</label>
+                <div class="relative">
+                  <input
+                    class="w-full h-10 px-3.5 pr-9 rounded bg-surface-container-lowest text-on-surface text-xs font-medium focus:outline-none focus:bg-surface-container-high transition-colors"
+                    id="owner-input" type="text" value="KRONOS MOBILITY FLEET SPAIN S.L." />
+                  <span
+                    class="absolute right-3 top-2.5 material-symbols-outlined text-outline text-[18px]">corporate_fare</span>
+                </div>
+              </div>
+              <!-- Taller emisor asignado -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-headline font-medium text-on-surface" for="workshop-select">Taller Pericial
+                  Asignado</label>
+                <select
+                  class="w-full h-10 px-3 rounded bg-surface-container-lowest text-on-surface text-xs focus:outline-none cursor-pointer"
+                  id="workshop-select">
+                  <option selected="" value="central">Taller Central Forense #01 (Bahía de Alta 04)</option>
+                  <option value="norte">División Pericial Norte (Madrid Lab)</option>
+                  <option value="sur">Polo Tecnológico Sur (Sevilla Hub)</option>
+                </select>
+              </div>
+              <!-- Kilometraje y Estado Batería (SoH) -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="odometer-input">Odómetro
+                    Inicial</label>
+                  <div class="relative">
+                    <input
+                      class="w-full h-10 px-3 pr-8 rounded bg-surface-container-lowest text-on-surface font-label text-xs focus:outline-none focus:bg-surface-container-high"
+                      id="odometer-input" type="text" value="14,820" />
+                    <span class="absolute right-2.5 top-2.5 font-label text-[10px] text-outline">KM</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-xs font-headline font-medium text-on-surface" for="soh-input">Salud Batería
+                    (SoH)</label>
+                  <div class="relative">
+                    <input
+                      class="w-full h-10 px-3 pr-8 rounded bg-surface-container-lowest text-secondary font-label text-xs focus:outline-none focus:bg-surface-container-high"
+                      id="soh-input" max="100" min="0" type="number" value="98" />
+                    <span class="absolute right-2.5 top-2.5 font-label text-[10px] text-secondary">%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Llaves Físicas / Digitales -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-headline font-medium text-on-surface">Dispositivos de Acceso
+                  Recepcionados</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="flex items-center justify-between p-2.5 rounded bg-surface-container-lowest">
+                    <span class="text-xs text-on-surface-variant flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-[16px] text-outline">key</span> Llaves Físicas
+                    </span>
+                    <span
+                      class="font-label text-xs font-bold text-on-surface bg-surface-container px-2 py-0.5 rounded">2 /
+                      2</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 rounded bg-surface-container-lowest">
+                    <span class="text-xs text-on-surface-variant flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-[16px] text-outline">nfc</span> Token / App
+                    </span>
+                    <span
+                      class="font-label text-xs font-bold text-secondary bg-surface-container px-2 py-0.5 rounded">VINCULADO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bloque C: Validación de Gemelo Digital -->
+            <div class="lg:col-span-4 p-6 rounded-xl bg-surface-container flex flex-col gap-5 shadow-sm">
+              <div
+                class="flex items-center justify-between pb-3 bg-surface-container-low/40 -mx-6 -mt-6 p-6 rounded-t-xl">
+                <div class="flex items-center gap-2.5">
+                  <span
+                    class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center font-label text-xs font-bold">C</span>
+                  <div>
+                    <h2 class="text-sm font-headline font-semibold text-on-surface">Gemelo Digital SITAA</h2>
+                    <span class="text-[11px] font-label text-on-surface-variant">Parametrización y emisión de
+                      nodo</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-primary text-[20px]">token</span>
+              </div>
+              <!-- Switch Generar Pasaporte Digital -->
+              <div class="flex items-start justify-between p-3.5 rounded bg-surface-container-lowest">
+                <div class="flex flex-col gap-1 pr-3">
+                  <span class="text-xs font-headline font-semibold text-on-surface">Pasaporte Digital Inmutable</span>
+                  <span class="text-[11px] text-on-surface-variant leading-tight">
+                    Ancla el hash SHA-256 inicial y apertura el libro de autopartes auditables.
+                  </span>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer mt-0.5">
+                  <input checked="" class="sr-only peer" id="toggle-passport" type="checkbox" />
+                  <div
+                    class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container">
+                  </div>
+                </label>
+              </div>
+              <!-- Nivel de Inspección Inicial -->
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-headline font-medium text-on-surface">Nivel de Protocolo Pericial</label>
+                <div class="space-y-2">
+                  <label
+                    class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+                    <input class="accent-primary-container" name="protocol-level" type="radio" value="standard" />
+                    <div class="flex flex-col">
+                      <span class="text-xs font-headline font-medium text-on-surface">Estándar Bahía (Nivel 1)</span>
+                      <span class="text-[10px] text-on-surface-variant">Check visual, VIN e inventario base de 8
+                        autopartes</span>
+                    </div>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+                    <input checked="" class="accent-primary-container" name="protocol-level" type="radio"
+                      value="preventa" />
+                    <div class="flex flex-col">
+                      <span class="text-xs font-headline font-medium text-on-surface">Peritaje Preventa / Leasing (Nivel
+                        2)</span>
+                      <span class="text-[10px] text-on-surface-variant">Escaneo OBD-II, SoH comprobado, registro
+                        fotográfico forense</span>
+                    </div>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-2.5 rounded bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+                    <input class="accent-primary-container" name="protocol-level" type="radio" value="homologacion" />
+                    <div class="flex flex-col">
+                      <span class="text-xs font-headline font-medium text-on-surface">Homologación Oficial / DGT (Nivel
+                        3)</span>
+                      <span class="text-[10px] text-on-surface-variant">Firma pericial colegiada con certificación
+                        criptográfica plena</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <!-- Telemetría preliminar / Pre-visualización -->
+              <div class="mt-auto p-3 rounded bg-surface-container-low flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] font-label text-outline uppercase">Bloque Propuesto</span>
+                    <span class="text-xs font-label text-on-surface">TX-M02-98442</span>
+                  </div>
+                </div>
+                <span class="text-[11px] font-label text-secondary bg-secondary/10 px-2 py-0.5 rounded">Listo para
+                  sellado</span>
+              </div>
+            </div>
+          </div>
+          <!-- Actions Bar -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-surface-container shadow-sm">
+            <div class="flex items-center gap-2 text-xs font-label text-on-surface-variant">
+              <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+              <span>Validación criptográfica local lista. No se registraron conflictos de duplicidad registral.</span>
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+              <button
+                class="px-5 py-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-headline font-medium transition-colors"
+                type="button">
+                Guardar Borrador
+              </button>
+              <button
+                class="flex items-center gap-2 px-6 py-2.5 rounded bg-primary-container hover:bg-blue-600 text-on-primary-container text-xs font-headline font-semibold transition-colors shadow-md"
+                id="btn-submit-registration" type="button">
+                <span class="material-symbols-outlined text-[18px]">add_circle</span>
+                <span>Registrar Vehículo y Crear Gemelo Digital</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- Lista Inferior: Últimos Vehículos Enrolados -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <h3 class="text-base font-headline font-bold text-on-surface">Últimos Vehículos Enrolados en la Red</h3>
+              <span
+                class="px-2 py-0.5 rounded bg-surface-container-high font-label text-[11px] text-on-surface-variant">Sesión
+                actual: 5</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <input
+                  class="h-8 pl-8 pr-3 rounded bg-surface-container text-xs text-on-surface placeholder:text-outline font-label focus:outline-none focus:bg-surface-container-high"
+                  placeholder="Filtrar por VIN o Matrícula..." type="text" />
+                <span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[16px]">search</span>
+              </div>
+            </div>
+          </div>
+          <!-- Table Container -->
+          <div class="overflow-x-auto rounded-xl bg-surface-container shadow-sm">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-surface-container-lowest text-[11px] font-label text-outline uppercase tracking-wider">
+                  <th class="py-3 px-4">Vehículo / Unidad</th>
+                  <th class="py-3 px-4">VIN / Bastidor</th>
+                  <th class="py-3 px-4">Matrícula</th>
+                  <th class="py-3 px-4">Auditor / Perito</th>
+                  <th class="py-3 px-4">Fecha y Hora</th>
+                  <th class="py-3 px-4">Estado Registral</th>
+                  <th class="py-3 px-4 text-right">Acción</th>
+                </tr>
+              </thead>
+              <tbody class="text-xs divide-y divide-surface-container-low font-body">
+                <!-- Row 1 -->
+                <tr class="hover:bg-surface-container-high/40 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-[18px]">electric_car</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline font-semibold text-on-surface">Porsche Taycan 4S</span>
+                        <span class="text-[10px] text-on-surface-variant font-label">BEV · 2024</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-primary">WP0AB2Y16MSA90142</td>
+                  <td class="py-3.5 px-4 font-label text-on-surface">8921-MBX</td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      <span class="text-on-surface">AUD-90241-TX</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 10:24:18</td>
+                  <td class="py-3.5 px-4">
+                    <span
+                      class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary/15 text-secondary font-label text-[10px] font-medium tracking-wide">
+                      <span class="material-symbols-outlined text-[12px]">check_circle</span> ENROLADO OK
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
+                      Ver Ficha
+                    </button>
+                  </td>
+                </tr>
+                <!-- Row 2 -->
+                <tr class="hover:bg-surface-container-high/40 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-[18px]">electric_car</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline font-semibold text-on-surface">Tesla Model S Plaid</span>
+                        <span class="text-[10px] text-on-surface-variant font-label">BEV · 2023</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-primary">5YJSA1E28PF492810</td>
+                  <td class="py-3.5 px-4 font-label text-on-surface">1402-LZK</td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      <span class="text-on-surface">AUD-90241-TX</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 09:41:02</td>
+                  <td class="py-3.5 px-4">
+                    <span
+                      class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary/15 text-secondary font-label text-[10px] font-medium tracking-wide">
+                      <span class="material-symbols-outlined text-[12px]">check_circle</span> ENROLADO OK
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
+                      Ver Ficha
+                    </button>
+                  </td>
+                </tr>
+                <!-- Row 3 -->
+                <tr class="hover:bg-surface-container-high/40 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-tertiary">
+                        <span class="material-symbols-outlined text-[18px]">directions_car</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline font-semibold text-on-surface">Audi e-tron GT RS</span>
+                        <span class="text-[10px] text-on-surface-variant font-label">BEV · 2023</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-primary">WAUZZZF27NA019284</td>
+                  <td class="py-3.5 px-4 font-label text-on-surface">4920-KJP</td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                      <span class="text-on-surface">AUD-81044-MD</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-12 08:15:50</td>
+                  <td class="py-3.5 px-4">
+                    <span
+                      class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-tertiary/15 text-tertiary font-label text-[10px] font-medium tracking-wide">
+                      <span class="material-symbols-outlined text-[12px]">sync</span> EN CURSO (SoH)
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
+                      Ver Ficha
+                    </button>
+                  </td>
+                </tr>
+                <!-- Row 4 -->
+                <tr class="hover:bg-surface-container-high/40 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-error">
+                        <span class="material-symbols-outlined text-[18px]">warning</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-headline font-semibold text-on-surface">BMW i4 M50 Gran Coupé</span>
+                        <span class="text-[10px] text-on-surface-variant font-label">BEV · 2022</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-error">WBA33AW08NFP51094</td>
+                  <td class="py-3.5 px-4 font-label text-on-surface">7194-LTV</td>
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      <span class="text-on-surface">AUD-90241-TX</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4 font-label text-[11px] text-on-surface-variant">2025-05-11 17:50:33</td>
+                  <td class="py-3.5 px-4">
+                    <span
+                      class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error/15 text-error font-label text-[10px] font-medium tracking-wide">
+                      <span class="material-symbols-outlined text-[12px]">gpp_maybe</span> ALERTA VIN
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-right">
+                    <button
+                      class="px-2.5 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline text-[11px] font-medium transition-colors">
+                      Ver Ficha
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Toast Notification Simulator for Registration Feedback -->
+        <div
+          class="fixed bottom-6 right-6 hidden bg-surface-container-highest text-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 z-50"
+          id="registration-toast">
+          <span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
+          <div class="flex flex-col">
+            <span class="text-xs font-headline font-semibold">Gemelo Digital Emitido con Éxito</span>
+            <span class="text-[11px] font-label text-on-surface-variant" id="toast-vin-label">VIN: WP0AB2Y16MSA90142 |
+              Bloque generado</span>
+          </div>
+        </div>
+      </div>
+      <script>
+          // Script para micro-interacciones del formulario de alta vehicular
+          (function () {
+            const vinInput = document.getElementById('vin-input');
+            const checksumBadge = document.getElementById('vin-checksum-badge');
+            const btnSubmit = document.getElementById('btn-submit-registration');
+            const toast = document.getElementById('registration-toast');
+            const toastLabel = document.getElementById('toast-vin-label');
+            const btnScanDoc = document.getElementById('btn-scan-doc');
+
+            // Validación interactiva de VIN (17 caracteres)
+            if (vinInput && checksumBadge) {
+              vinInput.addEventListener('input', function (e) {
+                const val = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+                e.target.value = val;
+                if (val.length === 17) {
+                  checksumBadge.textContent = 'ISO 3779 OK';
+                  checksumBadge.className = 'font-label text-[10px] text-secondary font-medium tracking-wide';
+                } else {
+                  checksumBadge.textContent = `${val.length}/17 DÍGITOS`;
+                  checksumBadge.className = 'font-label text-[10px] text-tertiary font-medium tracking-wide';
+                }
+              });
+            }
+
+            // Feedback de registro al hacer click en el botón principal
+            if (btnSubmit && toast) {
+              btnSubmit.addEventListener('click', function () {
+                const currentVin = vinInput ? vinInput.value : 'WP0AB2Y16MSA90142';
+                if (toastLabel) {
+                  toastLabel.textContent = `VIN: ${currentVin} | Gemelo digital TX-M02-98442 anclado`;
+                }
+                toast.classList.remove('hidden');
+                toast.classList.add('flex');
+                setTimeout(() => {
+                  toast.classList.add('hidden');
+                  toast.classList.remove('flex');
+                }, 4000);
+              });
+            }
+
+            // Simulación de escaneo rápido de ficha técnica
+            if (btnScanDoc && vinInput) {
+              btnScanDoc.addEventListener('click', function () {
+                btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-primary text-[18px] animate-spin">refresh</span><span>Extrayendo Datos OCR...</span>';
+                setTimeout(() => {
+                  btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-secondary text-[18px]">done</span><span>Ficha Extraída</span>';
+                  vinInput.value = 'WP0AB2Y16MSA90142';
+                  if (checksumBadge) {
+                    checksumBadge.textContent = 'ISO 3779 OK';
+                    checksumBadge.className = 'font-label text-[10px] text-secondary font-medium tracking-wide';
+                  }
+                  setTimeout(() => {
+                    btnScanDoc.innerHTML = '<span class="material-symbols-outlined text-primary text-[18px]">document_scanner</span><span>Escanear Ficha Técnica (OCR)</span>';
+                  }, 2000);
+                }, 1200);
+              });
+            }
+          })();
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>
