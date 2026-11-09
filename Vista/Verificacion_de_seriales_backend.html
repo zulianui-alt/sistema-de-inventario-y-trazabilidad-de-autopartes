@@ -1,522 +1,740 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#434655","surface-container-high":"#1d2a3e","surface-container-lowest":"#020e21","tertiary-fixed":"#ffdad6","on-error-container":"#ffdad6","inverse-surface":"#d6e3fe","surface-tint":"#b7c4ff","surface-container-low":"#0e1c2f","on-tertiary":"#690005","tertiary-fixed-dim":"#ffb4ab","primary-container":"#1d4ed8","tertiary-container":"#bb0112","on-tertiary-container":"#ffc7c1","secondary":"#68dba9","on-secondary-fixed":"#002114","error-container":"#93000a","surface":"#061426","surface-bright":"#2d3a4e","secondary-fixed-dim":"#68dba9","secondary-fixed":"#85f8c4","secondary-container":"#25a475","surface-dim":"#061426","tertiary":"#ffb4ab","surface-container-highest":"#28354a","on-surface-variant":"#c4c5d7","surface-container":"#132033","surface-variant":"#28354a","error":"#ffb4ab","on-background":"#d6e3fe","on-primary":"#002682","on-error":"#690005","on-primary-container":"#cad3ff","on-primary-fixed-variant":"#0039b5","outline":"#8e90a0","on-secondary-container":"#00311f","primary-fixed-dim":"#b7c4ff","on-tertiary-fixed":"#410002","inverse-on-surface":"#243145","on-secondary":"#003825","primary":"#b7c4ff","inverse-primary":"#2151da","on-tertiary-fixed-variant":"#93000b","on-primary-fixed":"#001551","primary-fixed":"#dce1ff","on-surface":"#d6e3fe","on-secondary-fixed-variant":"#005137","background":"#061426"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["JetBrains Mono"]},fontSize:{}}}}</script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK"/><div class="flex flex-col"><span class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span></div></div><div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between"><div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span></div><nav class="px-3 space-y-4 pb-6" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01: Usuarios y Acceso</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02: Inventario Vehicular</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03: Auditoría y Escaneo</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04: Supervisión Forense</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div></div><div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05: Trazabilidad Registral</span><div class="space-y-0.5 pt-1"><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div></div></nav></div><div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2"><div class="flex items-center justify-between text-xs"><span class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span class="text-secondary font-label text-[11px]">ACTIVO</span></div><div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-secondary w-full"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-4"><div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">domain</span><div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller / Entorno</span><select class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2"><option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01</option><option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option><option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)</option></select></div></div><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">lock</span><span class="font-label text-xs text-on-surface-variant">Ledger Status: <span class="text-secondary font-semibold">Inmutable</span></span></div></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label"><span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span></div><button aria-label="Notificaciones" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right"><span class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<div class="p-6 lg:p-8 space-y-6 max-w-[1720px] mx-auto w-full">
-<!-- Top System Banner & Header -->
-<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container-low p-6 rounded-xl shadow-md relative overflow-hidden">
-<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
-<div class="space-y-2 relative z-10">
-<div class="flex flex-wrap items-center gap-2">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-label text-[11px] font-semibold tracking-wider uppercase bg-primary-container/20 text-primary">
-<span class="material-symbols-outlined text-[13px] animate-pulse">terminal</span>
-            RF-M03-02 // AUDITORÍA ASÍNCRONA EN TIEMPO REAL
-          </span>
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label text-[11px] bg-secondary-container/20 text-secondary">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-            PIPELINE AJAX v4.8 ACTIVE
-          </span>
-<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label text-[11px] bg-surface-container-high text-on-surface-variant">
-            UNECE R155 / ISO 21434
-          </span>
-</div>
-<h1 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface tracking-tight">
-          Verificación Asíncrona de Seriales y Originalidad OEM
-        </h1>
-<p class="text-xs lg:text-sm text-on-surface-variant max-w-4xl font-body leading-relaxed">
-          Cotejo instantáneo sub-segundo con repositorios maestros criptográficos de fabricantes homologados. Valida emparejamiento digital, previene inserción de repuestos clonados, piezas hurtadas o manipuladas sin recarga de pantalla.
-        </p>
-</div>
-<!-- Quick Metrics Ribbon -->
-<div class="flex items-center gap-3 relative z-10 shrink-0">
-<div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
-<div class="font-label text-[10px] uppercase text-outline tracking-wider">Tasa de Respuesta</div>
-<div class="font-label text-base font-bold text-secondary">99.98%</div>
-</div>
-<div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
-<div class="font-label text-[10px] uppercase text-outline tracking-wider">Consultas Hoy</div>
-<div class="font-label text-base font-bold text-primary">1,248 <span class="text-[10px] text-on-surface-variant">TX</span></div>
-</div>
-<div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
-<div class="font-label text-[10px] uppercase text-outline tracking-wider">Falsos Positivos</div>
-<div class="font-label text-base font-bold text-secondary">0.00%</div>
-</div>
-</div>
-</div>
-<!-- Telemetry Diagnostic Bar -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-3 bg-surface-container-lowest p-3 rounded-lg text-xs font-label">
-<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
-<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
-<span class="text-on-surface-variant">Ping Backend AJAX:</span>
-<span class="text-secondary font-semibold" id="telemetry-ping">18 ms</span>
-</div>
-<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
-<span class="material-symbols-outlined text-[14px] text-primary">lock_clock</span>
-<span class="text-on-surface-variant">Túnel Seguro:</span>
-<span class="text-on-surface font-semibold">TLS 1.3 / E2EE</span>
-</div>
-<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
-<span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
-<span class="text-on-surface-variant">Red OEM Federada:</span>
-<span class="text-secondary font-semibold">5/5 En Línea</span>
-</div>
-<div class="flex items-center justify-between px-3 py-1.5 bg-surface-container-low rounded">
-<span class="text-on-surface-variant">Frecuencia Polling:</span>
-<span class="text-primary font-semibold">WebSocket Event-Driven</span>
-</div>
-</div>
-<!-- Main Workspace Bento: Tester + Instant Diagnostic Card -->
-<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
-<!-- Interactive AJAX Live Tester (Left Col) -->
-<div class="xl:col-span-5 flex flex-col gap-5 bg-surface-container p-6 rounded-xl shadow-lg">
-<div class="flex items-center justify-between pb-2">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
-<h2 class="font-headline font-semibold text-sm uppercase tracking-wider text-on-surface">
-              Consola de Consulta Rápida (AJAX Tester)
-            </h2>
-</div>
-<span class="font-label text-[10px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">MODO DIRECTO</span>
-</div>
-<form class="space-y-4" id="ajax-audit-form" onsubmit="event.preventDefault(); window.ejecutarVerificacionAjax();">
-<!-- Input Serial Number with Quick Pre-fills -->
-<div class="space-y-1.5">
-<label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
-              Número de Serie Físico o Tag NFC / DataMatrix
-            </label>
-<div class="relative flex items-center">
-<span class="absolute left-3 material-symbols-outlined text-outline text-[18px]">barcode_scanner</span>
-<input class="w-full bg-surface-container-lowest text-on-surface font-label text-sm pl-10 pr-24 py-3 rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors tracking-wider uppercase placeholder:text-outline/50" id="serial-input" placeholder="EJ. SN-BSH-992381-Z" required="" type="text" value="SN-BSH-449102-X"/>
-<button class="absolute right-2 px-2.5 py-1 text-[10px] font-label uppercase font-medium bg-surface-container-high hover:bg-surface-bright text-primary rounded transition-all" onclick="window.autocompletarPrueba()" title="Cargar muestra aleatoria" type="button">
-                Demo SN
-              </button>
-</div>
-</div>
-<!-- Dual Select: Component Type & Manufacturer -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div class="space-y-1.5">
-<label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
-                Componente
-              </label>
-<select class="w-full bg-surface-container-lowest text-on-surface font-body text-xs p-2.5 rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer" id="component-type">
-<option value="Inversor SiC Alta Tensión">Inversor SiC Alta Tensión</option>
-<option value="Módulo Batería NMC 800V">Módulo Batería NMC 800V</option>
-<option value="ECU Motor Principal">ECU Motor Principal</option>
-<option value="Sensor LiDAR Frontal">Sensor LiDAR Frontal</option>
-<option value="Módulo Airbag Conductor">Módulo Airbag Conductor</option>
-<option value="Unidad Odómetro Criptográfica">Unidad Odómetro Cripto</option>
-</select>
-</div>
-<div class="space-y-1.5">
-<label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
-                Fabricante OEM
-              </label>
-<select class="w-full bg-surface-container-lowest text-on-surface font-body text-xs p-2.5 rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer" id="oem-provider">
-<option value="Bosch Automotive OEM">Bosch Automotive (DE)</option>
-<option value="Porsche AG Assembly">Porsche AG (Leipzig)</option>
-<option value="Continental Automotive">Continental Powertrain</option>
-<option value="Denso Corporation">Denso Corp (JP)</option>
-<option value="Tesla Energy Giga">Tesla Giga Berlin</option>
-</select>
-</div>
-</div>
-<!-- Associated Vehicle Target -->
-<div class="space-y-1.5">
-<label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
-              VIN del Vehículo en Proceso de Intervención
-            </label>
-<div class="flex items-center gap-2">
-<input class="w-full bg-surface-container-lowest text-on-surface font-label text-xs px-3 py-2.5 rounded-lg focus:outline-none tracking-widest uppercase" id="target-vin" type="text" value="WP0AB2Y14MSA88102"/>
-<span class="shrink-0 px-2.5 py-2 bg-surface-container-high rounded font-label text-[11px] text-secondary">
-                MATCH ACTIVO
-              </span>
-</div>
-</div>
-<!-- Action Buttons -->
-<div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
-<button class="w-full sm:flex-1 py-3 px-4 bg-primary-container hover:bg-primary-container/80 text-on-primary-container font-headline font-semibold text-xs tracking-wider uppercase rounded-lg flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]" id="btn-verify" type="submit">
-<span class="material-symbols-outlined text-[18px]" id="btn-icon">bolt</span>
-<span id="btn-text">Verificar Serial en Vivo (AJAX)</span>
-</button>
-<button class="w-full sm:w-auto py-3 px-4 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label text-xs rounded-lg transition-colors" onclick="window.reiniciarFormulario()" type="button">
-              Limpiar
-            </button>
-</div>
-</form>
-<!-- Dynamic Payload Stream Terminal Snippet -->
-<div class="mt-2 p-3 bg-surface-container-lowest rounded-lg font-label text-[11px] space-y-1 overflow-x-auto">
-<div class="flex items-center justify-between text-outline text-[10px]">
-<span>HEADER: X-SITAA-TOKEN-AUTH</span>
-<span class="text-secondary">AJAX READYSTATE: 4 (DONE)</span>
-</div>
-<div class="text-on-surface-variant truncate">
-            &gt; POST /api/v4/forensic/verify-serial HTTP/2
-          </div>
-<div class="text-secondary/90 truncate" id="live-payload-preview">
-            &gt; PAYLOAD: {"serial":"SN-BSH-449102-X","oem":"BOSCH","hash_match":true,"nonce":948102}
-          </div>
-</div>
-</div>
-<!-- Instant Validation Diagnostic Card (Right Col) -->
-<div class="xl:col-span-7 flex flex-col gap-4 bg-surface-container p-6 rounded-xl shadow-lg relative transition-all duration-300" id="diagnostic-panel">
-<!-- Header Ribbon with Large Decision Badge -->
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3">
-<div>
-<span class="font-label text-[10px] text-outline uppercase tracking-wider">Resultado Inmediato de Cotejo</span>
-<h3 class="text-lg font-headline font-bold text-on-surface">Ficha de Cotejo Criptográfica Forense</h3>
-</div>
-<div class="px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary flex items-center gap-2 shrink-0" id="status-verdict-badge">
-<span class="material-symbols-outlined text-[18px]">verified</span>
-<span class="font-label font-bold text-xs uppercase tracking-wider">ORIGINAL HOMOLOGADO (MATCH 100%)</span>
-</div>
-</div>
-<!-- Forensic Visual Summary Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<!-- Monitored Spec Card 1 -->
-<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
-<div class="flex items-center justify-between">
-<span class="font-label text-[11px] text-on-surface-variant">SERIAL CONSULTADO</span>
-<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
-</div>
-<div class="font-label text-base font-bold text-on-surface tracking-wider" id="res-serial">
-              SN-BSH-449102-X
-            </div>
-<div class="text-[11px] text-outline font-body">
-              DataMatrix escaneado bajo estándar ISO/IEC 16022 con hash Blake3 validado.
-            </div>
-</div>
-<!-- Monitored Spec Card 2 -->
-<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
-<div class="flex items-center justify-between">
-<span class="font-label text-[11px] text-on-surface-variant">REGISTRO DE FÁBRICA OEM</span>
-<span class="font-label text-[10px] text-primary">CONFIRMADO</span>
-</div>
-<div class="font-headline text-sm font-semibold text-on-surface" id="res-factory">
-              Porsche Leipzig Assembly Plant
-            </div>
-<div class="text-[11px] text-outline font-body" id="res-batch">
-              Lote de Alta Integridad: #OCT-2023-B39 | Certificado UNECE R155.
-            </div>
-</div>
-<!-- Monitored Spec Card 3: Cryptographic Hash Pairing -->
-<div class="bg-surface-container-low p-4 rounded-lg space-y-1.5 md:col-span-2">
-<div class="flex items-center justify-between">
-<span class="font-label text-[11px] text-on-surface-variant">HASH CRIPTOGRÁFICO DE EMPAREJAMIENTO (SHA-256 STATE)</span>
-<span class="font-label text-[10px] text-secondary font-semibold">FIRMA VÁLIDA</span>
-</div>
-<div class="p-2.5 bg-surface-container-lowest rounded font-label text-xs text-primary flex items-center justify-between gap-2 overflow-x-auto">
-<span class="tracking-widest" id="res-hash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
-<button class="text-outline hover:text-on-surface shrink-0" onclick="navigator.clipboard.writeText(document.getElementById('res-hash').innerText)" title="Copiar Hash">
-<span class="material-symbols-outlined text-[16px]">content_copy</span>
-</button>
-</div>
-<p class="text-[11px] text-outline pt-0.5">
-              Emparejado matemáticamente con el firmware nativo del vehículo. Cero discrepancia de bytes.
-            </p>
-</div>
-<!-- Monitored Spec Card 4: Installation History -->
-<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
-<div class="flex items-center justify-between">
-<span class="font-label text-[11px] text-on-surface-variant">HISTORIAL DE INSTALACIONES</span>
-<span class="px-2 py-0.5 bg-secondary-container/20 text-secondary font-label text-[10px] rounded">VIRGEN</span>
-</div>
-<div class="font-headline text-sm font-bold text-on-surface">
-              0 Instalaciones Previas Registradas
-            </div>
-<p class="text-[11px] text-outline">
-              Sin reportes de re-empadronamiento, siniestro total, desguace o robo internacional en Interpol/StolenAuto.
-            </p>
-</div>
-<!-- Monitored Spec Card 5: Warranty & Compliance -->
-<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
-<div class="flex items-center justify-between">
-<span class="font-label text-[11px] text-on-surface-variant">GARANTÍA OEM &amp; CERTIFICADO</span>
-<span class="font-label text-[10px] text-primary">ACTIVA</span>
-</div>
-<div class="font-headline text-sm font-bold text-on-surface">
-              Vigente hasta 31/10/2028
-            </div>
-<p class="text-[11px] text-outline">
-              Cobertura global de reemplazo de celda de potencia y soporte de calibración forense.
-            </p>
-</div>
-</div>
-<!-- Technical Traceability Footprint & Fast Action Triggers -->
-<div class="mt-2 pt-4 bg-surface-container-low p-4 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-3">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined text-[22px]">policy</span>
-</div>
-<div class="space-y-0.5">
-<div class="text-xs font-semibold text-on-surface font-headline">Acta de Conformidad Lista para Emitir</div>
-<div class="font-label text-[10px] text-outline">Registro inmutable listo para M05: Trazabilidad Registral</div>
-</div>
-</div>
-<div class="flex items-center gap-2 w-full sm:w-auto">
-<button class="flex-1 sm:flex-initial px-3.5 py-2 bg-secondary-container text-on-secondary-container hover:bg-secondary font-headline font-semibold text-xs rounded transition-colors flex items-center justify-center gap-1.5" onclick="window.generarActa()" type="button">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-              Generar Acta Digital
-            </button>
-<button class="flex-1 sm:flex-initial px-3.5 py-2 bg-surface-container-highest hover:bg-surface-bright text-tertiary font-headline font-semibold text-xs rounded transition-colors flex items-center justify-center gap-1.5" onclick="window.derivarDiscrepancia()" type="button">
-<span class="material-symbols-outlined text-[16px]">flag</span>
-              Disputar Serial
-            </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Live AJAX Request Stream (Forensic Monitor Table) -->
-<div class="bg-surface-container p-6 rounded-xl shadow-lg space-y-4">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[20px]">dynamic_feed</span>
-<h2 class="font-headline font-semibold text-base text-on-surface">
-            Monitor de Peticiones AJAX en Tiempo Real (Log de Auditoría Local)
-          </h2>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-<span class="font-label text-[11px] text-on-surface-variant">Transmisiones del Taller Central #01</span>
-<button class="ml-2 px-2.5 py-1 text-[10px] font-label text-outline hover:text-on-surface bg-surface-container-high rounded" onclick="window.limpiarLogs()">
-            Limpiar Vista
-          </button>
-</div>
-</div>
-<!-- Responsive Data Table -->
-<div class="overflow-x-auto rounded-lg">
-<table class="w-full text-left font-body text-xs whitespace-nowrap">
-<thead class="bg-surface-container-lowest text-on-surface-variant uppercase font-label text-[10px] tracking-wider">
-<tr>
-<th class="py-3 px-4">Hora (UTC)</th>
-<th class="py-3 px-4">Serial Consultado</th>
-<th class="py-3 px-4">Componente</th>
-<th class="py-3 px-4">VIN Asociado</th>
-<th class="py-3 px-4">Servidor OEM</th>
-<th class="py-3 px-4">Latencia</th>
-<th class="py-3 px-4">Veredicto Cripto</th>
-<th class="py-3 px-4 text-right">Acción Pericial</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container-high" id="logs-table-body">
-<!-- Row 1 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3 px-4 font-label text-[11px] text-outline">14:32:08.412</td>
-<td class="py-3 px-4 font-label text-xs font-semibold text-primary">SN-BSH-449102-X</td>
-<td class="py-3 px-4 text-on-surface">Inversor SiC Alta Tensión</td>
-<td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">WP0AB2Y14MSA88102</td>
-<td class="py-3 px-4 text-on-surface-variant">Porsche Leipzig</td>
-<td class="py-3 px-4 font-label text-secondary font-semibold">18 ms</td>
-<td class="py-3 px-4">
-<span class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">check</span>
-                  APROBADO
-                </span>
-</td>
-<td class="py-3 px-4 text-right">
-<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded" onclick="window.generarActaRapida('SN-BSH-449102-X')">
-                  Acta Digital
-                </button>
-</td>
-</tr>
-<!-- Row 2 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3 px-4 font-label text-[11px] text-outline">14:28:44.119</td>
-<td class="py-3 px-4 font-label text-xs font-semibold text-on-surface">BAT-LGX-88204-Q</td>
-<td class="py-3 px-4 text-on-surface">Módulo Batería NMC 800V</td>
-<td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">WP0AB2Y14MSA88102</td>
-<td class="py-3 px-4 text-on-surface-variant">Bosch Automotive</td>
-<td class="py-3 px-4 font-label text-secondary font-semibold">24 ms</td>
-<td class="py-3 px-4">
-<span class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">check</span>
-                  APROBADO
-                </span>
-</td>
-<td class="py-3 px-4 text-right">
-<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded" onclick="window.generarActaRapida('BAT-LGX-88204-Q')">
-                  Acta Digital
-                </button>
-</td>
-</tr>
-<!-- Row 3 (Alert Discrepancy) -->
-<tr class="hover:bg-surface-container-high/40 transition-colors bg-tertiary-container/5">
-<td class="py-3 px-4 font-label text-[11px] text-outline">14:15:10.871</td>
-<td class="py-3 px-4 font-label text-xs font-semibold text-tertiary">AIRB-TK-00921-WARN</td>
-<td class="py-3 px-4 text-on-surface">Módulo Airbag Conductor</td>
-<td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">1HGCR2F83HA009120</td>
-<td class="py-3 px-4 text-on-surface-variant">Continental Powertrain</td>
-<td class="py-3 px-4 font-label text-secondary font-semibold">31 ms</td>
-<td class="py-3 px-4">
-<span class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-tertiary-container/30 text-tertiary inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">warning</span>
-                  DISCREPANCIA SERIAL
-                </span>
-</td>
-<td class="py-3 px-4 text-right">
-<button class="px-2 py-1 bg-tertiary-container text-on-tertiary font-label text-[10px] rounded hover:opacity-90" onclick="window.derivarDiscrepancia('AIRB-TK-00921-WARN')">
-                  Derivar M04-01
-                </button>
-</td>
-</tr>
-<!-- Row 4 -->
-<tr class="hover:bg-surface-container-high/40 transition-colors">
-<td class="py-3 px-4 font-label text-[11px] text-outline">13:58:22.045</td>
-<td class="py-3 px-4 font-label text-xs font-semibold text-on-surface">ECU-DEN-901411-V</td>
-<td class="py-3 px-4 text-on-surface">ECU Motor Principal</td>
-<td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">JN1AZ0CP7BT100492</td>
-<td class="py-3 px-4 text-on-surface-variant">Denso Corporation</td>
-<td class="py-3 px-4 font-label text-secondary font-semibold">19 ms</td>
-<td class="py-3 px-4">
-<span class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">check</span>
-                  APROBADO
-                </span>
-</td>
-<td class="py-3 px-4 text-right">
-<button class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded" onclick="window.generarActaRapida('ECU-DEN-901411-V')">
-                  Acta Digital
-                </button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- Security & Legal Footer Meta -->
-<div class="p-4 bg-surface-container-lowest rounded-lg flex flex-col md:flex-row items-center justify-between text-xs text-outline font-label gap-3">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
-<span>Validaciones amparadas bajo protocolo inmutable SHA-256 SITAA Ledger RF-M03-02.</span>
-</div>
-<div>
-        Hash de Sesión Pericial: <span class="text-on-surface font-semibold">0x7F9A...B30C</span> | Clave Pública Auditor: <span class="text-primary font-semibold">ED25519-TX-88</span>
-</div>
-</div>
-</div>
-</div>
-<script>
-(function() {
-  const demos = [
-    {
-      serial: 'SN-BSH-449102-X',
-      comp: 'Inversor SiC Alta Tensión',
-      oem: 'Porsche AG Assembly',
-      status: 'valid',
-      vin: 'WP0AB2Y14MSA88102',
-      factory: 'Porsche Leipzig Assembly Plant',
-      batch: 'Lote de Alta Integridad: #OCT-2023-B39 | Certificado UNECE R155',
-      hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
-      ms: 18
-    },
-    {
-      serial: 'CLONE-ECU-99210-ALARM',
-      comp: 'ECU Motor Principal',
-      oem: 'Bosch Automotive OEM',
-      status: 'tampered',
-      vin: '1HGCR2F83HA009120',
-      factory: 'Registro Duplicado en Servidor Bosch Frankfurt',
-      batch: 'ALERTA: Serial ya instalado en VIN DE7748123 (Posible Clonación)',
-      hash: 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',
-      ms: 34
-    },
-    {
-      serial: 'LIDAR-DEN-55019-OK',
-      comp: 'Sensor LiDAR Frontal',
-      oem: 'Denso Corporation',
-      status: 'valid',
-      vin: 'JN1AZ0CP7BT100492',
-      factory: 'Denso Tech Park Aichi (Lote 2024)',
-      batch: 'Calibración Óptica de Fábrica Certificada ISO 26262 ASIL-D',
-      hash: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8',
-      ms: 22
-    }
-  ];
+<html lang="es">
 
-  let currentDemoIndex = 0;
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <style>
+    @layer base {
 
-  window.autocompletarPrueba = function() {
-    currentDemoIndex = (currentDemoIndex + 1) % demos.length;
-    const item = demos[currentDemoIndex];
-    document.getElementById('serial-input').value = item.serial;
-    document.getElementById('component-type').value = item.comp;
-    document.getElementById('oem-provider').value = item.oem;
-    document.getElementById('target-vin').value = item.vin;
-  };
-
-  window.reiniciarFormulario = function() {
-    document.getElementById('serial-input').value = '';
-    document.getElementById('target-vin').value = '';
-    document.getElementById('serial-input').focus();
-  };
-
-  window.ejecutarVerificacionAjax = function() {
-    const btn = document.getElementById('btn-verify');
-    const btnText = document.getElementById('btn-text');
-    const btnIcon = document.getElementById('btn-icon');
-    const serialVal = document.getElementById('serial-input').value.trim() || 'SN-BSH-449102-X';
-    const compVal = document.getElementById('component-type').value;
-    const oemVal = document.getElementById('oem-provider').value;
-    const vinVal = document.getElementById('target-vin').value.trim() || 'WP0AB2Y14MSA88102';
-
-    // UI Loading state
-    btn.disabled = true;
-    btnText.innerText = 'Consultando Repositorio OEM...';
-    btnIcon.innerText = 'sync';
-    btnIcon.classList.add('animate-spin');
-
-    // Update terminal preview
-    const payloadPreview = document.getElementById('live-payload-preview');
-    payloadPreview.innerText = '> POST: {"query":"' + serialVal + '","vin":"' + vinVal + '"} [AJAX PENDING]';
-
-    // Simulate high-speed AJAX call (350ms)
-    setTimeout(() => {
-      const isTampered = serialVal.includes('WARN') || serialVal.includes('ALARM') || serialVal.includes('CLONE');
-      const randomPing = Math.floor(Math.random() * 15) + 16; // 16 - 31ms
-
-      // Restore button
-      btn.disabled = false;
-      btnText.innerText = 'Verificar Serial en Vivo (AJAX)';
-      btnIcon.innerText = 'bolt';
-      btnIcon.classList.remove('animate-spin');
-
-      // Update Telemetry Ping
-      document.getElementById('telemetry-ping').innerText = randomPing + ' ms';
-
-      // Update Diagnostic Card
-      const diagBadge = document.getElementById('status-verdict-badge');
-      const resSerial = document.getElementById('res-serial');
-      const resFactory = document.getElementById('res-factory');
-      const resBatch = document.getElementById('res-batch');
-      const resHash = document.getElementById('res-hash');
-
-      resSerial.innerText = serialVal;
-
-      if (isTampered) {
-        diagBadge.className = 'px-4 py-2 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center gap-2 shrink-0';
-        diagBadge.innerHTML = '<span class="material-symbols-outlined text-[18px]">warning</span><span class="font-label font-bold text-xs uppercase tracking-wider">DISCREPANCIA OEM DETECTADA</span>';
-        resFactory.innerText = 'ALERTA: Registro Duplicado o Falso';
-        resBatch.innerText = 'El número no concuerda con la firma de origen del fabricante. Posible clon físico.';
-        resHash.innerText = 'f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0' + Math.random().toString(36).substring(2, 8);
-      } else {
-        diagBadge.className = 'px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary flex items-center gap-2 shrink-0';
-        diagBadge.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label font-bold text-xs uppercase tracking-wider">ORIGINAL HOMOLOGADO (MATCH 100%)</span>';
-        resFactory.innerText = oemVal + ' Master Database';
-        resBatch.innerText = 'Firma Criptográfica Genuina | Lote Certificado UNECE R155';
-        resHash.innerText = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e' + Math.random().toString(36).substring(2, 10);
+      html,
+      body {
+        margin: 0;
+        padding: 0;
       }
 
-      payloadPreview.innerText = '> 200 OK: {"serial":"' + serialVal + '","status":"' + (isTampered ? 'TAMPERED' : 'VALID') + '","latency":' + randomPing + 'ms}';
+      body {
+        overscroll-behavior: none;
+      }
 
-      // Add to Table Stream
-      const tableBody = document.getElementById('logs-table-body');
-      const now = new Date();
-      const timeStr = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
+      main>:first-child {
+        margin-top: 0 !important;
+      }
 
-      const tr = document.createElement('tr');
-      tr.className = 'hover:bg-surface-container-high/40 transition-colors ' + (isTampered ? 'bg-tertiary-container/5' : '');
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
 
-      tr.innerHTML = `
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"outline-variant": "#434655", "surface-container-high": "#1d2a3e", "surface-container-lowest": "#020e21", "tertiary-fixed": "#ffdad6", "on-error-container": "#ffdad6", "inverse-surface": "#d6e3fe", "surface-tint": "#b7c4ff", "surface-container-low": "#0e1c2f", "on-tertiary": "#690005", "tertiary-fixed-dim": "#ffb4ab", "primary-container": "#1d4ed8", "tertiary-container": "#bb0112", "on-tertiary-container": "#ffc7c1", "secondary": "#68dba9", "on-secondary-fixed": "#002114", "error-container": "#93000a", "surface": "#061426", "surface-bright": "#2d3a4e", "secondary-fixed-dim": "#68dba9", "secondary-fixed": "#85f8c4", "secondary-container": "#25a475", "surface-dim": "#061426", "tertiary": "#ffb4ab", "surface-container-highest": "#28354a", "on-surface-variant": "#c4c5d7", "surface-container": "#132033", "surface-variant": "#28354a", "error": "#ffb4ab", "on-background": "#d6e3fe", "on-primary": "#002682", "on-error": "#690005", "on-primary-container": "#cad3ff", "on-primary-fixed-variant": "#0039b5", "outline": "#8e90a0", "on-secondary-container": "#00311f", "primary-fixed-dim": "#b7c4ff", "on-tertiary-fixed": "#410002", "inverse-on-surface": "#243145", "on-secondary": "#003825", "primary": "#b7c4ff", "inverse-primary": "#2151da", "on-tertiary-fixed-variant": "#93000b", "on-primary-fixed": "#001551", "primary-fixed": "#dce1ff", "on-surface": "#d6e3fe", "on-secondary-fixed-variant": "#005137", "background": "#061426"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {}, fontFamily: {headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["JetBrains Mono"]}, fontSize: {}}}}</script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto">
+    <div class="flex flex-col">
+      <div class="h-16 px-5 flex items-center gap-3 bg-surface-container-low/40"><img
+          alt="Logotipo moderno y de alta tecnología para SITAA" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1X9fBz8AUgRrMOoPz535IoZqSyNqt_3-s8Q5W2r5Yin_1Qq34y7YlgiidKTMVSGLqUe_TdmAdcKZnX3hZGEWotWfAe0w66vHbKWawt2GF-R_AzEmjqXr4uRLQqMHcef3_PCIxeGd20wtMczZ_vGdOZr3TH0DunWKjREj63sD2OK_sUIbDk8zMDYCzyDN01GyeDjTl8WyGnFmQhTMLUg9rCAz_dOoh_oGnv6Ak1tpUaK" />
+        <div class="flex flex-col"><span
+            class="font-headline font-bold text-sm tracking-wider text-primary">SITAA</span><span
+            class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Core Cryptographic</span>
+        </div>
+      </div>
+      <div class="px-4 py-3 bg-surface-container-low/20 mx-3 my-3 rounded-lg flex items-center justify-between">
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span><span
+            class="font-label text-xs text-secondary uppercase tracking-wider">Node: Synced</span></div><span
+          class="font-label text-[10px] text-on-surface-variant">v4.2.1-SEC</span>
+      </div>
+      <nav class="px-3 space-y-4 pb-6"
+        data-active-classes="bg-primary-container text-on-primary-container font-semibold">
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M01:
+            Usuarios y Acceso</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-y-autenticacion" href="#">Registro &amp; Autenticación</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="control-de-roles-rbac" href="#">Control de Roles RBAC</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M02:
+            Inventario Vehicular</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="alta-de-vehiculos" href="#">Alta de Vehículos (RF-M02-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="inventariado-de-autopartes" href="#">Inventariado Autopartes (RF-M02-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M03:
+            Auditoría y Escaneo</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="escaneo-de-codigos" href="#">Escaneo de Códigos (RF-M03-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="verificacion-de-seriales" href="#">Verificación de Seriales (RF-M03-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M04:
+            Supervisión Forense</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="centro-de-discrepancias" href="#">Centro de Discrepancias (RF-M04-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="registro-de-reemplazo" href="#">Registro de Reemplazo (RF-M04-02)</a></div>
+        </div>
+        <div class="space-y-1"><span class="px-3 font-label text-[10px] tracking-widest uppercase text-outline">M05:
+            Trazabilidad Registral</span>
+          <div class="space-y-0.5 pt-1"><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="emision-de-certificados" href="#">Emisión de Certificados (RF-M05-01)</a><a
+              class="block px-3 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+              data-path="hoja-de-vida" href="#">Hoja de Vida Ledger (RF-M05-02)</a></div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-3 bg-surface-container-low/60 m-3 rounded-lg flex flex-col gap-2">
+      <div class="flex items-center justify-between text-xs"><span
+          class="text-on-surface-variant font-label text-[11px]">Algoritmo SHA-256</span><span
+          class="text-secondary font-label text-[11px]">ACTIVO</span></div>
+      <div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+        <div class="h-full bg-secondary w-full"></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-lg"><span
+            class="material-symbols-outlined text-outline text-[18px]">domain</span>
+          <div class="flex flex-col"><span class="text-[10px] font-label text-outline uppercase tracking-wider">Taller /
+              Entorno</span><select
+              class="bg-transparent text-xs font-medium text-on-surface focus:outline-none cursor-pointer pr-2">
+              <option class="bg-surface-container-high text-on-surface" value="central">Taller Central Forense #01
+              </option>
+              <option class="bg-surface-container-high text-on-surface" value="norte">División Pericial Norte</option>
+              <option class="bg-surface-container-high text-on-surface" value="audit">Polo Tecnológico Sur (Audit)
+              </option>
+            </select></div>
+        </div>
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span
+            class="material-symbols-outlined text-secondary text-[16px]">lock</span><span
+            class="font-label text-xs text-on-surface-variant">Ledger Status: <span
+              class="text-secondary font-semibold">Inmutable</span></span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary text-xs font-label">
+          <span class="material-symbols-outlined text-[14px]">verified_user</span><span>NIVEL CRIPTOGRÁFICO L3</span>
+        </div><button aria-label="Notificaciones"
+          class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+          type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span
+            class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button>
+        <div class="flex items-center gap-3 pl-2">
+          <div class="flex flex-col text-right"><span
+              class="text-xs font-semibold text-on-surface font-headline">Auditor Principal</span><span
+              class="text-[11px] text-outline font-label">ID: AUD-90241-TX</span></div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+              class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <div class="p-6 lg:p-8 space-y-6 max-w-[1720px] mx-auto w-full">
+          <!-- Top System Banner & Header -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container-low p-6 rounded-xl shadow-md relative overflow-hidden">
+            <div
+              class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="space-y-2 relative z-10">
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-label text-[11px] font-semibold tracking-wider uppercase bg-primary-container/20 text-primary">
+                  <span class="material-symbols-outlined text-[13px] animate-pulse">terminal</span>
+                  RF-M03-02 // AUDITORÍA ASÍNCRONA EN TIEMPO REAL
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label text-[11px] bg-secondary-container/20 text-secondary">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  PIPELINE AJAX v4.8 ACTIVE
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label text-[11px] bg-surface-container-high text-on-surface-variant">
+                  UNECE R155 / ISO 21434
+                </span>
+              </div>
+              <h1 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface tracking-tight">
+                Verificación Asíncrona de Seriales y Originalidad OEM
+              </h1>
+              <p class="text-xs lg:text-sm text-on-surface-variant max-w-4xl font-body leading-relaxed">
+                Cotejo instantáneo sub-segundo con repositorios maestros criptográficos de fabricantes homologados.
+                Valida emparejamiento digital, previene inserción de repuestos clonados, piezas hurtadas o manipuladas
+                sin recarga de pantalla.
+              </p>
+            </div>
+            <!-- Quick Metrics Ribbon -->
+            <div class="flex items-center gap-3 relative z-10 shrink-0">
+              <div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
+                <div class="font-label text-[10px] uppercase text-outline tracking-wider">Tasa de Respuesta</div>
+                <div class="font-label text-base font-bold text-secondary">99.98%</div>
+              </div>
+              <div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
+                <div class="font-label text-[10px] uppercase text-outline tracking-wider">Consultas Hoy</div>
+                <div class="font-label text-base font-bold text-primary">1,248 <span
+                    class="text-[10px] text-on-surface-variant">TX</span></div>
+              </div>
+              <div class="px-4 py-2.5 bg-surface-container rounded-lg text-right">
+                <div class="font-label text-[10px] uppercase text-outline tracking-wider">Falsos Positivos</div>
+                <div class="font-label text-base font-bold text-secondary">0.00%</div>
+              </div>
+            </div>
+          </div>
+          <!-- Telemetry Diagnostic Bar -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-3 bg-surface-container-lowest p-3 rounded-lg text-xs font-label">
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
+              <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+              <span class="text-on-surface-variant">Ping Backend AJAX:</span>
+              <span class="text-secondary font-semibold" id="telemetry-ping">18 ms</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
+              <span class="material-symbols-outlined text-[14px] text-primary">lock_clock</span>
+              <span class="text-on-surface-variant">Túnel Seguro:</span>
+              <span class="text-on-surface font-semibold">TLS 1.3 / E2EE</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded">
+              <span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
+              <span class="text-on-surface-variant">Red OEM Federada:</span>
+              <span class="text-secondary font-semibold">5/5 En Línea</span>
+            </div>
+            <div class="flex items-center justify-between px-3 py-1.5 bg-surface-container-low rounded">
+              <span class="text-on-surface-variant">Frecuencia Polling:</span>
+              <span class="text-primary font-semibold">WebSocket Event-Driven</span>
+            </div>
+          </div>
+          <!-- Main Workspace Bento: Tester + Instant Diagnostic Card -->
+          <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+            <!-- Interactive AJAX Live Tester (Left Col) -->
+            <div class="xl:col-span-5 flex flex-col gap-5 bg-surface-container p-6 rounded-xl shadow-lg">
+              <div class="flex items-center justify-between pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
+                  <h2 class="font-headline font-semibold text-sm uppercase tracking-wider text-on-surface">
+                    Consola de Consulta Rápida (AJAX Tester)
+                  </h2>
+                </div>
+                <span class="font-label text-[10px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">MODO
+                  DIRECTO</span>
+              </div>
+              <form class="space-y-4" id="ajax-audit-form"
+                onsubmit="event.preventDefault(); window.ejecutarVerificacionAjax();">
+                <!-- Input Serial Number with Quick Pre-fills -->
+                <div class="space-y-1.5">
+                  <label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
+                    Número de Serie Físico o Tag NFC / DataMatrix
+                  </label>
+                  <div class="relative flex items-center">
+                    <span
+                      class="absolute left-3 material-symbols-outlined text-outline text-[18px]">barcode_scanner</span>
+                    <input
+                      class="w-full bg-surface-container-lowest text-on-surface font-label text-sm pl-10 pr-24 py-3 rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors tracking-wider uppercase placeholder:text-outline/50"
+                      id="serial-input" placeholder="EJ. SN-BSH-992381-Z" required="" type="text"
+                      value="SN-BSH-449102-X" />
+                    <button
+                      class="absolute right-2 px-2.5 py-1 text-[10px] font-label uppercase font-medium bg-surface-container-high hover:bg-surface-bright text-primary rounded transition-all"
+                      onclick="window.autocompletarPrueba()" title="Cargar muestra aleatoria" type="button">
+                      Demo SN
+                    </button>
+                  </div>
+                </div>
+                <!-- Dual Select: Component Type & Manufacturer -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div class="space-y-1.5">
+                    <label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
+                      Componente
+                    </label>
+                    <select
+                      class="w-full bg-surface-container-lowest text-on-surface font-body text-xs p-2.5 rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer"
+                      id="component-type">
+                      <option value="Inversor SiC Alta Tensión">Inversor SiC Alta Tensión</option>
+                      <option value="Módulo Batería NMC 800V">Módulo Batería NMC 800V</option>
+                      <option value="ECU Motor Principal">ECU Motor Principal</option>
+                      <option value="Sensor LiDAR Frontal">Sensor LiDAR Frontal</option>
+                      <option value="Módulo Airbag Conductor">Módulo Airbag Conductor</option>
+                      <option value="Unidad Odómetro Criptográfica">Unidad Odómetro Cripto</option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
+                      Fabricante OEM
+                    </label>
+                    <select
+                      class="w-full bg-surface-container-lowest text-on-surface font-body text-xs p-2.5 rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer"
+                      id="oem-provider">
+                      <option value="Bosch Automotive OEM">Bosch Automotive (DE)</option>
+                      <option value="Porsche AG Assembly">Porsche AG (Leipzig)</option>
+                      <option value="Continental Automotive">Continental Powertrain</option>
+                      <option value="Denso Corporation">Denso Corp (JP)</option>
+                      <option value="Tesla Energy Giga">Tesla Giga Berlin</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Associated Vehicle Target -->
+                <div class="space-y-1.5">
+                  <label class="block font-label text-[11px] uppercase tracking-wider text-on-surface-variant">
+                    VIN del Vehículo en Proceso de Intervención
+                  </label>
+                  <div class="flex items-center gap-2">
+                    <input
+                      class="w-full bg-surface-container-lowest text-on-surface font-label text-xs px-3 py-2.5 rounded-lg focus:outline-none tracking-widest uppercase"
+                      id="target-vin" type="text" value="WP0AB2Y14MSA88102" />
+                    <span
+                      class="shrink-0 px-2.5 py-2 bg-surface-container-high rounded font-label text-[11px] text-secondary">
+                      MATCH ACTIVO
+                    </span>
+                  </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                  <button
+                    class="w-full sm:flex-1 py-3 px-4 bg-primary-container hover:bg-primary-container/80 text-on-primary-container font-headline font-semibold text-xs tracking-wider uppercase rounded-lg flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
+                    id="btn-verify" type="submit">
+                    <span class="material-symbols-outlined text-[18px]" id="btn-icon">bolt</span>
+                    <span id="btn-text">Verificar Serial en Vivo (AJAX)</span>
+                  </button>
+                  <button
+                    class="w-full sm:w-auto py-3 px-4 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label text-xs rounded-lg transition-colors"
+                    onclick="window.reiniciarFormulario()" type="button">
+                    Limpiar
+                  </button>
+                </div>
+              </form>
+              <!-- Dynamic Payload Stream Terminal Snippet -->
+              <div
+                class="mt-2 p-3 bg-surface-container-lowest rounded-lg font-label text-[11px] space-y-1 overflow-x-auto">
+                <div class="flex items-center justify-between text-outline text-[10px]">
+                  <span>HEADER: X-SITAA-TOKEN-AUTH</span>
+                  <span class="text-secondary">AJAX READYSTATE: 4 (DONE)</span>
+                </div>
+                <div class="text-on-surface-variant truncate">
+                  &gt; POST /api/v4/forensic/verify-serial HTTP/2
+                </div>
+                <div class="text-secondary/90 truncate" id="live-payload-preview">
+                  &gt; PAYLOAD: {"serial":"SN-BSH-449102-X","oem":"BOSCH","hash_match":true,"nonce":948102}
+                </div>
+              </div>
+            </div>
+            <!-- Instant Validation Diagnostic Card (Right Col) -->
+            <div
+              class="xl:col-span-7 flex flex-col gap-4 bg-surface-container p-6 rounded-xl shadow-lg relative transition-all duration-300"
+              id="diagnostic-panel">
+              <!-- Header Ribbon with Large Decision Badge -->
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3">
+                <div>
+                  <span class="font-label text-[10px] text-outline uppercase tracking-wider">Resultado Inmediato de
+                    Cotejo</span>
+                  <h3 class="text-lg font-headline font-bold text-on-surface">Ficha de Cotejo Criptográfica Forense</h3>
+                </div>
+                <div
+                  class="px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary flex items-center gap-2 shrink-0"
+                  id="status-verdict-badge">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  <span class="font-label font-bold text-xs uppercase tracking-wider">ORIGINAL HOMOLOGADO (MATCH
+                    100%)</span>
+                </div>
+              </div>
+              <!-- Forensic Visual Summary Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Monitored Spec Card 1 -->
+                <div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label text-[11px] text-on-surface-variant">SERIAL CONSULTADO</span>
+                    <span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                  </div>
+                  <div class="font-label text-base font-bold text-on-surface tracking-wider" id="res-serial">
+                    SN-BSH-449102-X
+                  </div>
+                  <div class="text-[11px] text-outline font-body">
+                    DataMatrix escaneado bajo estándar ISO/IEC 16022 con hash Blake3 validado.
+                  </div>
+                </div>
+                <!-- Monitored Spec Card 2 -->
+                <div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label text-[11px] text-on-surface-variant">REGISTRO DE FÁBRICA OEM</span>
+                    <span class="font-label text-[10px] text-primary">CONFIRMADO</span>
+                  </div>
+                  <div class="font-headline text-sm font-semibold text-on-surface" id="res-factory">
+                    Porsche Leipzig Assembly Plant
+                  </div>
+                  <div class="text-[11px] text-outline font-body" id="res-batch">
+                    Lote de Alta Integridad: #OCT-2023-B39 | Certificado UNECE R155.
+                  </div>
+                </div>
+                <!-- Monitored Spec Card 3: Cryptographic Hash Pairing -->
+                <div class="bg-surface-container-low p-4 rounded-lg space-y-1.5 md:col-span-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label text-[11px] text-on-surface-variant">HASH CRIPTOGRÁFICO DE EMPAREJAMIENTO
+                      (SHA-256 STATE)</span>
+                    <span class="font-label text-[10px] text-secondary font-semibold">FIRMA VÁLIDA</span>
+                  </div>
+                  <div
+                    class="p-2.5 bg-surface-container-lowest rounded font-label text-xs text-primary flex items-center justify-between gap-2 overflow-x-auto">
+                    <span class="tracking-widest"
+                      id="res-hash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+                    <button class="text-outline hover:text-on-surface shrink-0"
+                      onclick="navigator.clipboard.writeText(document.getElementById('res-hash').innerText)"
+                      title="Copiar Hash">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                    </button>
+                  </div>
+                  <p class="text-[11px] text-outline pt-0.5">
+                    Emparejado matemáticamente con el firmware nativo del vehículo. Cero discrepancia de bytes.
+                  </p>
+                </div>
+                <!-- Monitored Spec Card 4: Installation History -->
+                <div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label text-[11px] text-on-surface-variant">HISTORIAL DE INSTALACIONES</span>
+                    <span
+                      class="px-2 py-0.5 bg-secondary-container/20 text-secondary font-label text-[10px] rounded">VIRGEN</span>
+                  </div>
+                  <div class="font-headline text-sm font-bold text-on-surface">
+                    0 Instalaciones Previas Registradas
+                  </div>
+                  <p class="text-[11px] text-outline">
+                    Sin reportes de re-empadronamiento, siniestro total, desguace o robo internacional en
+                    Interpol/StolenAuto.
+                  </p>
+                </div>
+                <!-- Monitored Spec Card 5: Warranty & Compliance -->
+                <div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label text-[11px] text-on-surface-variant">GARANTÍA OEM &amp; CERTIFICADO</span>
+                    <span class="font-label text-[10px] text-primary">ACTIVA</span>
+                  </div>
+                  <div class="font-headline text-sm font-bold text-on-surface">
+                    Vigente hasta 31/10/2028
+                  </div>
+                  <p class="text-[11px] text-outline">
+                    Cobertura global de reemplazo de celda de potencia y soporte de calibración forense.
+                  </p>
+                </div>
+              </div>
+              <!-- Technical Traceability Footprint & Fast Action Triggers -->
+              <div
+                class="mt-2 pt-4 bg-surface-container-low p-4 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">policy</span>
+                  </div>
+                  <div class="space-y-0.5">
+                    <div class="text-xs font-semibold text-on-surface font-headline">Acta de Conformidad Lista para
+                      Emitir</div>
+                    <div class="font-label text-[10px] text-outline">Registro inmutable listo para M05: Trazabilidad
+                      Registral</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                  <button
+                    class="flex-1 sm:flex-initial px-3.5 py-2 bg-secondary-container text-on-secondary-container hover:bg-secondary font-headline font-semibold text-xs rounded transition-colors flex items-center justify-center gap-1.5"
+                    onclick="window.generarActa()" type="button">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    Generar Acta Digital
+                  </button>
+                  <button
+                    class="flex-1 sm:flex-initial px-3.5 py-2 bg-surface-container-highest hover:bg-surface-bright text-tertiary font-headline font-semibold text-xs rounded transition-colors flex items-center justify-center gap-1.5"
+                    onclick="window.derivarDiscrepancia()" type="button">
+                    <span class="material-symbols-outlined text-[16px]">flag</span>
+                    Disputar Serial
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Live AJAX Request Stream (Forensic Monitor Table) -->
+          <div class="bg-surface-container p-6 rounded-xl shadow-lg space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[20px]">dynamic_feed</span>
+                <h2 class="font-headline font-semibold text-base text-on-surface">
+                  Monitor de Peticiones AJAX en Tiempo Real (Log de Auditoría Local)
+                </h2>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span class="font-label text-[11px] text-on-surface-variant">Transmisiones del Taller Central #01</span>
+                <button
+                  class="ml-2 px-2.5 py-1 text-[10px] font-label text-outline hover:text-on-surface bg-surface-container-high rounded"
+                  onclick="window.limpiarLogs()">
+                  Limpiar Vista
+                </button>
+              </div>
+            </div>
+            <!-- Responsive Data Table -->
+            <div class="overflow-x-auto rounded-lg">
+              <table class="w-full text-left font-body text-xs whitespace-nowrap">
+                <thead
+                  class="bg-surface-container-lowest text-on-surface-variant uppercase font-label text-[10px] tracking-wider">
+                  <tr>
+                    <th class="py-3 px-4">Hora (UTC)</th>
+                    <th class="py-3 px-4">Serial Consultado</th>
+                    <th class="py-3 px-4">Componente</th>
+                    <th class="py-3 px-4">VIN Asociado</th>
+                    <th class="py-3 px-4">Servidor OEM</th>
+                    <th class="py-3 px-4">Latencia</th>
+                    <th class="py-3 px-4">Veredicto Cripto</th>
+                    <th class="py-3 px-4 text-right">Acción Pericial</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container-high" id="logs-table-body">
+                  <!-- Row 1 -->
+                  <tr class="hover:bg-surface-container-high/40 transition-colors">
+                    <td class="py-3 px-4 font-label text-[11px] text-outline">14:32:08.412</td>
+                    <td class="py-3 px-4 font-label text-xs font-semibold text-primary">SN-BSH-449102-X</td>
+                    <td class="py-3 px-4 text-on-surface">Inversor SiC Alta Tensión</td>
+                    <td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">WP0AB2Y14MSA88102</td>
+                    <td class="py-3 px-4 text-on-surface-variant">Porsche Leipzig</td>
+                    <td class="py-3 px-4 font-label text-secondary font-semibold">18 ms</td>
+                    <td class="py-3 px-4">
+                      <span
+                        class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px]">check</span>
+                        APROBADO
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded"
+                        onclick="window.generarActaRapida('SN-BSH-449102-X')">
+                        Acta Digital
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr class="hover:bg-surface-container-high/40 transition-colors">
+                    <td class="py-3 px-4 font-label text-[11px] text-outline">14:28:44.119</td>
+                    <td class="py-3 px-4 font-label text-xs font-semibold text-on-surface">BAT-LGX-88204-Q</td>
+                    <td class="py-3 px-4 text-on-surface">Módulo Batería NMC 800V</td>
+                    <td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">WP0AB2Y14MSA88102</td>
+                    <td class="py-3 px-4 text-on-surface-variant">Bosch Automotive</td>
+                    <td class="py-3 px-4 font-label text-secondary font-semibold">24 ms</td>
+                    <td class="py-3 px-4">
+                      <span
+                        class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px]">check</span>
+                        APROBADO
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded"
+                        onclick="window.generarActaRapida('BAT-LGX-88204-Q')">
+                        Acta Digital
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 3 (Alert Discrepancy) -->
+                  <tr class="hover:bg-surface-container-high/40 transition-colors bg-tertiary-container/5">
+                    <td class="py-3 px-4 font-label text-[11px] text-outline">14:15:10.871</td>
+                    <td class="py-3 px-4 font-label text-xs font-semibold text-tertiary">AIRB-TK-00921-WARN</td>
+                    <td class="py-3 px-4 text-on-surface">Módulo Airbag Conductor</td>
+                    <td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">1HGCR2F83HA009120</td>
+                    <td class="py-3 px-4 text-on-surface-variant">Continental Powertrain</td>
+                    <td class="py-3 px-4 font-label text-secondary font-semibold">31 ms</td>
+                    <td class="py-3 px-4">
+                      <span
+                        class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-tertiary-container/30 text-tertiary inline-flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px]">warning</span>
+                        DISCREPANCIA SERIAL
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2 py-1 bg-tertiary-container text-on-tertiary font-label text-[10px] rounded hover:opacity-90"
+                        onclick="window.derivarDiscrepancia('AIRB-TK-00921-WARN')">
+                        Derivar M04-01
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Row 4 -->
+                  <tr class="hover:bg-surface-container-high/40 transition-colors">
+                    <td class="py-3 px-4 font-label text-[11px] text-outline">13:58:22.045</td>
+                    <td class="py-3 px-4 font-label text-xs font-semibold text-on-surface">ECU-DEN-901411-V</td>
+                    <td class="py-3 px-4 text-on-surface">ECU Motor Principal</td>
+                    <td class="py-3 px-4 font-label text-[11px] text-on-surface-variant">JN1AZ0CP7BT100492</td>
+                    <td class="py-3 px-4 text-on-surface-variant">Denso Corporation</td>
+                    <td class="py-3 px-4 font-label text-secondary font-semibold">19 ms</td>
+                    <td class="py-3 px-4">
+                      <span
+                        class="px-2 py-0.5 rounded font-label text-[10px] font-semibold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px]">check</span>
+                        APROBADO
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <button
+                        class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded"
+                        onclick="window.generarActaRapida('ECU-DEN-901411-V')">
+                        Acta Digital
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Security & Legal Footer Meta -->
+          <div
+            class="p-4 bg-surface-container-lowest rounded-lg flex flex-col md:flex-row items-center justify-between text-xs text-outline font-label gap-3">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+              <span>Validaciones amparadas bajo protocolo inmutable SHA-256 SITAA Ledger RF-M03-02.</span>
+            </div>
+            <div>
+              Hash de Sesión Pericial: <span class="text-on-surface font-semibold">0x7F9A...B30C</span> | Clave Pública
+              Auditor: <span class="text-primary font-semibold">ED25519-TX-88</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+          (function () {
+            const demos = [
+              {
+                serial: 'SN-BSH-449102-X',
+                comp: 'Inversor SiC Alta Tensión',
+                oem: 'Porsche AG Assembly',
+                status: 'valid',
+                vin: 'WP0AB2Y14MSA88102',
+                factory: 'Porsche Leipzig Assembly Plant',
+                batch: 'Lote de Alta Integridad: #OCT-2023-B39 | Certificado UNECE R155',
+                hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                ms: 18
+              },
+              {
+                serial: 'CLONE-ECU-99210-ALARM',
+                comp: 'ECU Motor Principal',
+                oem: 'Bosch Automotive OEM',
+                status: 'tampered',
+                vin: '1HGCR2F83HA009120',
+                factory: 'Registro Duplicado en Servidor Bosch Frankfurt',
+                batch: 'ALERTA: Serial ya instalado en VIN DE7748123 (Posible Clonación)',
+                hash: 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',
+                ms: 34
+              },
+              {
+                serial: 'LIDAR-DEN-55019-OK',
+                comp: 'Sensor LiDAR Frontal',
+                oem: 'Denso Corporation',
+                status: 'valid',
+                vin: 'JN1AZ0CP7BT100492',
+                factory: 'Denso Tech Park Aichi (Lote 2024)',
+                batch: 'Calibración Óptica de Fábrica Certificada ISO 26262 ASIL-D',
+                hash: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8',
+                ms: 22
+              }
+            ];
+
+            let currentDemoIndex = 0;
+
+            window.autocompletarPrueba = function () {
+              currentDemoIndex = (currentDemoIndex + 1) % demos.length;
+              const item = demos[currentDemoIndex];
+              document.getElementById('serial-input').value = item.serial;
+              document.getElementById('component-type').value = item.comp;
+              document.getElementById('oem-provider').value = item.oem;
+              document.getElementById('target-vin').value = item.vin;
+            };
+
+            window.reiniciarFormulario = function () {
+              document.getElementById('serial-input').value = '';
+              document.getElementById('target-vin').value = '';
+              document.getElementById('serial-input').focus();
+            };
+
+            window.ejecutarVerificacionAjax = function () {
+              const btn = document.getElementById('btn-verify');
+              const btnText = document.getElementById('btn-text');
+              const btnIcon = document.getElementById('btn-icon');
+              const serialVal = document.getElementById('serial-input').value.trim() || 'SN-BSH-449102-X';
+              const compVal = document.getElementById('component-type').value;
+              const oemVal = document.getElementById('oem-provider').value;
+              const vinVal = document.getElementById('target-vin').value.trim() || 'WP0AB2Y14MSA88102';
+
+              // UI Loading state
+              btn.disabled = true;
+              btnText.innerText = 'Consultando Repositorio OEM...';
+              btnIcon.innerText = 'sync';
+              btnIcon.classList.add('animate-spin');
+
+              // Update terminal preview
+              const payloadPreview = document.getElementById('live-payload-preview');
+              payloadPreview.innerText = '> POST: {"query":"' + serialVal + '","vin":"' + vinVal + '"} [AJAX PENDING]';
+
+              // Simulate high-speed AJAX call (350ms)
+              setTimeout(() => {
+                const isTampered = serialVal.includes('WARN') || serialVal.includes('ALARM') || serialVal.includes('CLONE');
+                const randomPing = Math.floor(Math.random() * 15) + 16; // 16 - 31ms
+
+                // Restore button
+                btn.disabled = false;
+                btnText.innerText = 'Verificar Serial en Vivo (AJAX)';
+                btnIcon.innerText = 'bolt';
+                btnIcon.classList.remove('animate-spin');
+
+                // Update Telemetry Ping
+                document.getElementById('telemetry-ping').innerText = randomPing + ' ms';
+
+                // Update Diagnostic Card
+                const diagBadge = document.getElementById('status-verdict-badge');
+                const resSerial = document.getElementById('res-serial');
+                const resFactory = document.getElementById('res-factory');
+                const resBatch = document.getElementById('res-batch');
+                const resHash = document.getElementById('res-hash');
+
+                resSerial.innerText = serialVal;
+
+                if (isTampered) {
+                  diagBadge.className = 'px-4 py-2 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center gap-2 shrink-0';
+                  diagBadge.innerHTML = '<span class="material-symbols-outlined text-[18px]">warning</span><span class="font-label font-bold text-xs uppercase tracking-wider">DISCREPANCIA OEM DETECTADA</span>';
+                  resFactory.innerText = 'ALERTA: Registro Duplicado o Falso';
+                  resBatch.innerText = 'El número no concuerda con la firma de origen del fabricante. Posible clon físico.';
+                  resHash.innerText = 'f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0' + Math.random().toString(36).substring(2, 8);
+                } else {
+                  diagBadge.className = 'px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary flex items-center gap-2 shrink-0';
+                  diagBadge.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label font-bold text-xs uppercase tracking-wider">ORIGINAL HOMOLOGADO (MATCH 100%)</span>';
+                  resFactory.innerText = oemVal + ' Master Database';
+                  resBatch.innerText = 'Firma Criptográfica Genuina | Lote Certificado UNECE R155';
+                  resHash.innerText = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e' + Math.random().toString(36).substring(2, 10);
+                }
+
+                payloadPreview.innerText = '> 200 OK: {"serial":"' + serialVal + '","status":"' + (isTampered ? 'TAMPERED' : 'VALID') + '","latency":' + randomPing + 'ms}';
+
+                // Add to Table Stream
+                const tableBody = document.getElementById('logs-table-body');
+                const now = new Date();
+                const timeStr = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-surface-container-high/40 transition-colors ' + (isTampered ? 'bg-tertiary-container/5' : '');
+
+                tr.innerHTML = `
         <td class="py-3 px-4 font-label text-[11px] text-outline">${timeStr}</td>
         <td class="py-3 px-4 font-label text-xs font-semibold ${isTampered ? 'text-tertiary' : 'text-primary'}">${serialVal}</td>
         <td class="py-3 px-4 text-on-surface">${compVal}</td>
@@ -530,34 +748,39 @@
           </span>
         </td>
         <td class="py-3 px-4 text-right">
-          ${isTampered 
-            ? `<button onclick="window.derivarDiscrepancia('${serialVal}')" class="px-2 py-1 bg-tertiary-container text-on-tertiary font-label text-[10px] rounded hover:opacity-90">Derivar M04-01</button>`
-            : `<button onclick="window.generarActaRapida('${serialVal}')" class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded">Acta Digital</button>`
-          }
+          ${isTampered
+                    ? `<button onclick="window.derivarDiscrepancia('${serialVal}')" class="px-2 py-1 bg-tertiary-container text-on-tertiary font-label text-[10px] rounded hover:opacity-90">Derivar M04-01</button>`
+                    : `<button onclick="window.generarActaRapida('${serialVal}')" class="px-2 py-1 bg-surface-container-high hover:bg-surface-bright text-on-surface text-[10px] font-label rounded">Acta Digital</button>`
+                  }
         </td>
       `;
 
-      tableBody.insertBefore(tr, tableBody.firstChild);
+                tableBody.insertBefore(tr, tableBody.firstChild);
 
-    }, 380);
-  };
+              }, 380);
+            };
 
-  window.generarActa = function() {
-    alert('Acta de Conformidad Criptográfica SITAA generada con éxito para el serial seleccionado. Enviada al libro mayor inmutable (M05).');
-  };
+            window.generarActa = function () {
+              alert('Acta de Conformidad Criptográfica SITAA generada con éxito para el serial seleccionado. Enviada al libro mayor inmutable (M05).');
+            };
 
-  window.generarActaRapida = function(sn) {
-    alert('Generando Acta de Homologación para serial: ' + sn + '. Bloque firmado y sellado.');
-  };
+            window.generarActaRapida = function (sn) {
+              alert('Generando Acta de Homologación para serial: ' + sn + '. Bloque firmado y sellado.');
+            };
 
-  window.derivarDiscrepancia = function(sn) {
-    const id = sn || document.getElementById('serial-input').value;
-    alert('Serial ' + id + ' derivado de inmediato al Centro de Discrepancias (RF-M04-01) para peritaje judicial.');
-  };
+            window.derivarDiscrepancia = function (sn) {
+              const id = sn || document.getElementById('serial-input').value;
+              alert('Serial ' + id + ' derivado de inmediato al Centro de Discrepancias (RF-M04-01) para peritaje judicial.');
+            };
 
-  window.limpiarLogs = function() {
-    const tableBody = document.getElementById('logs-table-body');
-    tableBody.innerHTML = '';
-  };
-})();
-</script></main></div></body></html>
+            window.limpiarLogs = function () {
+              const tableBody = document.getElementById('logs-table-body');
+              tableBody.innerHTML = '';
+            };
+          })();
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>
